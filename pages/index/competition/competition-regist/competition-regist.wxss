@@ -1,0 +1,513 @@
+/* pages/index/competition/competition-regist/competition-regist.wxss */
+page{
+  background-color: white;
+}
+
+.index-content{
+position: relative;
+margin-top: 80rpx;
+}
+
+.swiper-tab{
+  width: 100%;
+  text-align: center;
+  height: 90rpx;
+  line-height: 90rpx;
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+  background-color: #FFFFFF;
+  border-top: 1px solid #e9e9e9;
+  border-bottom: 1px solid #e9e9e9;
+}
+
+.swiper-tab-item{
+  width: 25%; 
+  font-size: 32rpx;
+  font-weight: bold;
+  position: relative;
+}
+
+.swiper-tab-item:first-child{  
+  margin-left: 20%;
+}
+
+.swiper-tab-item:nth-child(2){
+  margin-right: 20%;
+}
+
+.active{
+  color:#ed334b;
+}
+
+.info-one{
+  position: relative;
+  width: 100%;
+  height: 60rpx;
+  margin-top: 30rpx;
+  border: rgb(0, 0, 0) solid 1px;
+}
+
+.info-one text{
+  position: relative;
+  float: left;
+  width:150rpx ;
+  height: 50rpx;
+  line-height: 50rpx;
+  font-size: 32rpx;
+  font-weight: bold;
+  margin-left: 30rpx;
+  letter-spacing: 3rpx;
+}
+
+.info-one input{
+  width: 520rpx;
+  position: relative;
+  float: left;
+  height: 50rpx;
+  line-height: 50rpx;
+  margin-left: 20rpx;
+  padding-left: 5rpx;
+  border: 1px solid #3f3e3e;
+  border-radius: 8rpx;
+}
+
+.info-two{
+  position: relative;
+  width: 100%;
+  height: 60rpx;
+  margin-top: 20rpx;
+  border: rgb(0, 0, 0) solid 1px;
+}
+
+.info-two text{
+  position: relative;
+  float: left;
+  width:150rpx ;
+  height: 50rpx;
+  line-height: 50rpx;
+  font-size: 32rpx;
+  font-weight: bold;
+  margin-left: 30rpx;
+  letter-spacing: 3rpx;
+}
+
+.info-two input{
+  width: 520rpx;
+  position: relative;
+  float: left;
+  height: 50rpx;
+  line-height: 50rpx;
+  margin-left: 20rpx;
+  padding-left: 5rpx;
+  border: 1px solid #3f3e3e;
+  border-radius: 8rpx;
+}
+
+.info-three{
+  position: relative;
+  width: 100%;
+  height: 60rpx;
+  margin-top: 20rpx;
+  border: rgb(0, 0, 0) solid 1px;
+}
+
+.info-three text{
+  position: relative;
+  float: left;
+  width:230rpx ;
+  height: 50rpx;
+  line-height: 50rpx;
+  font-size: 32rpx;
+  font-weight: bold;
+  margin-left: 30rpx;
+  letter-spacing: 3rpx;
+}
+
+.info-three input{
+  width: 460rpx;
+  position: relative;
+  float: left;
+  height: 50rpx;
+  line-height: 50rpx;
+  margin-left: 0rpx;
+  padding-left: 5rpx;
+  border: 1px solid #3f3e3e;
+  border-radius: 8rpx;
+}
+
+.info-four{
+  position: relative;
+  width: 100%;
+  height: 60rpx;
+  margin-top: 20rpx;
+  border: rgb(0, 0, 0) solid 1px;
+}
+
+.info-four text{
+  position: relative;
+  float: left;
+  width:230rpx ;
+  height: 50rpx;
+  line-height: 50rpx;
+  font-size: 32rpx;
+  font-weight: bold;
+  margin-left: 30rpx;
+  letter-spacing: 3rpx;
+}
+
+.info-four input{
+  width: 100rpx;
+  position: relative;
+  float: left;
+  height: 50rpx;
+  line-height: 50rpx;
+  margin-left: 10rpx;
+  padding-left: 5rpx;
+  border: 1px solid #3f3e3e;
+  border-radius: 8rpx;
+}
+
+.info-five{
+  position: relative;
+  width: 100%;
+  height: 60rpx;
+  margin-top: 20rpx;
+  border: rgb(0, 0, 0) solid 1px;
+}
+
+.info-five input{
+  width: 100rpx;
+  position: relative;
+  float: left;
+  height: 50rpx;
+  line-height: 50rpx;
+  margin-left: 265rpx;
+  padding-left: 5rpx;
+  border: 1px solid #3f3e3e;
+  border-radius: 8rpx;
+}
+
+.info-five text{
+  position: relative;
+  float: left;
+  width:230rpx ;
+  height: 50rpx;
+  line-height: 50rpx;
+  font-size: 32rpx;
+  font-weight: bold;
+  margin-left: 30rpx;
+  letter-spacing: 3rpx;
+}
+
+.info-six{
+  position: relative;
+  width: 100%;
+  height: 60rpx;
+  margin-top: 20rpx;
+  border: rgb(0, 0, 0) solid 1px;
+}
+
+.info-six input{
+  width: 440rpx;
+  position: relative;
+  float: left;
+  height: 50rpx;
+  line-height: 50rpx;
+  margin-left: 265rpx;
+  padding-left: 5rpx;
+  border: 1px solid #3f3e3e;
+  border-radius: 8rpx;
+}
+
+/* 下拉框选项 */
+.info-middle{
+  height: 60rpx;
+  width: 100%;
+  background: #ffffff;
+  font-size: 32rpx; 
+  position: relative;
+  margin-top: 20rpx;
+  border: rgb(0, 0, 0) solid 1px;
+  /* border: rgb(216, 212, 212) solid 1px; */
+}
+
+.info-left{
+  background: #ffffff;
+  height: 60rpx;
+  width: 200rpx;
+  font-size: 32rpx;
+  position: relative; 
+  float: left;
+}
+
+.info-center{
+  height: 60rpx;
+  width: 50rpx;
+  background: #ffffff;
+  font-size: 32rpx;
+  position: relative; 
+  float: left;
+}
+
+.info-center-gender{
+  width: 50rpx;
+  position: relative;
+  float: left;
+  height: 60rpx;
+  line-height: 60rpx;
+  margin-left: 20rpx;
+  border-radius: 8rpx;
+  border: 1px solid #3f3e3e;
+}
+
+.info-right{
+  height: 60rpx;
+  width: 50rpx;
+  background: #ffffff;
+  font-size: 32rpx;
+  position: relative; 
+  float: left;
+}
+
+.info-right-gender{
+  width: 100rpx;
+  position: relative;
+  float: left;
+  height: 60rpx;
+  line-height: 60rpx;
+  margin-left: 20rpx;
+  border-radius: 8rpx;
+  border: 1px solid #3f3e3e;
+}
+
+.qualification-value{
+  text-align: center;
+}
+
+.gender-input text{
+  margin-top: 10rpx;
+  font-size: 32rpx;
+  font-weight: bold;
+  padding-left: 5rpx;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+
+
+.experience-years-value{
+ text-align: center;
+}
+
+.year-input text{
+  margin-top: 10rpx;
+  font-size: 32rpx;
+  font-weight: bold;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+/* 身份证号 */
+.info-seven{
+  position: relative;
+  width: 100%;
+  height: 50rpx;
+  margin-top: 20rpx;
+}
+
+.info-seven text{
+  position: relative;
+  float: left;
+  width:150rpx ;
+  height: 50rpx;
+  line-height: 50rpx;
+  font-size: 32rpx;
+  font-weight: bold;
+  margin-left: 30rpx;
+  letter-spacing: 3rpx;
+}
+
+.info-seven input{
+  width: 520rpx;
+  position: relative;
+  float: left;
+  height: 50rpx;
+  line-height: 50rpx;
+  margin-left: 20rpx;
+  padding-left: 5rpx;
+  border: 1px solid #3f3e3e;
+  border-radius: 8rpx;
+}
+
+.info-eight{
+  position: relative;
+  width: 100%;
+  height: 90rpx;
+  margin-top: 20rpx;
+  margin-bottom: 20rpx;
+}
+
+.info-eight text{
+  position: relative;
+  float: left;
+  width:150rpx ;
+  height: 50rpx;
+  line-height: 50rpx;
+  font-size: 32rpx;
+  font-weight: bold;
+  margin-left: 30rpx;
+  letter-spacing: 3rpx;
+}
+
+.info-eight-detail{
+  width: 220rpx;
+  position: relative;
+  float: left;
+  height: 100rpx;
+  line-height: 100rpx;
+  margin-left: 20rpx;
+  border-radius: 8rpx;
+  border: 1px solid #3f3e3e;
+}
+
+.info-nine{
+  position: relative;
+  width: 100%;
+  height: 200rpx;
+  margin-top: 20rpx;
+}
+
+.info-nine text{
+  position: relative;
+  float: left;
+  width:150rpx ;
+  height: 50rpx;
+  line-height: 50rpx;
+  font-size: 32rpx;
+  font-weight: bold;
+  margin-left: 30rpx;
+  letter-spacing: 3rpx;
+}
+
+.textarea-wrap textarea{
+  position: relative;
+  float: left;
+  height: 200rpx;
+  width: 520rpx;
+  background: #ffffff;
+  margin-left: 20rpx;
+  font-size: 32rpx;
+  border: rgb(0, 0, 0) solid 1px;
+  border-radius: 8rpx;
+}
+
+.placeholder{
+  color: #d0e9fd;
+}
+
+.submit-icon{
+  position: relative;
+  float: left;
+  width: 30%;
+  height: 80rpx;
+  line-height: 80rpx;
+  margin-left: 35%;
+  margin-top: 90rpx;
+  margin-bottom: 90rpx;
+  font-size: 32rpx;
+  border:  rgb(0, 0, 0) solid 1px;
+}
+
+.info-middle-second{
+  height: 200rpx;
+  width: 100%;
+  background: #ffffff;
+  font-size: 32rpx; 
+  position: relative;
+  margin-top: 50rpx;
+  border: rgb(216, 212, 212) solid 1px;
+}
+
+.info-ten{
+  position: relative;
+  width: 100%;
+  height: 50rpx;
+  margin-top: 20rpx;
+}
+
+.info-ten text{
+  position: relative;
+  float: left;
+  width:150rpx ;
+  height: 50rpx;
+  line-height: 50rpx;
+  font-size: 32rpx;
+  font-weight: bold;
+  margin-left: 30rpx;
+  letter-spacing: 3rpx;
+}
+
+.info-ten input{
+  width: 220rpx;
+  position: relative;
+  float: left;
+  height: 50rpx;
+  line-height: 50rpx;
+  margin-left: 10rpx;
+  padding-left: 5rpx;
+  border: 1px solid #3f3e3e;
+  border-radius: 8rpx;
+}
+
+.info-eleven{
+  position: relative;
+  width: 100%;
+  height: 50rpx;
+  margin-top: 20rpx;
+}
+
+.info-eleven input{
+  width: 220rpx;
+  position: relative;
+  float: left;
+  height: 50rpx;
+  line-height: 50rpx;
+  margin-left: 190rpx;
+  padding-left: 5rpx;
+  border: 1px solid #3f3e3e;
+  border-radius: 8rpx;
+}
+
+.info-eleven text{
+  position: relative;
+  float: left;
+  width:150rpx ;
+  height: 50rpx;
+  line-height: 50rpx;
+  font-size: 32rpx;
+  font-weight: bold;
+  margin-left: 30rpx;
+  letter-spacing: 3rpx;
+}
+
+.info-twelve{
+  position: relative;
+  width: 100%;
+  height: 50rpx;
+  margin-top: 20rpx;
+}
+
+.info-twelve input{
+  width: 530rpx;
+  position: relative;
+  float: left;
+  height: 50rpx;
+  line-height: 50rpx;
+  margin-left: 190rpx;
+  padding-left: 5rpx;
+  border: 1px solid #3f3e3e;
+  border-radius: 8rpx;
+}

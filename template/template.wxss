@@ -1,0 +1,51 @@
+.tabBar{
+  width:100%;
+  height: 80rpx;
+  position: fixed;
+  bottom:0;
+  background:#ffffff;
+  font-size:22rpx;
+  color:#999999;
+  padding: 10rpx 0;
+  letter-spacing: 2rpx;
+  z-index: 999;
+  border-top: 2rpx solid #e9e9e9;
+}
+.tabBar-item{
+  float:left;
+/* 20200411 start */
+  /* width:20%; */
+  width:19%;
+/* 20200411 end */
+  text-align: center;
+  overflow: hidden;
+}
+.tabBar-item:first-child .icon{
+  width:48rpx;
+  height: 48rpx;
+}
+.tabBar-item:nth-child(2) .icon{
+  width:48rpx;
+  height: 48rpx;
+}
+.tabBar-item:nth-child(3) .icon{
+  width:48rpx;
+  height: 48rpx;
+}
+.tabBar-item:nth-child(4) .icon{
+/* 20200411 start */
+  /* width:53rpx;
+  height: 53rpx; */
+  width:48rpx;
+  height: 48rpx;
+/* 20200411 end */
+}
+.tabBar-item:nth-child(5) .icon{
+  width:48rpx;
+  height: 48rpx;
+}
+/*当前字体颜色*/
+.tabBartext{
+  color:#000;
+  font-weight: bold;
+}

@@ -1,0 +1,65 @@
+/* pages/index/competition/competition-regist/payment/payment-success/payment-success.wxss */
+page{
+  background-color: white;
+}
+
+.pay-result{
+  position: relative;
+  margin-top: 90rpx;
+  width: 100%;
+  height: 160rpx;
+  text-align: center;
+}
+
+.payment-success{
+  width: 150rpx;
+  height: 150rpx;
+}
+
+.payment-success-title{
+  position: relative;
+  margin-top: 30rpx;
+  width: 100%;
+  height: 70rpx;
+  line-height: 70rpx;
+  font-size: 36rpx;
+  font-weight: bold;
+  text-align: center;
+}
+
+.payment-success-num{
+  position: relative;
+  margin-top: 30rpx;
+  width: 100%;
+  height: 70rpx;
+  line-height: 70rpx;
+  font-size: 36rpx;
+  font-weight: bold;
+  text-align: center;
+}
+
+.payment-success-point{
+  position: relative;
+  margin-top: 50rpx;
+  width: 100%;
+  height: 70rpx;
+  line-height: 70rpx;
+  font-size: 36rpx;
+  font-weight: bold;
+  color: gray;
+  letter-spacing: 3rpx;
+  text-align: center;
+}
+
+.back-icon{
+  position: relative;
+  margin-top: 50rpx;
+  margin-left: 10%;
+  width: 80%;
+  height: 80rpx;
+  line-height: 80rpx;
+  font-size: 34rpx;
+  /* font-weight: bold; */
+  /* background-color: rgb(96, 165, 5); */
+  border: 1px solid #3f3e3e;
+}

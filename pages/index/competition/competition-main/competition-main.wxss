@@ -1,0 +1,68 @@
+/* pages/index/competition/competition-main/competition-main.wxss */
+page{
+  background-color: white;
+}
+
+.index-top{
+  position: relative;
+  width: 100%;
+  margin-top: 50rpx;
+}
+
+.index-top text{
+  width: 100%;
+  font-size: 36rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.th-text {
+  justify-content: center;
+  color: #000;
+  display: block;
+  width: 90%;
+  margin-top: 20rpx;
+  margin-left: 5%;
+  height: 120rpx;
+  align-items: center;
+  max-height: 120rpx;
+  font-size: 30rpx;
+}
+
+.index-bottom{
+  position: relative;
+  margin-top: 700rpx;
+}
+
+.enroll-btn{
+  width: 40%;
+  height: 70rpx;
+  line-height: 70rpx;
+  border: rgb(0, 0, 0) solid 1px;
+  color: black;
+  position: relative;
+  margin-left: 30%;
+  border-radius: 10rpx;
+  font-size: 24rpx;
+  text-align: center;
+  font-size: 36rpx;
+}
+
+.look-btn{
+  width: 40%;
+  height: 70rpx;
+  line-height: 70rpx;
+  border: rgb(0, 0, 0) solid 1px;
+  color: black;
+  position: relative;
+  margin-left: 30%;
+  margin-top: 30rpx;
+  border-radius: 10rpx;
+  font-size: 24rpx;
+  text-align: center;
+  font-size: 36rpx;
+}
+
+
+
