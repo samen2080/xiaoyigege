@@ -1,6 +1,0 @@
-<!--pages/index/competition/competition-regist/payment/payment.wxml-->
-<view class="entry-fee">参赛报名费</view>
-
-<view class="entry-fee-detail">￥25.00</view>
-
-<button class='pay-icon' catchtap='pay'>立即支付</button>

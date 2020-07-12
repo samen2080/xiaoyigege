@@ -1,8 +1,0 @@
-<!--component/videos/videos.wxml-->
-<view class="video">
-    <view class="covers" wx:if="{{pause}}">
-        <image src="{{poster}}"></image>
-        <image class="player" src="/static/images/players1.png"></image>
-    </view>
-    <video poster="{{poster}}" src="{{src}}" wx:else></video>
-</view>
