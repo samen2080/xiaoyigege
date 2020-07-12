@@ -1,0 +1,65 @@
+/* pages/index/transaction/publish/info.wxss */
+
+page{
+  font-size: 32rpx;
+}
+.addInfo-price,.addInfo-input{
+  padding: 0 24rpx;
+  height: 96rpx;
+  line-height: 96rpx;
+  background: #ffffff;
+  border-bottom: 2rpx solid #e9e9e9;
+}
+.addInfo-price:nth-child(1){
+  border-top: 2rpx solid #e9e9e9;
+}
+.addInfo-input:nth-child(2){
+  margin-top: 24rpx;
+}
+.addInfo-input:last-child{
+  border-bottom: none;
+}
+.addInfo-price input{
+  width: 180rpx;
+  height: 96rpx;
+  line-height: 96rpx;
+  float: right;
+  margin-left: 18rpx;
+}
+.addInfo-price text{
+  float: right;
+  color: #ff0000;
+}
+.addInfo-input input,.area-select{
+  width: 530rpx;
+  float: right;
+  height: 96rpx;
+  line-height: 96rpx;
+}
+.placeholder{
+  color: #999999;
+}
+.area-select{
+  color: #999999;
+}
+
+
+
+.addinfo-btn{
+  width: 100%;
+  height: 112rpx;
+  line-height: 114rpx;
+  background: #ffffff;
+  position: fixed;
+  bottom: 0;
+  border-top: 2rpx solid #e9e9e9;
+}
+.addinfo-btn button{
+  width: 702rpx;
+  height: 86rpx;
+  line-height: 86rpx;
+  background: #3ec51f;
+  color: #ffffff;
+  margin-top: 13rpx;
+}
+

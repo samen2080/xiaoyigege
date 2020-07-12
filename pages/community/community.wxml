@@ -1,0 +1,147 @@
+<!--pages/community/community.wxml-->
+<import src="../../template/template.wxml"/>
+<template is="tabBar" data="{{tabBar:bindData.tabBar}}"/>
+
+<view class='index-search-box'>
+  <view class='wrap'>
+    <view class='index-search'>
+      <image src='/images/search.png'></image>
+      <input placeholder='搜索关键词' placeholder-class='search-placeholder' disabled='true' catchtap='searchPage'></input>
+    </view>
+  </view>
+</view>
+
+
+<!-- 轮播 -->
+<view class='community-banner'>
+  <swiper class='community-banner-swiper' current="{{swiperCurrent}}" bindchange="swiperChange">
+      <swiper-item>
+        <image src='/images/wres001.jpg' mode='aspectFill'></image>
+      </swiper-item>
+
+      <swiper-item>        
+        <image src='/images/wres002.jpg' mode='aspectFill'></image>
+      </swiper-item>
+
+      <swiper-item>
+        <image src='/images/wres003.jpg' mode='aspectFill'></image>        
+      </swiper-item>
+  </swiper>    
+
+  <!-- 小圆点 -->
+  <view class="dots">
+    <!-- <block wx:for="{{slider}}" wx:key="unique"> -->
+      <view class="dot{{swiperCurrent == 0 ? ' active' : ''}}"></view>
+      <view class="dot{{swiperCurrent == 1 ? ' active' : ''}}"></view>
+      <view class="dot{{swiperCurrent == 2 ? ' active' : ''}}"></view>
+    <!-- </block> -->
+  </view>
+</view>
+
+
+
+<!-- 热门话题 -->
+<view class='community-hot-topic'>
+  <!--<view class='community-hot-topic-title'>#<text>热门</text>#</view> 190820-->
+
+  <view class='community-hot-topic-list'><navigator url='hot-topic/topic-home/topic-home?topic_id={{hotList[0].topic_id}}' hover-class='none'>
+    <image src='/images/n1.png'></image>
+    <text>{{hotList[0].topic_name}}</text></navigator>
+  </view>
+
+  <view class='community-hot-topic-list'><navigator url='hot-topic/topic-home/topic-home?topic_id={{hotList[1].topic_id}}' hover-class='none'>
+    <image src='/images/n2.png'></image>
+    <text>{{hotList[1].topic_name}}</text></navigator>
+  </view>
+  
+  <view class='community-hot-topic-list'><navigator url='hot-topic/topic-home/topic-home?topic_id={{hotList[2].topic_id}}' hover-class='none'>
+    <image src='/images/n3.png'></image>
+    <text>{{hotList[2].topic_name}}</text></navigator>
+  </view>
+  <view class='community-hot-topic-list'><navigator url='hot-topic/hot-topic' hover-class='none'>
+    <image src='/images/n4.png'></image>
+    <text>职场进阶</text></navigator>
+  </view>
+</view>
+
+
+<!-- 论坛 -->
+<view class='community-bbs'>
+  <view class='community-bbs-title'>
+    <image src='/images/i3-n.png'></image>
+    <text>论坛</text>
+    <view class='community-bbs-more'><navigator url='bbs/bbs' hover-class='none'>全部 <image src='/images/more.png'></image></navigator></view>
+  </view>
+
+  <view class='community-bbs-list-wrap'>
+    <view class='community-bbs-list' wx:for='{{bbsList}}' wx:key='{{bbsList}}'><navigator url='bbs/bbs-home/bbs-home?forum_id={{item.forum_id}}' hover-class='none'>
+      <view class='community-bbs-tx-wrap'>
+        <image src='{{host}}{{item.forum_img}}' mode='aspectFill'></image>
+      </view>
+
+      <view class='community-bbs-name'>{{item.forum_name}}</view>
+      <view class='community-bbs-instru'>{{item.forum_intro}}</view>
+
+      <!-- <view class='community-bbs-attention' catchtap='focus' wx:if="{{item.isfocus==false}}" id='{{item.forum_id}}'>+ 加入</view>
+      <view class='community-bbs-attention focus' catchtap='focus' wx:if="{{item.isfocus==true}}" id='{{item.forum_id}}'>已加入</view> -->
+      <view class='line'></view></navigator>
+    </view>
+  </view>
+</view>
+
+
+<!-- 帖子 -->
+<view class='community-post'>
+  <!-- <view class='community-post-title'>
+    <view catchtap="allButton"><text>全部</text><image src='/images/arrow-d.png'></image></view>
+    <view catchtap="sortButton"><text>排序</text><image src='/images/arrow-d.png'></image></view>
+  </view> -->
+
+  <view class='community-bbs-title'>
+    <image src='/images/i10-n.png'></image>
+    <text>帖子</text>
+  </view>
+
+  <view class='mine-subject-box'>
+
+    <view class='mine-subject-list' wx:for="{{items}}" wx:key="items" wx:for-item="i"><navigator url='hot-topic/topic-show/topic-show?in_id={{i.in_id}}' hover-class='none'>
+      <view class='wrap'>
+        <view class='mine-subject-head-box'>
+          <image src='{{i.user_headimg}}' class='mine-subject-tx' mode='aspectFill'></image>
+          <view class='mine-subject-name'>{{i.in_user_nickname}}</view>
+          <view class='mine-subject-time'>{{i.in_add_time}}</view>
+          <image src='/images/arrow-d.png' class='arrow-d' catchtap="listenerButton" data-inid="{{i.in_id}}"></image>
+        </view>
+
+        <view class='mine-subject-content-box'>
+          <text class='mine-subject-cate-name'>{{i.topic_name}}</text>
+          <text class='mine-subject-content'>{{i.in_content}}</text>
+        </view>
+
+        <view class='mine-subject-img-list'>
+          <image src='{{host}}{{item}}' mode='aspectFill' wx:for="{{i.in_append}}" wx:key="item" wx:if='{{i.in_append_type == 1}}'></image>
+          <video src='{{host}}{{item}}' objectFit='cover' wx:for="{{i.in_append}}" wx:key="item" wx:if='{{i.in_append_type == 2}}'></video>
+        </view>
+
+        <view class='mine-subject-info'>
+          <view class='mine-subject-like-img'>
+            <image src='{{item}}' mode='aspectFill' wx:for="{{i.thumbs_up_imgs}}" wx:key="item"></image>
+          </view>
+
+          <view class='mine-subject-like-sum'>点赞<text>{{i.in_thumbs_up_num}}</text></view>
+          
+          <view class='mine-subject-comment'><image src='/images/pinglun.png'></image><text>{{i.in_comment}}</text></view>
+          
+          <view class='mine-subject-like'>
+            <image src='/images/like.png' wx:if='{{i.is_thumbs == 0}}' data-inid='{{i.in_id}}' catchtap='like'></image>
+            <image src='/images/likes.png' wx:if='{{i.is_thumbs == 1}}' data-inid='{{i.in_id}}' catchtap='like'></image>
+            <text>{{i.in_thumbs_up_num}}</text>
+          </view>
+
+          <view class='mine-subject-view'><image src='/images/liulan.png'></image><text>{{i.in_browse}}</text></view>
+        </view>
+      </view></navigator>
+    </view>
+
+  </view>
+</view>

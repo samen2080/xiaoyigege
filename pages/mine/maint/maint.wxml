@@ -1,0 +1,105 @@
+<!--pages/mine/maint/maint.wxml-->
+<view class="swiper-tab">
+  <view class="swiper-tab-item {{currentTab==0?'active':''}}" data-current="0" bindtap="clickTab">未执行
+    <view class='border-bottom' style='display:{{currentTab==0?"block":"none"}}'></view>
+  </view>
+  <view class="swiper-tab-item {{currentTab==1?'active':''}}" data-current="1" bindtap="clickTab">已执行
+    <view class='border-bottom' style='display:{{currentTab==1?"block":"none"}}'></view>
+  </view>
+</view>
+
+<swiper current="{{currentTab}}" duration="300"  bindchange="swiperTab" style='height:{{sheight}}rpx;margin-bottom:50rpx;'>
+  <!-- 未执行-->
+  <swiper-item>
+    <view class='on-list'>   
+      <view class='on-list-list' wx:for="{{items}}" wx:key="items" wx:for-item="i">
+        <view class='on-list-number-wrap' >
+          <text class='on-list-number'>保养编号:<text>{{i.mnt_id}}</text></text>
+          <text class='on-list-status orange-txt'> {{i.mnt_status == 0?"未执行":i.mnt_status == 1?"提前已执行":i.mnt_status == 2?"按时已执行":i.mnt_status == 3?"延时已执行":i.mnt_status == 4?'临时已执行':'提交已接单'}}</text>
+          <!-- <text class='on-list-status orange-txt' wx:if='{{i.mnt_status==4}}'>待保养</text> -->
+          <!-- <text class='on-list-status' wx:else>{{i.mnt_status == 5 ? "已保养":"已过期"}}</text> -->
+        </view>
+
+        <navigator url='maint-show/maint-show?mnt_id={{i.mnt_id}}' hover-class='none'>
+          <view class='on-list-info'>
+            <image src='/images/wgz-tx.png' mode='aspectFill'></image>
+            <!--index.wxml-->
+            <view class='on-list-name1'>保养区域：{{i.mnt_user_province}} {{i.mnt_user_city}} {{i.mnt_user_county}}</view>
+            <view class='on-list-name2'>地址：{{i.mnt_user_address}}</view>
+            <view class='on-list-name3'>执行日期：{{i.mnt_exe_date}}</view>
+          </view>
+        </navigator>
+
+        <view class='on-list-btn-wrap' ><button class='on-list-change-btn' hover-class='none' data-mntid="{{i.mnt_id}}" catchtap='showPage'>查看详情</button></view>
+        <view class='on-list-btn-wrap' ><button class='on-list-change-btn' hover-class='none' data-mntid="{{i.mnt_id}}" data-i="{{i}}"catchtap='change'>修改保养</button></view>
+        <!-- <view class='on-list-btn-wrap' wx:if='{{user_identity == 1}}' wx:if='{{i.mnt_status == 5}}'><button class='on-list-change-btn' hover-class='none' data-mntid="{{i.mnt_id}}" catchtap='showComment'>提交评论</button></view> -->
+      </view>
+    </view>  
+  </swiper-item>
+
+  <!-- 已执行 -->
+  <swiper-item>
+    <view class='remove-list'>  
+      <view class='on-list-list' wx:for="{{items}}" wx:key="items" wx:for-item="i">
+        <view class='on-list-number-wrap'>
+          <text class='on-list-number'>保养编号:<text>{{i.mnt_id}}</text></text>
+          <!-- <text class='on-list-status orange-txt'>已保养</text> -->
+          <!-- <text class='on-list-status orange-txt' wx:if='{{i.mnt_status==5}}'>已保养</text> -->
+          <text class='on-list-status orange-txt'> {{i.mnt_status == 0?"未执行":i.mnt_status == 1?"提前已执行":i.mnt_status == 2?"按时已执行":i.mnt_status == 3?"延时已执行":i.mnt_status == 4?'临时已执行':'提交已接单'}}</text>
+          
+        </view>
+        <navigator url='maint-show/maint-show?mnt_id={{i.mnt_id}}' hover-class='none'>
+          <view class='on-list-info'>
+            <image src='{{host}}{{i.mnt_img[0]}}' mode='aspectFill'></image>
+            <!-- <text class='on-list-name'>{{i.mnt_user_address}}</text>
+            <text class='on-list-price'>{{i.mnt_exe_date}}</text> -->
+            <view class='on-list-name1'>{{i.mnt_user_province}} {{i.mnt_user_city}} {{i.mnt_user_county}}</view>
+            <view class='on-list-name2'>{{i.mnt_user_address}}</view>
+            <view class='on-list-name3'>{{i.mnt_exe_date}}</view>
+          </view>
+        </navigator>
+
+        <view class='on-list-btn-wrap' ><button class='on-list-change-btn' hover-class='none' data-mntid="{{i.mnt_id}}" catchtap='showPage'>查看详情</button></view>
+        <view class='on-list-btn-wrap' wx:if='{{user_identity == 1}}' ><button class='on-list-change-btn' hover-class='none' data-mntid="{{i.mnt_id}}" catchtap='showComment'>提交评论</button></view>
+      </view>
+    </view>
+  </swiper-item>
+</swiper>
+
+  <!-- <view class="flex-row bar-bottom">
+    <view class="flex-grow-1 flex-row">
+      <view bindtap="addCart" class="flex-grow-1 flex-y-center flex-x-center add-cart"><button open-type='contact' >联系客服</button></view>
+      <view bindtap="submitMnt" class="flex-grow-1 flex-y-center flex-x-center buy-now">提交保养</view>
+    </view>
+  </view> -->
+
+
+  <view class="flex-row bar-bottom">
+    <view class="flex-grow-1 flex-row">
+      <view bindtap="addCart" class="flex-grow-1 flex-y-center flex-x-center add-cart"><button open-type='contact' >联系客服</button></view>
+      <view bindtap="submitMnt" class="flex-grow-1 flex-y-center flex-x-center buy-now">提交保养</view>
+    </view>
+  </view>
+
+
+
+  
+    <!-- <view class="flex" style="position:fixed; bottom:0;width: 750rpx;background: #f39800;">
+      <view bindtap="addCart" class="flex-1"> <button open-type='contact' >联系客服</button></view>
+      <view bindtap="submitMnt" class="flex-2> <button>提交保养</button></view>
+    </view> -->
+ 
+  
+<!-- 空白页 -->
+<view class='kb-page' wx:if='{{items.length <= 0}}'>
+  <image src='/images/kb.png'></image>
+  <view>暂无记录~</view>
+</view>
+
+<view class='removeModal' hidden='{{hidden}}'>
+  <view class='removeModal-box'>
+    <view class='removeModal-title'>{{qxTxt}}</view>
+    <view class='removeModal-cancel' bindtap='changeCancel'>再想想</view>
+    <view class='removeModal-sure' bindtap='changeSure' data-num="{{num}}">确定</view>
+  </view>
+</view>

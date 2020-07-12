@@ -1,0 +1,46 @@
+<!--pages/mine/workrepair/workrepair.wxml-->
+ <view class='on-list'>   
+      <view class='on-list-list' wx:for="{{items}}" wx:key="{{items}}">
+        <view class='on-list-number-wrap'>
+          <text class='on-list-number'>维修编号:<text>{{item.rep_id}}</text></text>
+          <text class='on-list-status orange-txt' wx:if='{{item.rep_status==1}}'>已报修</text>
+          <text class='on-list-status' wx:else>{{item.rep_status==2 ? "已维修":"已过期"}}</text>
+        </view>
+        <navigator url='repair-show/repair-show?con_id={{item.rep_id}}' hover-class='none'><view class='on-list-info'>
+          <image src='/images/资讯2.png'></image>
+          <text class='on-list-name'>维修地址：{{item.rep_user_province}}{{item.rep_user_city}}{{item.rep_user_county}}{{item.rep_user_address}}</text>
+          <!-- <text class='mine-contract-date-title2'>电话：{{item.rep_user_mobile}}</text> -->
+          <view class='mine-contract-date-wrap'>
+              <text class='mine-contract-date-title'>维修日期:</text>
+              <text class='mine-contract-date-value'>{{item.rep_date}}</text>
+          </view>
+        </view></navigator>
+
+        <view class='on-list-btn-wrap' wx:if='{{item.rep_status == 1}}'><button class='on-list-remove-btn' hover-class='none' data-repid="{{item.rep_id}}" data-i="{{item}}" catchtap='changePro'>修改维修</button></view>
+        <!-- <view class='on-list-btn-wrap' wx:elif='{{item.rep_status == 2}}'><button class='on-list-remove-btn' hover-class='none' data-repid="{{item.rep_id}}" catchtap='showRatePage'>维修评价</button></view> -->
+        <!-- <view class='on-list-btn-wrap' wx:else><button class='on-list-remove-btn' hover-class='none' data-repid="{{item.rep_id}}" catchtap='cancelPro'>删除维修</button></view> -->
+        <view class='on-list-btn-wrap'><button class='on-list-remove-btn' hover-class='none' data-repid="{{item.rep_id}}" catchtap='showRepPage'>查看详情</button></view>
+    </view>
+    <!-- <view class="flex-row bar-bottom">
+      <view class="flex-grow-1 flex-row">
+        <view bindtap="addCart" class="flex-grow-1 flex-y-center flex-x-center add-cart"><button open-type='contact' >联系客服</button></view>
+        <view bindtap="submitRep" class="flex-grow-1 flex-y-center flex-x-center buy-now">提交维修</view>
+      </view>
+    </view> -->
+        
+   </view>
+
+   <view class='removeModal' hidden='{{hidden}}'>
+  <view class='removeModal-box'>
+    <view class='removeModal-title'>{{qxTxt}}</view>
+    <view class='removeModal-cancel' bindtap='removeCancel'>再想想</view>
+    <view class='removeModal-sure' bindtap='removeSure' data-num="{{num}}">确定</view>
+  </view>
+</view>
+
+<view class='kb-page' wx:if='{{item.length <= 0}}'>
+  <image src='/images/kb.png'></image>
+  <view>暂无记录~</view>
+</view>
+
+

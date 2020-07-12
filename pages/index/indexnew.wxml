@@ -1,0 +1,23 @@
+<!--pages/index/index.wxml-->
+<view class="index-page">
+    <image class='background-img' src='../../images/background.jpg' mode="aspectFill"></image>
+
+    <view class="role-chioce-one">
+        <text>我是机构</text>
+    </view>
+
+    <view class="role-chioce-two">
+        <text>我是教师</text>
+    </view>
+
+    <view class="role-chioce-three">
+        <text>我是学员</text>
+    </view>
+
+    <view class="role-chioce-four">
+        <navigator url='competition-main/competition-main' hover-class='none'>
+        <text>参赛报名</text>
+        </navigator>
+    </view>
+
+</view>

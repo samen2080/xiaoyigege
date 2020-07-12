@@ -1,0 +1,42 @@
+<!--pages/index/activity/activity.wxml-->
+<view class='activity-banner'>
+  <view class="swiperContainer">
+    <swiper current='0' indicator-dots='true' indicator-color='rgba(255,255,255,1)' indicator-active-color='#19c810'>
+        <block wx:for="{{imgUrls}}" wx:key="*this">
+            <swiper-item>
+                <image src="{{item}}" mode="aspectFill"/>
+            </swiper-item>
+        </block>
+    </swiper>
+  </view>
+</view>
+
+<view class='activity-list-box'>
+  <view class='activity-list-box-title'>精彩活动</view>
+
+  <view class='activity-list-wrap'>
+    <view class='activity-list left'><navigator url='activity-show/activity-show' hover-class='none'>
+      <image src='/images/activity2.png' mode='aspectFill'></image>
+      <view class='activity-name'>打击乐行业盛会航空之家的全新教育之姿打击乐行业盛会航空之家的全新教育之姿</view>
+      <view class='activity-location'>18/02/23</view></navigator>
+    </view>
+
+    <view class='activity-list left'><navigator url='activity-show/activity-show' hover-class='none'>
+      <image src='/images/activity2.png' mode='aspectFill'></image>
+      <view class='activity-name'>打击乐行业盛会航空之家的全新教育之姿打击乐行业盛会航空之家的全新教育之姿</view>
+      <view class='activity-location'>18/02/23</view></navigator>
+    </view>
+    
+    <view class='activity-list left'><navigator url='activity-show/activity-show' hover-class='none'>
+      <image src='/images/activity2.png' mode='aspectFill'></image>
+      <view class='activity-name'>打击乐行业盛会航空之家的全新教育之姿打击乐行业盛会航空之家的全新教育之姿</view>
+      <view class='activity-location'>18/02/23</view></navigator>
+    </view>
+
+    <view class='activity-list left'><navigator url='activity-show/activity-show' hover-class='none'>
+      <image src='/images/activity2.png' mode='aspectFill'></image>
+      <view class='activity-name'>打击乐行业盛会航空之家的全新教育之姿打击乐行业盛会航空之家的全新教育之姿</view>
+      <view class='activity-location'>18/02/23</view></navigator>
+    </view>
+  </view>
+</view>

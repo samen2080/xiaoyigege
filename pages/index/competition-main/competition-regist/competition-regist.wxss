@@ -1,0 +1,537 @@
+/* pages/index/competition-main/competition-regist/competition-regist.wxss */
+page{
+  background-color: white;
+}
+
+.index-content{
+position: relative;
+margin-top: 80rpx;
+}
+
+.swiper-tab{
+  width: 100%;
+  text-align: center;
+  height: 90rpx;
+  line-height: 90rpx;
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+  background-color: #FFFFFF;
+  border-top: 1px solid #e9e9e9;
+  border-bottom: 1px solid #e9e9e9;
+}
+
+.swiper-tab-item{
+  width: 25%; 
+  font-size: 32rpx;
+  font-weight: bold;
+  position: relative;
+}
+
+.swiper-tab-item:first-child{  
+  margin-left: 20%;
+}
+
+.swiper-tab-item:nth-child(2){
+  margin-right: 20%;
+}
+
+.active{
+  color:#ed334b;
+}
+
+.info-first{
+  width: 100%;
+  height: 100%;
+}
+
+.info-one{
+  position: relative;
+  width: 100%;
+  height: 60rpx;
+  margin-top: 30rpx;
+  /*border: rgb(0, 0, 0) solid 1px;*/
+}
+
+.info-one text{
+  position: relative;
+  float: left;
+  width:150rpx ;
+  height: 50rpx;
+  line-height: 50rpx;
+  font-size: 32rpx;
+  font-weight: bold;
+  margin-left: 30rpx;
+  letter-spacing: 3rpx;
+}
+
+.info-one input{
+  width: 520rpx;
+  position: relative;
+  float: left;
+  height: 50rpx;
+  line-height: 50rpx;
+  margin-left: 10rpx;
+  padding-left: 5rpx;
+  border: 1px solid #3f3e3e;
+  border-radius: 8rpx;
+}
+
+.info-two{
+  position: relative;
+  width: 100%;
+  height: 60rpx;
+  margin-top: 20rpx;
+  /*border: rgb(0, 0, 0) solid 1px;*/
+}
+
+.info-two text{
+  position: relative;
+  float: left;
+  width:150rpx ;
+  height: 50rpx;
+  line-height: 50rpx;
+  font-size: 32rpx;
+  font-weight: bold;
+  margin-left: 30rpx;
+  letter-spacing: 3rpx;
+}
+
+.info-two input{
+  width: 520rpx;
+  position: relative;
+  float: left;
+  height: 50rpx;
+  line-height: 50rpx;
+  margin-left: 10rpx;
+  padding-left: 5rpx;
+  border: 1px solid #3f3e3e;
+  border-radius: 8rpx;
+}
+
+.info-three{
+  position: relative;
+  width: 100%;
+  height: 60rpx;
+  margin-top: 20rpx;
+  /*border: rgb(0, 0, 0) solid 1px;*/
+}
+
+.info-three text{
+  position: relative;
+  float: left;
+  width:220rpx ;
+  height: 50rpx;
+  line-height: 50rpx;
+  font-size: 32rpx;
+  font-weight: bold;
+  margin-left: 30rpx;
+  letter-spacing: 3rpx;
+}
+
+.info-three input{
+  width: 460rpx;
+  position: relative;
+  float: left;
+  height: 50rpx;
+  line-height: 50rpx;
+  margin-left: 0rpx;
+  padding-left: 5rpx;
+  border: 1px solid #3f3e3e;
+  border-radius: 8rpx;
+}
+
+.info-four{
+  position: relative;
+  width: 100%;
+  height: 60rpx;
+  margin-top: 20rpx;
+  /*border: rgb(0, 0, 0) solid 1px;*/
+}
+
+.info-four text{
+  position: relative;
+  float: left;
+  width:230rpx ;
+  height: 50rpx;
+  line-height: 50rpx;
+  font-size: 32rpx;
+  font-weight: bold;
+  margin-left: 30rpx;
+  letter-spacing: 3rpx;
+}
+
+.info-four input{
+  width: 100rpx;
+  position: relative;
+  float: left;
+  height: 50rpx;
+  line-height: 50rpx;
+  margin-left: 10rpx;
+  padding-left: 5rpx;
+  border: 1px solid #3f3e3e;
+  border-radius: 8rpx;
+}
+
+.info-five{
+  position: relative;
+  width: 100%;
+  height: 60rpx;
+  margin-top: 20rpx;
+  /*border: rgb(0, 0, 0) solid 1px;*/
+}
+
+.info-five input{
+  width: 100rpx;
+  position: relative;
+  float: left;
+  height: 50rpx;
+  line-height: 50rpx;
+  margin-left: 265rpx;
+  padding-left: 5rpx;
+  border: 1px solid #3f3e3e;
+  border-radius: 8rpx;
+}
+
+.info-five text{
+  position: relative;
+  float: left;
+  width:230rpx ;
+  height: 50rpx;
+  line-height: 50rpx;
+  font-size: 32rpx;
+  font-weight: bold;
+  margin-left: 30rpx;
+  letter-spacing: 3rpx;
+}
+
+.info-six{
+  position: relative;
+  width: 100%;
+  height: 60rpx;
+  margin-top: 20rpx;
+  /* border: rgb(0, 0, 0) solid 1px; */
+}
+
+.info-six input{
+  width: 440rpx;
+  position: relative;
+  float: left;
+  height: 50rpx;
+  line-height: 50rpx;
+  margin-left: 265rpx;
+  padding-left: 5rpx;
+  border: 1px solid #3f3e3e;
+  border-radius: 8rpx;
+}
+
+/* 下拉框选项 */
+.info-name-gender-age{
+  height: 60rpx;
+  width: 100%;
+  background: #ffffff;
+  font-size: 32rpx; 
+  position: relative;
+  float: left;
+  margin-top: 20rpx;
+  margin-bottom:30rpx;
+  /* border: rgb(0, 0, 0) solid 1px; */
+}
+
+.info-name{
+  background: #ffffff;
+  height: 60rpx;
+  width: 240rpx;
+  font-size: 32rpx;
+  position: relative; 
+  float: left;
+  /*border: rgb(0, 0, 0) solid 1px;*/
+}
+
+.info-name input{
+  width: 130rpx;
+  position: relative;
+  float: left;
+  height: 50rpx;
+  line-height: 50rpx;
+  margin-left: 10rpx;
+  padding-left: 5rpx;
+  border: 1px solid #3f3e3e;
+  border-radius: 6rpx;
+}
+
+.info-name text{
+  position: relative;
+  float: left;
+  width:70rpx ;
+  height: 50rpx;
+  line-height: 50rpx;
+  font-size: 32rpx;
+  font-weight: bold;
+  margin-left: 20rpx;
+  letter-spacing: 3rpx;
+}
+
+.info-gender{
+  background: #ffffff;
+  height: 50rpx;
+  width: 240rpx;
+  font-size: 32rpx;
+  position: relative; 
+  float: left;
+  /*border: rgb(254, 0, 0) solid 1px;*/
+}
+
+.info-gender-input text{
+  position: relative;
+  float: left;
+  width:80rpx ;
+  height: 50rpx;
+  line-height: 50rpx;
+  font-size: 32rpx;
+  font-weight: bold;
+  margin-left: 20rpx;
+  letter-spacing: 3rpx;
+  /* border: rgb(248, 226, 24) solid 1px; */
+}
+
+.info-age{
+  background: #ffffff;
+  height: 50rpx;
+  width: 240rpx;
+  font-size: 32rpx;
+  position: relative; 
+  float: left;
+  /* border: rgb(240, 0, 0) solid 1px; */
+}
+
+.info-age-input text{
+  position: relative;
+  float: left;
+  width:80rpx ;
+  height: 50rpx;
+  line-height: 50rpx;
+  font-size: 32rpx;
+  font-weight: bold;
+  margin-left: 20rpx;
+  letter-spacing: 3rpx;
+  /* border: rgb(211, 238, 31) solid 1px; */
+}
+
+.qualification-value{
+  text-align: center;
+}
+
+
+
+
+.experience-years-value{
+ text-align: center;
+}
+
+.year-input text{
+  margin-top: 10rpx;
+  font-size: 32rpx;
+  font-weight: bold;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+/* 身份证号 */
+.info-seven{
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 60rpx;
+  margin-top: 30rpx;
+  /* border: rgb(228, 39, 39) solid 1px; */
+}
+
+.info-seven text{
+  position: relative;
+  float: left;
+  width:150rpx ;
+  height: 50rpx;
+  line-height: 50rpx;
+  font-size: 32rpx;
+  font-weight: bold;
+  margin-left: 30rpx;
+  letter-spacing: 3rpx;
+}
+
+.info-seven input{
+  width: 520rpx;
+  position: relative;
+  float: left;
+  height: 50rpx;
+  line-height: 50rpx;
+  margin-left: 10rpx;
+  padding-left: 5rpx;
+  border: 1px solid #3f3e3e;
+  border-radius: 8rpx;
+}
+
+.info-eight{
+  height: 60rpx;
+  width: 100%;
+  background: #ffffff;
+  font-size: 32rpx; 
+  position: relative;
+  float: left;
+  margin-top: 20rpx;
+  margin-bottom:30rpx;
+}
+
+.info-calligraphy-type{
+  background: #ffffff;
+  height: 50rpx;
+  width: 350rpx;
+  font-size: 32rpx;
+  position: relative; 
+  float: left;
+  /*border: rgb(254, 0, 0) solid 1px;*/
+}
+
+.info-calligraphy-type-input text{
+  position: relative;
+  float: left;
+  width: 160rpx ;
+  height: 50rpx;
+  line-height: 50rpx;
+  font-size: 32rpx;
+  font-weight: bold;
+  margin-left: 30rpx;
+  letter-spacing: 3rpx;
+  /* border: rgb(248, 226, 24) solid 1px; */
+}
+
+.info-nine{
+  position: relative;
+  width: 100%;
+  height: 210rpx;
+  margin-top: 30rpx;
+  /*border: rgb(254, 0, 0) solid 1px;*/
+}
+
+.info-nine text{
+  position: relative;
+  float: left;
+  width:150rpx ;
+  height: 50rpx;
+  line-height: 50rpx;
+  font-size: 32rpx;
+  font-weight: bold;
+  margin-left: 30rpx;
+  letter-spacing: 3rpx;
+}
+
+.textarea-wrap textarea{
+  position: relative;
+  float: left;
+  height: 200rpx;
+  width: 520rpx;
+  background: #ffffff;
+  margin-left: 10rpx;
+  font-size: 32rpx;
+  border: rgb(0, 0, 0) solid 1px;
+  border-radius: 8rpx;
+}
+
+.placeholder{
+  color: #c9c9c9;
+}
+
+.submit-icon{
+  position: relative;
+  float: left;
+  width: 30%;
+  height: 80rpx;
+  line-height: 80rpx;
+  margin-left: 35%;
+  margin-top: 90rpx;
+  margin-bottom: 90rpx;
+  font-size: 32rpx;
+  border:  rgb(0, 0, 0) solid 1px;
+}
+
+.info-ten{
+  position: relative;
+  width: 100%;
+  height: 50rpx;
+  margin-top: 20rpx;
+}
+
+.info-ten text{
+  position: relative;
+  float: left;
+  width:150rpx ;
+  height: 50rpx;
+  line-height: 50rpx;
+  font-size: 32rpx;
+  font-weight: bold;
+  margin-left: 30rpx;
+  letter-spacing: 3rpx;
+}
+
+.info-ten input{
+  width: 220rpx;
+  position: relative;
+  float: left;
+  height: 50rpx;
+  line-height: 50rpx;
+  margin-left: 10rpx;
+  padding-left: 5rpx;
+  border: 1px solid #3f3e3e;
+  border-radius: 8rpx;
+}
+
+.info-eleven{
+  position: relative;
+  width: 100%;
+  height: 50rpx;
+  margin-top: 20rpx;
+}
+
+.info-eleven input{
+  width: 220rpx;
+  position: relative;
+  float: left;
+  height: 50rpx;
+  line-height: 50rpx;
+  margin-left: 190rpx;
+  padding-left: 5rpx;
+  border: 1px solid #3f3e3e;
+  border-radius: 8rpx;
+}
+
+.info-eleven text{
+  position: relative;
+  float: left;
+  width:150rpx ;
+  height: 50rpx;
+  line-height: 50rpx;
+  font-size: 32rpx;
+  font-weight: bold;
+  margin-left: 30rpx;
+  letter-spacing: 3rpx;
+}
+
+.info-twelve{
+  position: relative;
+  width: 100%;
+  height: 50rpx;
+  margin-top: 20rpx;
+}
+
+.info-twelve input{
+  width: 520rpx;
+  position: relative;
+  float: left;
+  height: 50rpx;
+  line-height: 50rpx;
+  margin-left: 190rpx;
+  padding-left: 5rpx;
+  border: 1px solid #3f3e3e;
+  border-radius: 8rpx;
+}

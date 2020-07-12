@@ -1,0 +1,10 @@
+<!--pages/mine/purse/purse.wxml-->
+<view class='mine-purse-page'>
+  <view class='mine-purse-title'>
+    <image src='/images/i8.png'></image>
+    <text>余额</text>
+  </view>
+  <view class='mine-purse-balance'>￥<text>1200.00</text></view>
+  <navigator url='withdraw/withdraw' hover-class='none'><button class='mine-purse-btn'>提现</button></navigator>
+  <navigator url='charge/charge' hover-class='none'><button class='mine-purse-btn'>充值</button></navigator>
+</view>

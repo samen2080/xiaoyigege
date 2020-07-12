@@ -1,0 +1,38 @@
+<!--pages/mine/repair/repair-pj/repair-pj.wxml-->
+<form bindsubmit="formSubmit" bindreset="formReset">
+  <view class='input-wrap'>
+    <text>服务评价：</text>
+    <view class="star-pos">
+        <image class='stars' bindtap="changeColor" data-index='1' data-no="{{item}}" wx:for="{{stardata}}"src="{{flag[1]>=item? '/images/full-star.png': '/images/no-star.png'}}" name='rep_rating_grade' image/>
+        <!-- <view style='margin-left: 30rpx;'>{{startext[1]}}</view> 如果此行不注释，就会换行-->
+    </view>
+    <view class='star-desc'>{{startext[1]}}</view>
+  </view>
+
+  <view class='rate-desc-title'>
+    <text>评价描述：</text>
+  </view>
+
+  <view class='textarea-wrap'>
+    <textarea maxlength='138' placeholder='写点什么吧...' placeholder-class='placeholder' name='rep_rating_comment'></textarea>
+  </view>
+
+
+  <view class='btn-wrap'>
+    <button class='cancel-btn' bindtap='back'>取消</button>
+    <button class='sure-btn' form-type='submit'>发布</button>
+  </view>
+</form>
+
+<!-- <view class='textarea-wrap'>
+  <textarea maxlength='10000' placeholder='评价意见...' placeholder-class='placeholder' 
+      name='con_rating_comment'>
+  </textarea>
+</view>
+
+<form bindsubmit="formSubmit" bindreset="formReset">
+  <view class='btn-wrap'>
+    <button class='cancel-btn' bindtap='back'>取消</button>
+    <button class='sure-btn' form-type='submit'>提交</button>
+  </view>
+</form> -->

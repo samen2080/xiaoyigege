@@ -1,0 +1,102 @@
+<!--pages/index/search/search.wxml-->
+<view class='index-search-box'>
+  <view class='wrap'>
+    <view class='index-search'>
+      <image src='/images/search.png' catchtap='search'></image>
+      <input type='search' confirm-type='search' bindinput='bindinput' bindconfirm='bindconfirm' placeholder='搜索关键词' placeholder-class='search-placeholder' value='{{searchVal}}'></input>
+    </view>
+    <text class='cancel-btn' catchtap='cancelSearch'>取消</text>
+  </view>
+</view>
+
+<view class="swiper-tab">
+    <view class="swiper-tab-item {{currentTab==0?'active':''}}" data-current="0" bindtap="clickTab">用户<view class='border-bottom' style='display:{{currentTab==0?"block":"none"}}'></view></view>
+    <view class="swiper-tab-item {{currentTab==1?'active':''}}" data-current="1" bindtap="clickTab">话题<view class='border-bottom' style='display:{{currentTab==1?"block":"none"}}'></view></view>
+    <view class="swiper-tab-item {{currentTab==2?'active':''}}" data-current="2" bindtap="clickTab">帖子<view class='border-bottom' style='display:{{currentTab==2?"block":"none"}}'></view></view>
+</view>
+
+
+<swiper current="{{currentTab}}" duration="300"  bindchange="swiperTab" style='height:{{sheight}}rpx;background:{{bgcolor}}'>
+  <swiper-item>
+    <view class='user-list' wx:if='{{record==true}}' wx:for="{{items}}" wx:key="items" wx:for-item="i">
+      <image src='{{i.user_headimg}}' mode='aspectFill'></image>
+      <view class='user-name'>{{i.user_nickname}}</view>
+      <view class='user-intro'>简介:{{i.user_sign}}</view>
+      <view class='line'></view>
+    </view>
+
+    <!-- 无结果 -->
+    <view class='search-none' wx:if='{{record==false}}'>
+      <image src='/images/norecord.png'></image>
+      <view class='search-none-title'>暂无内容</view>
+    </view>
+
+  </swiper-item>
+  
+  <swiper-item>
+    <view class='sub-list' wx:for="{{items}}" wx:key="items" wx:for-item="i" wx:if='{{record==true}}'><navigator hover-class='none' url='../../community/hot-topic/topic-home/topic-home?topic_id={{i.topic_id}}'>
+      <image src='{{host}}{{i.topic_img[0]}}' mode='aspectFill'></image>
+      <view class='sub-name'>{{i.topic_name}}</view>
+      <view class='sub-intro'><text>动态：{{i.topic_dynamic}}</text>阅读：{{i.topic_read}}</view></navigator>
+    </view>
+
+    <!-- 无结果 -->
+    <view class='search-none' wx:if='{{record==false}}'>
+      <image src='/images/norecord.png'></image>
+      <view class='search-none-title'>暂无内容</view>
+    </view>
+  </swiper-item>
+  
+  <swiper-item>
+    <view class='mine-subject-box' wx:if='{{record==true}}'>
+
+      <view class='mine-subject-list' wx:for="{{items}}" wx:key="items" wx:for-item="i"><navigator hover-class='none' url='../../community/hot-topic/topic-show/topic-show?in_id={{i.in_id}}'>
+        <view class='wrap'>
+          <view class='mine-subject-head-box'>
+            <image src='{{i.in_user_headimg}}' class='mine-subject-tx' mode='aspectFill'></image>
+            <view class='mine-subject-name'>{{i.in_user_nickname}}</view>
+            <view class='mine-subject-time'>{{i.in_add_time}}</view>
+            <image src='/images/arrow-d.png' class='arrow-d' catchtap="listenerButton" data-inid='{{i.in_id}}'></image>
+          </view>
+
+          <view class='mine-subject-content-box'>
+            <text class='mine-subject-cate-name'>{{i.subject}}</text>
+            <text class='mine-subject-content'>{{i.in_content}}</text>
+          </view>
+
+          <view class='mine-subject-img-list' wx:if='{{i.in_append.length != 0}}'>
+            <image src='{{host}}{{item}}' mode='aspectFill' wx:for="{{i.in_append}}" wx:key="item" wx:if='{{i.in_append_type == 1}}'></image>
+            <video src='{{host}}{{item}}' objectFit='cover' wx:for="{{i.in_append}}" wx:key="item" wx:if='{{i.in_append_type == 2}}'></video>
+          </view>
+
+          <view class='mine-subject-info'>
+            <view class='mine-subject-like-img'>
+              <image src='{{item}}' mode='aspectFill' wx:for='{{i.thumbs_up_imgs}}' wx:key='{{i.thumbs_up_imgs}}'></image>
+            </view>
+
+            <view class='mine-subject-like-sum'>点赞<text>{{i.in_thumbs_up_num}}</text></view>
+            
+            <view class='mine-subject-comment'><image src='/images/pinglun.png'></image><text>{{i.in_comment}}</text></view>
+            
+            <view class='mine-subject-like'>
+              <image src='/images/like.png' wx:if='{{i.is_thumbs == 0}}' data-inid='{{i.in_id}}' catchtap='like'></image>
+              <image src='/images/likes.png' wx:if='{{i.is_thumbs == 1}}' data-inid='{{i.in_id}}' catchtap='like'></image>
+              <text>{{i.in_thumbs_up_num}}</text>
+            </view>
+
+            <view class='mine-subject-view'><image src='/images/liulan.png'></image><text>{{i.in_browse}}</text></view>
+          </view>
+        </view></navigator>
+      </view>
+
+    </view>
+
+    <!-- 无结果 -->
+    <view class='search-none' wx:if='{{record==false}}'>
+      <image src='/images/norecord.png'></image>
+      <view class='search-none-title'>暂无内容</view>
+    </view>
+  </swiper-item>
+</swiper>
+
+

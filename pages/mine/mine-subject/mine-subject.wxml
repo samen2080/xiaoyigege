@@ -1,0 +1,50 @@
+<!--pages/mine/mine-subject/mine-subject.wxml-->
+<view class='mine-subject-box'>
+
+  <view class='mine-subject-list' wx:for="{{items}}" wx:key="items" wx:for-item="i"><navigator url='../../community/hot-topic/topic-show/topic-show?in_id={{i.in_id}}' hover-class='none'>
+    <view class='wrap'>
+      <view class='mine-subject-head-box'>
+        <image src='{{i.user_headimg}}' class='mine-subject-tx' mode='aspectFill'></image>
+        <view class='mine-subject-name'>{{i.user_nickname}}</view>
+        <view class='mine-subject-time'>{{i.in_add_time}}</view>
+        <image src='/images/arrow-d.png' class='arrow-d' catchtap="listenerButton" data-id="{{index}}" data-inid='{{i.in_id}}'></image>
+      </view>
+
+      <view class='mine-subject-content-box'>
+        <text class='mine-subject-cate-name'>{{i.topic_name}}</text>
+        <text class='mine-subject-content'>{{i.in_content}}</text>
+      </view>
+
+      <view class='mine-subject-img-list' wx:if='{{i.in_append.length > 0}}'>
+        <image src='{{host}}{{item}}' mode='aspectFill' wx:for="{{i.in_append}}" wx:key="item" wx:if='{{i.in_append_type == 1}}'></image>
+        <video src='{{host}}{{item}}' objectFit='cover' wx:for="{{i.in_append}}" wx:key="item" wx:if='{{i.in_append_type == 2}}'></video>
+      </view>
+
+      <view class='mine-subject-info'>
+        <view class='mine-subject-like-img'>
+          <image src='{{item}}' mode='aspectFill' wx:for='{{i.thumbs_up_imgs}}' wx:key='{{i.thumbs_up_imgs}}'></image>
+        </view>
+
+        <view class='mine-subject-like-sum'>点赞<text>{{i.in_thumbs_up_num}}</text></view>
+        
+        <view class='mine-subject-comment'><image src='/images/pinglun.png'></image><text>{{i.in_comment}}</text></view>
+        
+        <view class='mine-subject-like'>
+          <image src='/images/like.png' wx:if='{{i.is_thumbs == 0}}' data-inid='{{i.in_id}}' catchtap='like'></image>
+          <image src='/images/likes.png' wx:if='{{i.is_thumbs == 1}}' data-inid='{{i.in_id}}' catchtap='like'></image>
+          <text>{{i.in_thumbs_up_num}}</text>
+        </view>
+
+        <view class='mine-subject-view'><image src='/images/liulan.png'></image><text>{{i.in_browse}}</text></view>
+      </view>
+    </view></navigator>
+  </view>
+
+</view>
+
+
+<!-- 空白页 -->
+<view class='kb-page' wx:if='{{items.length <= 0}}'>
+  <image src='/images/kb.png'></image>
+  <view>暂无帖子~</view>
+</view>

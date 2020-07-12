@@ -1,0 +1,116 @@
+/* pages/index/ad/ad-show/ad-show.wxss */
+.ad-show-top{
+  background: #ffffff;
+  border-top:2rpx solid #e9e9e9;
+  position: relative;
+  height: 230rpx;
+}
+.ad-show-name{
+  position: absolute;
+  left: 24rpx;
+  top: 34rpx;
+  font-size: 42rpx;
+  font-weight: bold;
+}
+.ad-show-jj{
+  width: 510rpx;
+  color: #999999;
+  line-height: 48rpx;
+  position: absolute;
+  left: 24rpx;
+  bottom: 30rpx;
+  word-break: break-all;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp:2;
+  overflow: hidden;
+  text-overflow:ellipsis;
+}
+.ad-show-top image{
+  position: absolute;
+  right: 24rpx;
+  top: 30rpx;
+  width: 170rpx;
+  height: 170rpx;
+  border-radius: 12rpx;
+  overflow: hidden;
+}
+
+
+.ad-show-middle,.ad-show-bottom{
+  margin-top: 24rpx;
+  background: #ffffff;
+}
+.ad-show-title-box{
+  height: 90rpx;
+  line-height: 90rpx;
+  font-size: 36rpx;
+  font-weight: bold;
+  border-bottom:2rpx solid #e9e9e9;
+}
+.line{
+  width: 10rpx;
+  height: 38rpx;
+  background: #19c810;
+  float: left;
+  margin: 26rpx 24rpx 0;
+}
+.ad-show-bottom image{
+  width: 55rpx;
+  height: 42rpx;
+  vertical-align: text-bottom;
+  margin-right: 14rpx;
+  float:left;
+  margin-top:24rpx;
+  border-radius: 10rpx;
+}
+
+/* 品牌图册 */
+.ad-show-pic-box{
+  padding: 30rpx 0;
+}
+.ad-show-pic-box-Wrap{
+  height:362rpx; 
+  width:100%; 
+  display: flex; 
+  display: -webkit-box; 
+  flex-direction: column;
+  margin-left: 24rpx;
+}
+.ad-show-pic-box-wrap-1{
+  height:362rpx; 
+  width:100%; 
+} 
+.ad-show-pic-box-wrap-1 image{
+  height:100%; 
+  width:702rpx;
+  margin-left: 24rpx; 
+}
+.ad-show-swiper{
+  text-align: center;
+  width: 554rpx;
+  position: relative;
+  height: 362rpx;
+  flex: 1;
+  margin-right: 24rpx;
+}
+.ad-show-pic{
+  width: 554rpx;
+  height: 100%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  border-radius: 12rpx;
+  overflow: hidden;
+}
+
+
+/* 品牌简介 */
+.ad-show-bottom-jj{
+  display: block;
+  padding: 28rpx 24rpx 100rpx;
+  font-size: 32rpx;
+  line-height: 52rpx;
+  color: #444444;
+  text-align: justify;
+}

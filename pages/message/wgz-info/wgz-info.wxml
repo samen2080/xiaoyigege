@@ -1,0 +1,34 @@
+<!-- 未关注人消息 -->
+<view class='message-list'>   
+
+  <view class='message-list-list'>
+    <view class='wrap'>
+      <image src='/images/wgz-yh-tx.png'></image>
+      <view class='message-list-right'>
+        <text class='message-list-title'>腕力小龙</text><text class='message-list-time'>10:20</text>
+        <text class='message-list-content'>您好，对您的视频非常感兴趣想互相交流对您的视频非常感兴趣想互相交流</text>
+      </view>
+    </view>
+  </view>
+  
+  <view class='message-list-list'>
+    <view class='wrap'>
+      <image src='/images/wgz-yh-tx.png'></image>
+      <view class='message-list-right'>
+        <text class='message-list-title'>腕力阿飞</text><text class='message-list-time'>07-15</text>
+        <text class='message-list-content'>您好，对您的视频非常感兴趣想互相交流对您的视频非常感兴趣想互相交流</text>
+      </view>
+    </view>
+  </view>
+  
+  <view class='message-list-list'>
+    <view class='wrap'>
+      <image src='/images/wgz-yh-tx.png'></image>
+      <view class='message-list-right'>
+        <text class='message-list-title'>喵喵的Mia</text><text class='message-list-time'>2017-06-28</text>
+        <text class='message-list-content'>您好，对您的视频非常感兴趣想互相交流对您的视频非常感兴趣想互相交流</text>
+      </view>
+    </view>
+  </view>
+
+</view>

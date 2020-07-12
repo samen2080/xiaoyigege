@@ -1,0 +1,49 @@
+<!--pages/message/message.wxml-->
+<import src="../../template/template.wxml"/>
+<template is="tabBar" data="{{tabBar:bindData.tabBar}}"/>
+
+ <view class="swiper-tab">
+    <view class="swiper-tab-item {{currentTab==0?'active':''}}" data-current="0" bindtap="clickTab">系统通知<view class='border-bottom' style='display:{{currentTab==0?"block":"none"}}'></view></view>
+    <view class="swiper-tab-item {{currentTab==1?'active':''}}" data-current="1" bindtap="clickTab">系统消息<view class='border-bottom' style='display:{{currentTab==1?"block":"none"}}'></view></view>
+</view> 
+
+ <swiper current="{{currentTab}}" duration="300"  bindchange="swiperTab" style='height:90vh'>
+
+<!-- 系统通知 -->
+   <swiper-item>
+    <view class='message-list'>   
+<!-- 20200209 增加通知已读功能 start -->
+        <view class='message-list-list' wx:for="{{items}}" wx:key="{{items}}" wx:for-item="i">
+            <navigator url='message-show/message-show?om_id={{i.om_id}}&om_add_time={{i.om_add_time}}&om_user_id={{i.om_user_id}}&om_content={{i.om_content}}&om_read_status={{i.om_read_status}}' hover-class='none'><view class='wrap'> 
+            <image src='/images/unread-msg.png' wx:if='{{i.om_read_status == 0}}'></image> 
+            <image src='/images/read-msg.png' wx:if='{{i.om_read_status == 1}}'></image> 
+            <view class='message-list-right'>
+            <text class='message-list-title'>{{i.om_user_id}}</text><text class='message-list-time'>{{i.om_add_time}}</text>
+            <text class='message-list-content'>{{i.om_content}}</text> 
+            </view> 
+            </view></navigator>
+        </view>
+<!-- 20200209 增加通知已读功能 end -->
+    </view>
+  </swiper-item> 
+
+<!-- 系统消息 -->
+   <swiper-item> 
+    <view class='inform-list'>
+
+    
+          <view class='message-list-list' wx:for="{{items}}" wx:key="{{items}}" wx:for-item="i">
+            <navigator url='message-show/message-show?om_id={{i.om_id}}&om_add_time={{i.om_add_time}}&om_user_id={{i.om_user_id}}&om_content={{i.om_content}}&om_read_status={{i.om_read_status}}' hover-class='none'><view class='wrap'> 
+            <image src='/images/unread-msg.png' wx:if='{{i.om_read_status == 0}}'></image> 
+            <image src='/images/read-msg.png' wx:if='{{i.om_read_status == 1}}'></image> 
+            <view class='message-list-right'>
+            <text class='message-list-title'>{{i.om_user_id}}</text><text class='message-list-time'>{{i.om_add_time}}</text>
+            <text class='message-list-content'>{{i.om_content}}</text> 
+            </view> 
+            </view></navigator>
+           </view>    
+    </view>
+   </swiper-item>
+
+
+</swiper> 

@@ -1,0 +1,24 @@
+<!-- 我的粉丝 -->
+<view class='fans-list'>   
+
+  <view class='fans-list-list' wx:for="{{FansList}}" wx:key="{{FansList}}">
+    <view class='wrap'>
+      <image src='{{item.user_headimg}}'></image>
+      <view class='fans-list-right'>
+        <text class='fans-list-title'>{{item.user_nickname}}</text>
+        <text class='fans-list-content'>{{item.user_sign}}</text>
+        <view class='fans-bq focus' id='{{item.user_id}}' wx:if="{{item.follow==1}}" catchtap='focus'>已关注</view>
+        <view class='fans-bq' id='{{item.user_id}}' wx:if="{{item.follow==0}}" catchtap='focus'>+ 关注</view>
+      </view>
+    </view>
+    <view class='line'></view>
+  </view>
+
+</view>
+
+
+<!-- 空白页 -->
+<view class='kb-page' wx:if='{{FansList.length <= 0}}'>
+  <image src='/images/kb.png'></image>
+  <view>暂无粉丝~</view>
+</view>

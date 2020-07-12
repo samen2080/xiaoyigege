@@ -1,0 +1,42 @@
+<!--pages/mine/worker/new-contract-page4/new-contract-page4.wxml-->
+
+<view class="drawer_title">请选择支付方式</view>
+            <view class="weui-cells weui-cells_after-title">
+                <radio-group bindchange="radioChange1" class="radio-group" name="radiogroup">
+                    <label>
+                        <view class="weui-cell">
+                            <view class="zfimg">
+                                <image src="/images/wxpay.png"></image>
+                            </view>
+                            <view class="weui-cell__bd">微信支付</view>
+                            <view class="weui-cell__ft">
+                                <radio checked="{{zffs==1}}" value="wxzf"></radio>
+                            </view>
+                        </view>
+                    </label>
+                    <label>
+                        <view class="weui-cell" style="border-top:1rpx solid #e6e6e6;">
+                            <view class="zfimg">
+                                <image src="/images/wmtime.png"></image>
+                            </view>
+                            <view class="weui-cell__bd">线下支付
+    
+                            </view>
+                            <view class="weui-cell__ft">
+                                <radio checked="{{zffs==2}}" color="#FF9700" value="yezf"></radio>
+                            </view>
+                        </view>
+                    </label>
+                </radio-group>
+            </view>
+
+             <view class="drawer_title1">您选择的{{zfwx}}
+
+             </view>
+             
+             <button bindtap="alone_pay" class="btn_ok1" disabled="{{zfz}}" formType="submit">
+             <view wx:if="{{!zfz&&zffs!=4}}">确定支付
+          <text class="zftext">￥{{QgGoodInfo.money}}</text>
+                </view>
+             </button>
+            

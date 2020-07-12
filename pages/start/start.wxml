@@ -1,0 +1,12 @@
+<!--pages/start/start.wxml-->
+<view class="start-view">
+<image src='/images/start_icon.jpg' mode='widthFix' class="start-image"></image>
+</view>
+
+<button 
+    wx:if="{{canIUse}}" 
+    open-type="getUserInfo" 
+    bindgetuserinfo="bindGetUserInfo"
+    hover-class='none'
+>立即开始</button>
+<view wx:else>请升级微信版本</view>

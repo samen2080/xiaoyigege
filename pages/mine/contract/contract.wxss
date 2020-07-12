@@ -1,0 +1,91 @@
+/* pages/mine/contract/contract.wxss */
+@import '../publish/publish.wxss';
+
+.on-list-list{
+  overflow: hidden;
+}
+.on-list-number-wrap{
+  height: 100rpx;
+  line-height: 100rpx;
+  border-bottom: 2rpx solid #e6e6e6;
+  overflow: hidden;
+  margin-left: 15rpx;
+}
+/* .on-list-number{
+  color: #999999;
+  float: left;
+  margin-left: 24rpx;
+} */
+.on-list-name1{
+  margin-top: 10rpx;
+  margin-left: 200rpx;
+  text-align: left;
+}
+
+.on-list-name2{
+  margin-top: 10rpx;
+  margin-left: 200rpx;
+  text-align: left;
+}
+.on-list-name3{
+  margin-top: 10rpx;
+  margin-left: 200rpx;
+  text-align: left;
+}
+.on-list-status{
+  color: #999999;
+  float: right;
+  margin-right: 24rpx;
+}
+.orange-txt{
+  color: #ff721c;
+}
+.on-list-btn-wrap{
+  width: 170rpx;
+  height: 90rpx;
+  overflow:visible;
+  float: right;
+  margin-left: 16rpx;
+}
+.on-list-remove-btn{
+  width: 100%;
+  height: 58rpx;
+  line-height: 58rpx;
+  margin-right: 0;
+  font-size: 28rpx;
+  color: #ff721c;
+  border: 2rpx solid #ff721c;
+  margin-top: 16rpx;
+}
+.on-list-btn-wrap:nth-child(3){
+  margin-right: 24rpx;
+}
+.on-list-btn-wrap:nth-child(4) .on-list-remove-btn{
+  color: #000000;
+  border: 2rpx solid #999999;
+}
+
+/*20191101 start */
+.mine-contract-date-wrap{
+  width: 158rpx;
+  height: 158rpx;
+  float: left;
+  vertical-align: middle;
+}
+
+.mine-contract-date-title{
+  position: absolute;
+  width: 510rpx;
+  bottom: 24rpx;
+  right: 24rpx;
+  text-align: left;
+}
+.mine-contract-date-value{
+  width: 510rpx;
+  position: absolute;
+  bottom: 24rpx;
+  right: -130rpx;
+  text-align: left;
+  color: #ff721c;
+}
+/*20191101 end */

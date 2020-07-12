@@ -1,0 +1,40 @@
+/* pages/mine/purse/purse.wxss */
+page{
+  background: #ffffff;
+  text-align: center;
+}
+.mine-purse-title{
+  font-size: 32rpx;
+  color: #999999;
+  margin: 80rpx 0 32rpx;
+}
+.mine-purse-title image{
+  width: 36rpx;
+  height: 36rpx;
+  vertical-align: text-bottom;
+  margin-right: 10rpx;
+}
+.mine-purse-balance{
+  font-size: 64rpx;
+  color: #19c810;
+  margin-bottom: 220rpx;
+}
+
+.mine-purse-btn,navigator{
+  width: 342rpx;
+  height: 84rpx;
+  line-height: 84rpx;
+  display: inline-block;
+  font-size: 36rpx;
+}
+navigator:nth-child(3){
+  margin-right: 18rpx;
+}
+navigator:nth-child(3) .mine-purse-btn{
+  color: #999999;
+  background: #e9e9e9;
+}
+navigator:nth-child(4) .mine-purse-btn{
+  color: #ffffff;
+  background: #19c810;
+}

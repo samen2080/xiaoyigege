@@ -1,0 +1,28 @@
+<!--pages/mine/coin/coin-make/coin-make.wxml-->
+<view class='mine-coin-top'>
+  <image src='/images/coin-back.png' class='mine-coin-back' mode='aspectFill'></image>
+  <view class='mine-coin-number-box'>
+    <image src='/images/coin-circle.png'></image>
+    <view class='mine-coin-number-wrap'>
+      <view class='mine-coin-number-title'>当前鼓币</view>
+      <view class='mine-coin-number'>4000</view>
+    </view>
+  </view>
+</view>
+
+<view class='coin-make-box'>
+  <view class='wrap'>
+    <view class='coin-make-list'>
+      <image src='/images/i7.png'></image>
+      <text class='coin-make-list-title'>每天登陆<text> (连续登陆21天额外奖励30)</text></text>
+      <text class='coin-make-list-number'>+2</text>
+      <view class='coin-make-btn' id='{{disable}}' bindtap='getCoin'>{{btnText}}</view>
+    </view>
+    <view class='coin-make-list'>
+      <image src='/images/i7.png'></image>
+      <text class='coin-make-list-title'>发帖1次(1天最多获15个)</text>
+      <text class='coin-make-list-number'>+5</text>
+      <view class='coin-make-btn'>立即前往</view>
+    </view>
+  </view>
+</view>

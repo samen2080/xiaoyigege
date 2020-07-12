@@ -1,0 +1,40 @@
+.success-top{
+  height: 406rpx;
+  background: #ffffff;
+  text-align: center;
+  border-top: 2rpx solid #e9e9e9;
+}
+.success-top image{
+  width: 208rpx;
+  height: 165rpx;
+  margin: 30rpx 0;
+}
+.success-top-title{
+  font-weight: bold;
+  font-size: 36rpx;
+}
+
+.success-top-btn{
+  width: 148rpx;
+  height: 56rpx;
+  line-height: 56rpx;
+  text-align:center;
+  margin-left: 300rpx;
+  margin-top: 30rpx;
+  border-radius: 12rpx;
+  border: 2rpx solid #19c810;
+  color: #19c810;
+}
+
+
+.success-phone{
+  background: #ffffff;
+  margin-top: 24rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+  padding: 0 24rpx;
+  font-size: 32rpx;
+}
+.success-phone text{
+  float: right;
+}

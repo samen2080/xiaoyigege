@@ -1,0 +1,61 @@
+<!--pages/mine/repair/repair-new/repair-new.wxml-->
+<form bindsubmit="formSubmit" bindreset="formReset">
+  <view class='contract-show-middle-title'>
+    <text>维修信息：</text>
+  </view>
+  <view class='input-wrap' >
+    <text>用户ID：{{user_id}}</text>
+    <input placeholder-class='placeholder' name='rep_user_id'></input>
+  </view>
+  <view class='input-wrap' >
+    <text>用户电话：</text>
+    <input placeholder-class='placeholder' name='rep_user_mobile'></input>
+  </view>
+  
+  <view class='input-wrap' >
+  <text>用户区域：</text>
+  <input placeholder="选择" value="{{rep_user_province}}-{{rep_user_city}}-{{rep_user_county}}" focus="{{focus}}" bindfocus="open" />
+  </view>
+  
+ 
+    <view class="citypicker" hidden='{{condition}}'>
+      <picker-view indicator-style="height: 50px;" style="width: 100%; height: 300px;" value="{{value}}" bindchange="bindChange" class="citybody">
+        <view class="cityheader">
+              <view bindtap="open" class="city-cancel">取消</view>
+              <view bindtap="open" class="city-true">确定</view>
+        </view>
+        <picker-view-column>
+          <view wx:for="{{provinces}}" wx:key="item" style="line-height: 50px;padding-left:10px;">{{item}}</view>
+        </picker-view-column>
+        <picker-view-column>
+          <view wx:for="{{citys}}" wx:key="item" style="line-height: 50px;padding-left:10px;">{{item}}</view>
+        </picker-view-column>
+        <picker-view-column>
+          <view wx:for="{{countys}}" wx:key="item" style="line-height: 50px;padding-left:10px;">{{item}}</view>
+        </picker-view-column>
+      </picker-view>
+    </view>
+
+
+  <view class='input-wrap' >
+    <text>用户地址：</text>
+    <input placeholder-class='placeholder' name='rep_user_address'></input>
+  </view>
+  <!-- <view class='input-wrap' >
+    <text>维修日期：</text>
+    <input placeholder-class='placeholder' name='rep_date'></input>
+  </view> -->
+  <view class='input-wrap'>
+        <text>日期：</text>
+        <view class="section">  
+          <picker mode="date" value="{{rep_date}}" bindchange="bindDateChange">  
+            <view class="picker" style='color:{{dateColor}}'>{{rep_date}}</view>  
+          </picker>  
+        </view> 
+  </view>
+  <view class='btn-wrap' wx:if='{{condition == 1}}'>
+      <button class='next-btn' form-type='submit'>下一步</button>
+  </view>
+
+  </form>
+ 

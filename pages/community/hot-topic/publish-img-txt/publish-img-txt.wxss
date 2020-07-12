@@ -1,0 +1,15 @@
+/* pages/community/hot-topic/publish-img-txt/publish-img-txt.wxss */
+@import "../publish-txt/publish-txt.wxss";
+
+textarea{
+  height: 200rpx;
+  margin-bottom: 24rpx;
+}
+.upload-wrap image{
+  width: 228rpx;
+  height: 228rpx;
+}
+.upload-wrap image:nth-child(2),.upload-wrap image:nth-child(5),.upload-wrap image:nth-child(8){
+  margin-left: 9rpx;
+  margin-right: 9rpx;
+}

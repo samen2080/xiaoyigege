@@ -1,0 +1,72 @@
+/* pages/index/activity/activity.wxss */
+.activity-banner{
+  padding: 24rpx;
+}
+.activity-banner swiper{
+  width: 702rpx;
+  height: 340rpx;
+  border-radius: 12rpx;
+  overflow: hidden;
+}
+.activity-banner swiper image{
+  width: 100%;
+  height: 100%;
+}
+
+.activity-list-box{
+  background: #ffffff;
+}
+.activity-list-box-title{
+  font-size: 32rpx;
+  border-bottom: 2rpx solid #e9e9e9;
+  height: 90rpx;
+  line-height: 90rpx;
+  font-weight: bold;
+  padding-left: 24rpx;
+}
+
+
+.activity-list-wrap{
+  overflow: hidden;
+  padding-bottom: 80rpx;
+}
+.activity-list-box{
+  /* margin-top: 86rpx; */
+}
+.activity-list{
+  background: #ffffff;
+  width: 342rpx;
+  height: 386rpx;
+  margin-top: 24rpx;
+}
+.left{
+  float: left;
+  margin-left: 24rpx;
+}
+.right{
+  float: right;
+  margin-right: 24rpx;
+}
+.activity-list image{
+  width: 342rpx;
+  height: 220rpx;
+  border-radius: 12rpx;
+  overflow: hidden;
+  vertical-align: middle;
+}
+.activity-name{
+  font-size: 32rpx;
+  margin: 24rpx 6rpx 16rpx;
+  display: -webkit-box;
+  word-break: break-all;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp:2;
+  overflow: hidden;
+  text-overflow:ellipsis;
+}
+.activity-location{
+  font-size: 26rpx;
+  color: #999999;
+  border-radius: 8rpx;
+  margin-left: 6rpx;
+}

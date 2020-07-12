@@ -1,0 +1,33 @@
+<!--pages/mine/purse/charge/charge.wxml-->
+<view class='purse-cate-page'>
+
+  <view class='purse-cate-list'>
+    <view class='wrap'>
+      <text class='purse-cate-list-title'>充值方式</text>
+      <text class='purse-cate-list-content'>微信</text>
+    </view>
+  </view>
+  
+  <view class='purse-cate-list'>
+    <view class='wrap'>
+      <text class='purse-cate-list-title'>充值金额</text>
+      <view class='purse-cate-list-sum'>￥<input id='purse-cate-list-sum' type='number' value='{{sum}}'></input></view>
+    </view>
+  </view>
+
+  <view class='purse-cate-list'>
+    <view class='wrap'>
+      <text class='purse-cate-list-title'>本次最多可充值￥10000</text> 
+    </view>
+  </view>
+
+</view>
+
+<view class='rule'>
+  <view class="rule-radio {{ischecked}}" bindtap='binchecked'></view>
+  <text>同意《支付服务协议》</text>
+</view>
+
+<view class='purse-btn'>
+  <button>确定</button>
+</view>

@@ -1,0 +1,16 @@
+<view class="ws_menu">
+	<navigator hover-class="none" url="/pages/mine/worker/new-contract-page1/new-contract-page1"><image src="https://m.youzhu.com/images/weChatAppImages/icon_1.png" /><text>新建合约</text></navigator>
+
+	<navigator hover-class="none" url="/pages/mine/worker/workcontract/workcontract"><image src="https://m.youzhu.com/images/weChatAppImages/icon_2.png" /><text>查看合约</text></navigator>
+
+	<navigator hover-class="none" url="/pages/mine/worker/new-maint-page1/new-maint-page1"><image src="https://m.youzhu.com/images/weChatAppImages/icon_1.png" /><text>新建保养</text></navigator>
+
+	<navigator hover-class="none" url="/pages/mine/worker/workmaint/workmaint"><image src="https://m.youzhu.com/images/weChatAppImages/icon_2.png" /><text>查看保养</text></navigator>
+
+	<navigator hover-class="none"
+   url="/pages/mine/worker/new-repair-page1/new-repair-page1"><image src="https://m.youzhu.com/images/weChatAppImages/icon_1.png" /><text>新建维修</text></navigator>
+
+	<navigator hover-class="none"
+   url="/pages/mine/worker/workrepair/workrepair"><image src="https://m.youzhu.com/images/weChatAppImages/icon_2.png" /><text>查看维修</text></navigator>
+
+</view>

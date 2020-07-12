@@ -1,0 +1,50 @@
+/* pages/mine/coin/coin-make/coin-make.wxss */
+@import "../coin.wxss";
+
+.coin-make-box{
+  width: 100%;
+}
+.coin-make-list{
+  width: 100%;
+  height: 128rpx;
+  margin-top: 24rpx;
+  background: #ffffff;
+  border-radius: 12rpx;
+  position: relative;
+}
+.coin-make-list image{
+  width: 73rpx;
+  height: 79rpx;
+  margin: 24rpx 22rpx 0 24rpx;
+  vertical-align: middle;
+}
+.coin-make-list-title text{
+  color: #999999;
+  font-size: 24rpx;
+}
+.coin-make-list-number{
+  font-size: 32rpx;
+  color: #999999;
+  width: 500rpx;
+  position: absolute;
+  bottom: 20rpx;
+  left: 119rpx;
+}
+.coin-make-btn{
+  width: 132rpx;
+  height: 54rpx;
+  line-height: 54rpx;
+  font-size: 26rpx;
+  border:1px solid #19c810;
+  color: #19c810;
+  border-radius: 12rpx;
+  text-align: center; 
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 24rpx;
+}
+#disable{  
+  border:1px solid #999999;
+  color: #999999;
+}

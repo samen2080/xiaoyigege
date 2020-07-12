@@ -1,0 +1,121 @@
+<!--pages/community/hot-topic/topic-home/topic-home.wxml-->
+
+<view class='topic-home-top'>
+  <image src='/images/mine-back.png' class='topic-home-top-back' mode='aspectFill'></image>
+  <button open-type='share' class='topic-home-top-share' hover-class='none'><image src='/images/share1.png'></image></button>
+  <image src='{{host}}{{topic.topic_img}}' class='topic-home-top-cover' mode='aspectFill'></image>
+
+  <view class='topic-home-top-name'>{{topic.topic_name}}</view>
+  <view class='topic-home-top-info'><text>帖子：{{topic.in_count}}</text><text>阅读：{{topic.topic_read}}</text></view>
+  <view class='topic-home-top-intro'><text>参与：{{topic.topic_comment}}</text></view>
+</view>
+
+<view class='topic-home-middle'>
+  <view class='topic-home-middle-source'><navigator url='../topic-member/topic-member?topic_id={{topic_id}}' hover-class='none'>
+    <image src='{{topic.user_headimg}}' mode='aspectFill'></image>
+    <text class='topic-home-middle-name'>{{topic.user_nickname}}</text>
+    <view class='topic-home-middle-people'>发起者</view></navigator>
+  </view>
+
+  <view class='topic-home-middle-active'>
+    <text class='topic-home-middle-active-title'>活跃用户：</text>
+    <view class='topic-home-middle-active-tx'>
+      <image src='{{item.user_headimg}}' wx:for='{{userList}}' wx:key='{{userList}}'wx:if='{{item.index < 6}}'></image>
+    </view>
+    <text class='topic-home-middle-active-number'>{{userList.length}}名</text>
+  </view>
+
+  <view class='topic-home-middle-bbs'>
+    <image src='/images/i3.png'></image><text>相关论坛</text>
+  </view>
+
+  <view class='community-bbs-list-wrap'>
+    <view class='community-bbs-list'><navigator hover-class='none' url='../../bbs/bbs-home/bbs-home?forum_id={{forumList.forum_id}}'>
+      <view class='community-bbs-tx-wrap'>
+        <image src='{{host}}{{forumList.forum_img}}' mode='aspectFill'></image>
+      </view>
+
+      <view class='community-bbs-name'>{{forumList.forum_name}}</view>
+      <view class='community-bbs-instru'>{{forumList.forum_intro}}</view></navigator>
+    </view>
+  </view>
+</view>
+
+<view class='topic-home-bottom'>
+  <view class='topic-home-middle-bbs'>
+    <image src='/images/i10.png'></image><text>推荐动态</text>
+  </view>
+
+  <view class='mine-subject-box'>
+
+    <view class='mine-subject-list' wx:for="{{inList}}" wx:key="{{inList}}" wx:for-item="i" data-inid="{{i.in_id}}" catchtap='showPage'>
+      <view class='wrap'>
+        <view class='mine-subject-head-box'>
+          <image src='{{i.in_user_headimg}}' class='mine-subject-tx' mode='aspectFill'></image>
+          <view class='mine-subject-name'>{{i.in_user_nickname}}</view>
+          <view class='mine-subject-time'>{{i.in_add_time}}</view>
+          <image src='/images/arrow-d.png' class='arrow-d' catchtap="listenerButton" data-inid="{{i.in_id}}"></image>
+        </view>
+
+        <view class='mine-subject-content-box'>
+          <text class='mine-subject-cate-name'>{{i.topic_name}}</text>
+          <text class='mine-subject-content'>{{i.in_content}}</text>
+        </view>
+
+        <view class='mine-subject-img-list'>
+          <image src='{{host}}{{item}}' mode='aspectFill' wx:for="{{i.in_append}}" wx:key="item" wx:if='{{i.in_append_type == 1}}'></image>
+          <video src='{{host}}{{item}}' objectFit='cover' wx:for="{{i.in_append}}" wx:key="item" wx:if='{{i.in_append_type == 2}}'></video>
+        </view>
+
+        <view class='mine-subject-info'>
+          <view class='mine-subject-like-img'>
+            <image src='{{item}}' mode='aspectFill' wx:for="{{i.thumbs_up_imgs}}" wx:key="item"></image>
+          </view>
+
+          <view class='mine-subject-like-sum'>点赞<text>{{i.in_thumbs_up_num}}</text></view>
+          
+          <view class='mine-subject-comment'><image src='/images/pinglun.png'></image><text>{{i.in_comment}}</text></view>
+          
+          <view class='mine-subject-like'>
+            <image src='/images/like.png' wx:if='{{i.is_thumbs == 0}}' data-inid='{{i.in_id}}' catchtap='like'></image>
+            <image src='/images/likes.png' wx:if='{{i.is_thumbs == 1}}' data-inid='{{i.in_id}}' catchtap='like'></image>
+            <text>{{i.in_thumbs_up_num}}</text>
+          </view>
+
+          <view class='mine-subject-view'><image src='/images/liulan.png'></image><text>{{i.in_browse}}</text></view>
+        </view>
+      </view>
+    </view>
+
+    <!-- 空白页 -->
+    <view class='kb-info' wx:if='{{inList.length <= 0}}'>暂无动态~</view>
+
+  </view>
+</view>
+
+
+
+<!-- 发布 -->
+<image src='/images/bbs-fabu.png' class='sub-publish-btn' catchtap='publishBbs'></image>
+
+<view class='sub-publish-page' hidden='{{pubPage}}'>
+  <view class='sub-publish-box'>
+    <view class='wrap'>
+      <view><navigator url='../publish-txt/publish-txt?topic_id={{topic_id}}' hover-class='none'><image src='/images/text.png'></image></navigator></view>
+      <view><navigator url='../publish-img-txt/publish-img-txt?topic_id={{topic_id}}' hover-class='none'><image src='/images/img-txt.png'></image></navigator></view>
+      <view><navigator url='../publish-video/publish-video?topic_id={{topic_id}}' hover-class='none'><image src='/images/video.png'></image></navigator></view>
+    </view>
+    <image src='/images/close1.png' class='sub-publish-close' catchtap='closePage'></image>
+  </view>
+</view>
+
+
+
+<!-- 消耗鼓币 -->
+<!-- <view class='removeModal' hidden='{{hidden}}'>
+  <view class='removeModal-box'>
+    <view class='removeModal-title'><text>想看全部内容吗？</text><view class='removeModal-title2'>兑换鼓币才能查看哦~</view></view>       
+    <view class='removeModal-cancel' bindtap='removeCancel'>取消</view>
+    <view class='removeModal-sure' bindtap='removeSure' data-num="{{num}}">消耗鼓币 20</view>
+  </view>
+</view> -->

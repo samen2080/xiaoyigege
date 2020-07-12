@@ -1,0 +1,2 @@
+/* pages/community/bbs/publish/publish.wxss */
+@import "../../hot-topic/publish-img-txt/publish-img-txt.wxss"

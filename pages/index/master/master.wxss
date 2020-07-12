@@ -1,0 +1,65 @@
+/* pages/index/master/master.wxss */
+
+.master-list{
+  background: #ffffff;
+  border-radius: 10rpx;
+  margin-top: 24rpx;
+  padding: 0 24rpx;
+  overflow: hidden;
+}
+.master-list-top{
+  position: relative;
+  border-bottom: 2rpx solid #e9e9e9;
+}
+.master-list-top image{
+  width: 184rpx;
+  height: 184rpx;
+  border-radius: 12rpx;
+  margin: 32rpx 0;
+}
+.master-list-name{
+  position: absolute;
+  top: 36rpx;
+  margin-left: 24rpx;
+  font-size: 36rpx;
+}
+.master-list-jj{
+  width: 440rpx;
+  position: absolute;
+  bottom: 38rpx;
+  left: 208rpx;
+  color: #999999;
+  line-height: 42rpx;
+  display: -webkit-box;
+  word-break: break-all;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp:3;
+  overflow: hidden;
+  text-overflow:ellipsis;
+}
+
+
+.master-list-bottom{
+  display: flex;
+  height: 50rpx;
+  line-height: 50rpx;
+  margin: 26rpx 0;
+}
+.master-list-bottom view{
+  flex: 1;
+  text-align: center;
+  color: #444444;
+  height: 50rpx;
+  line-height: 50rpx;
+  border-right: 2rpx solid #e9e9e9;
+}
+.master-list-bottom view:last-child{
+  border-right: none;
+}
+.master-list-bottom view text{
+  color: #19c810;
+  font-weight: bold;
+  margin-left: 24rpx;
+  font-size: 36rpx;
+  vertical-align: middle;
+}

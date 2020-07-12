@@ -1,0 +1,11 @@
+<!--pages/community/hot-topic/hot-topic.wxml-->
+
+<view class='hot-topic-list' wx:for='{{hotList}}' wx:key='{{hotList}}'><navigator url='topic-home/topic-home?topic_id={{item.topic_id}}' hover-class='none'>
+  <view class='wrap'>
+    <image src="{{host}}{{item.topic_img[0]}}" mode='aspectFill'></image>
+    <view class='hot-topic-list-bq' wx:if='{{item.index < 3}}'>{{item.index + 1}}</view>
+    <view class='hot-topic-list-title'>{{item.topic_name}}</view>
+    <view class='hot-topic-list-intro'>{{item.topic_content}}</view>
+    <view class='hot-topic-list-info'><text>动态：<text>{{item.topic_comment}}</text></text><text>阅读：<text>{{item.topic_read}}</text></text></view>
+  </view></navigator>
+</view>

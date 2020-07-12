@@ -1,0 +1,35 @@
+<view class='info-edit-page'>
+  <form id='info-edit-form' bindsubmit="formSubmit" bindreset="formReset">
+    <view class='info-edit-form-tx'>
+      <image src='{{user_headimg}}' id='info-tx' mode='aspectFill' catchtap='uploadImg'></image>
+      <view>点击上传头像</view>
+    </view>
+    <view class='info-edit-form-modify'>
+      <view class='info-edit-input'><text>昵称</text><input type='text' placeholder='请输入昵称' placeholder-class="placeholder" value='{{userInfo.user_nickname}}' name='user_nickname'></input></view>
+      <view class='info-edit-input' catchtap='genderSelect'>
+        <text>性别</text>
+        <view class='gender-select'><image src='{{id==0?"/images/male.png":"/images/circle.png"}}' data-id='0'></image>男</view>
+        <view class='gender-select'><image src='{{id==1?"/images/female.png":"/images/circle.png"}}' data-id='1'></image>女</view>
+      </view>
+      <view class='info-edit-input'><text>手机号</text><input type='text' placeholder='请输入手机号' placeholder-class="placeholder" value='{{userInfo.user_phone}}' name='user_phone'></input></view>
+
+      <view class='info-edit-input'>
+        <text>生日</text>
+        <view class="section">  
+          <picker mode="date" value="{{dates}}" bindchange="bindDateChange">  
+            <view class="picker" style='color:{{dateColor}}'>{{dates}}</view>  
+          </picker>  
+        </view> 
+      </view>
+
+      <view class='info-edit-input'><text>地址</text><input type='text' placeholder='请输入地址' placeholder-class="placeholder" value='{{userInfo.user_address}}' name='user_address'></input></view>      
+      <view class='info-edit-input'><text>签名</text><input type='text' value='{{userInfo.user_sign}}' name='user_sign'></input></view>
+      <view class='info-edit-input' wx:if='{{userInfo.user_identity == 2}}'><text>简介</text><textarea maxlength='1000' value='{{userInfo.user_intro}}' name='user_intro'></textarea></view>
+    </view>
+    <view class='info-edit-form-btn'>
+      <button formType="submit" class='info-edit-form-sub-btn'>
+        <text class='btn-text'>保存</text>
+      </button>
+    </view>
+  </form>
+</view>

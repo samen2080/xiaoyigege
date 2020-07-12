@@ -1,0 +1,59 @@
+<!--pages/index/activity/activity-show/activity-show.wxml-->
+
+<view class='activity-show-top'>
+  <view class="swiperContainer">
+    <swiper bindchange="swiperChange" autoplay="{{autoplay}}" current='{{current}}'>
+        <block wx:for="{{imgUrls}}" wx:key="*this">
+            <swiper-item>
+                <image src="{{item}}" mode="aspectFill"/>
+            </swiper-item>
+        </block>
+    </swiper>
+    <view class="imageCount">{{current+1}} / {{imgUrls.length}}</view>
+  </view>
+
+  <view class='activity-show-info'>
+    <view class='wrap'>
+      <view class='activity-show-name'>打击乐行业盛会航空之家的全新教育之姿</view>
+      <view class='activity-show-time'><image src='/images/time-icon.png'></image><text>2018年4.29-5.1</text></view>
+    </view>
+  </view>
+</view>
+
+
+
+<view class='activity-show-middle'>
+  <view class='activity-show-title-box'>
+    <text class='activity-show-title'>活动详情</text>
+  </view>
+
+  <view class='activity-show-info-box'>
+    <view class='activity-show-info-list'>时间：<text>2017/11/15 13:00-18:30</text></view>
+    <view class='activity-show-info-list'>地点：<text>北京.乐空间</text></view>
+    <view class='activity-show-info-list'>邀请大师：<text>张佳曦、荀亮</text></view>
+    <view class='activity-show-info-list'>针对人群：<text>全国航空、教师</text></view>
+    <view class='activity-show-info-list'>报名费用：<text>1080元/票</text></view>
+    <view class='activity-show-info-list'>限100人 前10个名额免费 前30报名享福利价99元</view>
+    <view class='activity-show-info-list'>流程：<text>11月15日下午13：00签到入场</text></view>
+  </view>
+</view>
+
+
+
+<view class='activity-show-middle'>
+  <view class='activity-show-title-box'>
+    <text class='activity-show-title'>活动内容</text>
+  </view>
+
+  <view class='activity-show-content-box'>
+    <text class='activity-show-content-list'>
+      1.艺术家演出及技术分享<br/>
+      2.航空之家课件及教学理念分享<br/>
+      3.航空之家加盟战略合作发布会<br/>
+      4.战略合作品牌介绍<br/>
+      5.两位艺术家battle演出<br/>
+      6.抽奖<br/>
+      特别演出环节：张佳曦老师庆祝2017第50场演奏会。<br/>
+    </text>
+  </view>
+</view>

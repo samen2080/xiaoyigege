@@ -1,0 +1,56 @@
+<!--pages/mine/workplan/workplan.wxml-->
+<view class='index-list-title2'>
+  <text>合约概要</text>
+</view>
+
+<view class='on-list-number-wrap-top'>
+  <text class='on-list-number-top'>合约编号:<text space="emsp"> {{coninfo[0].con_id}}</text></text>
+  <text class='on-list-number-top'>姓名:<text space="emsp"> {{coninfo[0].con_user_name}}</text></text>
+</view>
+<view class='on-list-number-wrap-top'>
+  <text space="nbsp">   用户区域: <text space="emsp">{{coninfo[0].con_user_province}}{{coninfo[0].con_user_city}}{{coninfo[0].con_user_county}}</text></text>
+  <!-- <text class='on-list-number-top' space="emsp"> 电话:<text space="emsp"> {{coninfo[0].con_user_mobile}}</text></text> -->
+</view>
+<view class='on-list-number-wrap-top'>
+  <text space="nbsp">   用户地址: <text pace="emsp"> {{coninfo[0].con_user_address}}</text></text>
+</view>
+<view class='on-list-number-wrap-top'>
+  <text space="nbsp">   用户电话: <text pace="emsp"> {{coninfo[0].con_user_mobile}}</text></text>
+</view>
+
+
+
+<view class='index-list-title2'>
+  <text>计划详情</text>
+</view>
+
+ 
+<view class='on-list'>   
+  <view class='on-list-list' wx:for="{{items}}" wx:key="{{items}}" wx:for-item="i">
+    <view class='on-list-number-wrap'>
+      <text class='on-list-number'>计划编号:<text>{{i.pln_id}}</text></text>
+      <text class='on-list-status orange-txt' wx:if='{{i.pln_status==1}}'>待执行</text>
+      <text class='on-list-status' wx:else>{{i.pln_status==2 ? "已执行":"已过期"}}</text>
+    </view>
+
+    <navigator url='repair-show/repair-show?con_id={{i.pln_id}}' hover-class='none'><view class='on-list-info'>
+      <image src='/images/资讯2.png'></image>
+      <text class='mine-contract-date-title2'>保养编号：{{i.pln_mnt_id}}</text>
+      <view class='mine-contract-date-wrap'>
+          <text class='mine-contract-date-title'>执行日期:</text>
+          <text class='mine-contract-date-value'>{{i.pln_exe_date}}</text>
+      </view>
+    </view></navigator>
+
+    <view class='on-list-btn-wrap' wx:if='{{i.pln_status == 1}}'><button class='on-list-remove-btn' hover-class='none' data-plnid="{{i.pln_id}}" data-i="{{i}}" catchtap='exePlan'>执行计划</button></view>
+       
+    <view class='on-list-btn-wrap'><button class='on-list-remove-btn' hover-class='none' data-plnmntid="{{i.pln_mnt_id}}" catchtap='workMaint'>查看保养</button></view>
+  </view>  
+</view>
+
+<view class='kb-page' wx:if='{{items.length <= 0}}'>
+  <image src='/images/kb.png'></image>
+  <view>暂无记录~</view>
+</view>
+
+

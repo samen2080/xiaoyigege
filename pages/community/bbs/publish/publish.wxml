@@ -1,0 +1,23 @@
+<!--pages/community/bbs/publish/publish.wxml-->
+<form bindsubmit="formSubmit" bindreset="formReset">
+  <view class='input-wrap'>
+    <text>名称：</text>
+    <input placeholder='4-23个字' placeholder-class='placeholder' name='topic_name'></input>
+  </view>
+
+  <view class='textarea-wrap'>
+    <textarea maxlength='10000' placeholder='话题简介...' placeholder-class='placeholder' name='topic_intro'></textarea>
+    <view class='upload-wrap'>    
+      <block wx:for="{{img_arr}}" wx:key="index">
+        <image src='{{host}}{{item}}' mode='aspectFill'></image>
+      </block>
+      <image src='/images/fabu1.png' class='upload-btn' mode='aspectFill' catchtap='upimg' hidden='{{upHidden}}'></image>
+    </view>
+  </view>
+
+
+  <view class='btn-wrap'>
+    <button class='cancel-btn' bindtap='back'>取消</button>
+    <button class='sure-btn' form-type='submit'>发布</button>
+  </view>
+</form>

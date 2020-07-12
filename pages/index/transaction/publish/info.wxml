@@ -1,0 +1,16 @@
+<!--pages/index/transaction/publish/info.wxml-->
+
+<form id='addInfo' bindsubmit="formSubmit" bindreset="formReset">
+  <view class='addInfo-price'>金额<input placeholder='请输入金额' name='price' placeholder-class='placeholder'></input><text>￥</text></view>
+  <view class='addInfo-input'>联系人<input placeholder='姓名' name='link_name' placeholder-class='placeholder'></input></view>
+  <view class='addInfo-input'>联系电话<input placeholder='手机号' name='link_mobile' placeholder-class='placeholder'></input></view>
+  <view class='addInfo-price'>选择区域
+    <picker mode="region" bindchange="bindRegionChange" value="{{region}}" custom-item="{{customItem}}" class='area-select'>
+      <view class="picker">{{region[0]}} {{region[1]}} {{region[2]}}</view>
+    </picker>
+  </view>
+  <view class='addInfo-input'>详细地址<input placeholder='请具体到街道、门牌' name='link_address' placeholder-class='placeholder'></input></view>
+
+  <view class='addinfo-btn'><button form-type='submit'>确认</button></view>
+</form>
+

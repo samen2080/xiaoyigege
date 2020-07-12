@@ -1,0 +1,18 @@
+<!--pages/index/master/master.wxml-->
+
+
+<view class='wrap'>
+  <view class='master-list' wx:for='{{masterLis}}' wx:key='{{masterLis}}'>
+    <view class='master-list-top'><navigator url='master-home/master-home?master_id={{item.user_id}}' hover-class='none'>
+      <image src='{{item.user_headimg}}' mode='aspectFill'></image>
+      <text class='master-list-name'>{{item.user_nickname}}</text>
+      <view class='master-list-jj'>{{item.user_intro}}</view></navigator>
+    </view>
+
+    <!-- <view class='master-list-bottom'>
+      <view>帖子<text>{{item.user_invitation_count == null ? 0 :item.user_invitation_count}}</text></view>
+      <view>粉丝<text>{{item.user_followers_count == null ? 0 :item.user_followers_count}}</text></view>
+      <view>关注<text>{{item.user_following_count == null ? 0 :item.user_following_count}}</text></view>
+    </view> -->
+  </view>
+</view>

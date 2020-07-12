@@ -1,0 +1,40 @@
+<!--pages/index/transaction/owner/owner.wxml-->
+
+<view class='owner-top'>
+  <image src='{{info.user_headimg}}' mode='aspectFill'></image>
+  <text class='owner-name'>{{info.user_nickname}}</text>
+  <text class='owner-sum'>累计发布二手商品<text>{{count}}</text>件</text>
+  <view class='owner-attention' catchtap='focus' wx:if="{{focus==0}}">+ 关注</view>
+  <view class='owner-attention focus' catchtap='focus' wx:if="{{focus==1}}">已关注</view>
+</view>
+
+<view class='owner-product'>
+  <view class='owner-product-title-box'>
+    <text class='owner-product-title'>其他商品</text>
+  </view>
+
+  <view class='owner-product-list'>
+    <view class='mine-collect-list-{{(item.index)%4 + 1}}' wx:for='{{proList}}' wx:key='{{proList}}'><navigator url='../../mine/product-show/product-show' hover-class='none'>
+      <view class='mine-collect-pic-wrap'>
+        <image src='{{host}}{{item.old_img[0]}}' class='mine-collect-pic' mode='aspectFill'></image>
+        <view class='mine-collect-price'>￥<text>{{item.old_money}}</text></view>
+      </view>
+
+      <view class='mine-collect-name-wrap'>
+        <text class='mine-collect-name'>{{item.old_name}}</text>
+        <text class='mine-collect-time'>{{item.old_add_time}}</text>
+      </view>
+
+      <view class='mine-collect-owner-wrap'>
+        <image src='{{info.user_headimg}}' mode='aspectFill' class='mine-collect-owner-tx'></image>
+        <text class='mine-collect-owner-name'>{{info.user_nickname}}</text>
+        <view class='mine-collect-sum'>
+          <image src='/images/collects.png' wx:if='{{item.collect == 0}}' data-collid='{{item.old_id}}' catchtap='collect'></image>
+          <image src='/images/collect.png' wx:if='{{item.collect == 1}}' data-collid='{{item.old_id}}' catchtap='collect'></image>
+          <text>{{item.old_collect}}</text>
+        </view>
+      </view></navigator>
+    </view>
+  </view>
+  
+</view>

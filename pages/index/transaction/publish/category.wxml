@@ -1,0 +1,5 @@
+
+<!-- 分类 -->
+<view class='pro-cat-box'>
+  <view wx:for='{{catArr}}' wx:key='item' data-id='{{index}}' catchtap='catSelect'>{{item}}</view>
+</view>

@@ -1,0 +1,29 @@
+<!--pages/mine/collect/collect.wxml-->
+<view class='overflow'>
+  <view class='mine-collect-list-{{(item.index)%4 + 1}}' wx:for='{{coList}}' wx:key='{{coList}}'><navigator url='../product-show/product-show?pro_id={{item.old_id}}' hover-class='none'>
+    <view class='mine-collect-pic-wrap'>
+      <image src='{{host}}{{item.old_img[0]}}' class='mine-collect-pic' mode='aspectFill'></image>
+      <view class='mine-collect-price'>￥<text>{{item.old_money}}</text></view>
+    </view>
+
+    <view class='mine-collect-name-wrap'>
+      <text class='mine-collect-name'>{{item.old_name}}</text>
+      <text class='mine-collect-time'>{{item.old_add_time}}</text>
+    </view>
+
+    <view class='mine-collect-owner-wrap'>
+      <image src='{{item.user_headimg}}' mode='aspectFill' class='mine-collect-owner-tx'></image>
+      <text class='mine-collect-owner-name'>{{item.user_nickname}}</text>
+      <view class='mine-collect-sum'>
+        <image src='/images/collect.png' catchtap='collect' data-id='{{item.coll_good_id}}'></image>
+        <text>{{item.collect}}</text>
+      </view>
+    </view></navigator>
+  </view>
+</view>
+
+<!-- 空白页 -->
+<view class='kb-page' wx:if='{{coList.length <= 0}}'>
+  <image src='/images/kb.png'></image>
+  <view>暂无记录~</view>
+</view>

@@ -1,0 +1,14 @@
+<view class='mine-comment-list' wx:for='{{items}}' wx:key='{{items}}'>
+  <view class='wrap'>
+    <view class='mine-comment-title'>{{item.com_desc}}</view>
+    <view class='mine-comment-time'>{{item.com_add_time}}</view>
+    <image src='{{item.com_user_headimg}}' mode='aspectFill'></image>
+  </view>
+</view>
+
+
+<!-- 空白页 -->
+<view class='kb-page' wx:if='{{items.length <= 0}}'>
+  <image src='/images/kb.png'></image>
+  <view>暂无评论~</view>
+</view>

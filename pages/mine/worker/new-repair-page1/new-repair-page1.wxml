@@ -1,0 +1,112 @@
+<!--pages/mine/worker/new-repair-page1/new-repair-page1.wxml-->
+<form bindsubmit="formSubmit" bindreset="formReset">
+  <view class='contract-show-middle-title'>
+    <text>维修信息：</text>
+  </view>
+  <!-- <view class='input-wrap'>
+    <text>维修日期：</text>
+    <input placeholder-class='placeholder' name='rep_date'></input>
+  </view> -->
+  <!-- 2020/1/21 start -->
+  <view class='input-wrap-new'>
+        <view class='input-wrap-title'>维修日期：</view>
+        <view class='input-wrap-content'>  
+            <picker mode="date" value="{{rep_date}}" bindchange="bindDateChange" name='rep_date'>  
+            <view style='color:{{dateColor}}'>{{rep_date}}</view>  
+           </picker>  
+        </view> 
+   </view>
+      <!-- 2020/1/21 end -->
+  <view class='input-wrap'>
+    <text>维修员ID：</text>
+    <input placeholder-class='placeholder' value='{{rep_repairman_id}}' name='rep_repairman_id'></input>
+  </view>
+  <view class='input-wrap'>
+    <text>维修公司：</text>
+    <input placeholder-class='placeholder' name='rep_repairman_com'></input>
+  </view>
+  <!-- <view class='input-wrap'>
+    <text>维修状态：</text>
+    <input placeholder='（1-已报修，2-已维修， 3-已过期）' placeholder-class='placeholder' name='rep_status'></input>
+  </view> -->
+  <!-- <view class='input-wrap'>
+    <text>维修状态：</text>
+    <Select prop-array='{{selectArray}}' bind:myget='getData'></Select>
+  </view> -->
+  <view class='input-wrap'>
+    <text>维修员电话：</text>
+    <input placeholder-class='placeholder' name='rep_repairman_mobile'></input>
+  </view>
+  <!-- 2020/1/21 start -->
+  <view class='input-wrap'>
+  <text>维修站区域：</text>
+  <input placeholder="选择" value="{{rep_repairman_province}}-{{rep_repairman_city}}-{{rep_repairman_county}}" focus="{{focus}}" bindfocus="open1" />
+  </view>
+  <!-- 2020/1/21 end -->
+  <view class='input-wrap' wx:if="{{condition1 == condition2}}">
+    <text>维修站地址：</text>
+    <input placeholder-class='placeholder' name='rep_repairman_address'></input>
+  </view>
+  <!-- <view class='input-wrap' wx:if="{{condition1 == condition2}}">
+    <text>用户ID：</text>
+    <input placeholder-class='placeholder' name='rep_user_id'></input>
+  </view>
+  <view class='input-wrap' wx:if="{{condition1 == condition2}}">
+    <text>用户电话：</text>
+    <input placeholder-class='placeholder' name='rep_user_mobile'></input>
+  </view>
+  
+  <view class='input-wrap' wx:if="{{condition2==0}}">
+  <text>用户区域：</text>
+  <input placeholder="选择" value="{{province2}}-{{city2}}-{{county2}}" focus="{{focus}}" bindfocus="open2" />
+  </view>
+  
+  <view class='input-wrap' wx:if="{{condition1==0}}">
+    <text>用户地址：</text>
+    <input placeholder-class='placeholder' name='rep_user_address'></input>
+  </view> -->
+  <view class='btn-wrap' >
+    <button class='next-btn' form-type='submit'>下一步</button>
+  </view>
+    <!-- <view class='upload-wrap'>    
+       <image src='{{host}}{{address_img}}' mode='aspectFill'></image>
+       <image src='/images/fabu1.png' class='upload-btn' mode='aspectFill' catchtap='uploadpic' hidden='{{upHidden}}'></image>
+  </view> -->
+</form>
+<!-- 2020/1/21 start -->
+<view wx:if="{{condition1}}" class="citypicker">
+  <picker-view indicator-style="height: 50px;" style="width: 100%; height: 300px;" value="{{value}}" bindchange="bindChangeMain" class="citybody">
+    <view class="cityheader">
+      <view bindtap="open1" class="city-cancel">取消</view>
+      <view bindtap="open1" class="city-true">确定</view>
+    </view>
+    <picker-view-column>
+      <view wx:for="{{provinces}}" wx:key="item" style="line-height: 50px;padding-left:10px;">{{item}}</view>
+    </picker-view-column>
+    <picker-view-column>
+      <view wx:for="{{citys}}" wx:key="item" style="line-height: 50px;padding-left:10px;">{{item}}</view>
+    </picker-view-column>
+    <picker-view-column>
+      <view wx:for="{{countys}}" wx:key="item" style="line-height: 50px;padding-left:10px;">{{item}}</view>
+    </picker-view-column>
+  </picker-view>
+</view>
+
+<!-- <view wx:if="{{condition2}}" class="citypicker">
+  <picker-view indicator-style="height: 50px;" style="width: 100%; height: 300px;" value="{{value}}" bindchange="bindChangeMain" class="citybody">
+    <view class="cityheader">
+      <view bindtap="open2" class="city-cancel">取消</view>
+      <view bindtap="open2" class="city-true">确定</view>
+    </view>
+    <picker-view-column>
+      <view wx:for="{{provinces}}" wx:key="item" style="line-height: 50px;padding-left:10px;">{{item}}</view>
+    </picker-view-column>
+    <picker-view-column>
+      <view wx:for="{{citys}}" wx:key="item" style="line-height: 50px;padding-left:10px;">{{item}}</view>
+    </picker-view-column>
+    <picker-view-column>
+      <view wx:for="{{countys}}" wx:key="item" style="line-height: 50px;padding-left:10px;">{{item}}</view>
+    </picker-view-column>
+  </picker-view>
+</view> -->
+<!-- 2020/1/21 end -->

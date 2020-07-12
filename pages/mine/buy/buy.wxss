@@ -1,0 +1,49 @@
+/* pages/mine/buy/buy.wxss */
+@import '../publish/publish.wxss';
+
+.on-list-list{
+  overflow: hidden;
+}
+.on-list-number-wrap{
+  height: 100rpx;
+  line-height: 100rpx;
+  border-bottom: 2rpx solid #e9e9e9;
+  overflow: hidden;
+}
+.on-list-number{
+  color: #999999;
+  float: left;
+  margin-left: 24rpx;
+}
+.on-list-status{
+  color: #999999;
+  float: right;
+  margin-right: 24rpx;
+}
+.orange-txt{
+  color: #ff721c;
+}
+.on-list-btn-wrap{
+  width: 170rpx;
+  height: 90rpx;
+  overflow:visible;
+  float: right;
+  margin-left: 16rpx;
+}
+.on-list-remove-btn{
+  width: 100%;
+  height: 58rpx;
+  line-height: 58rpx;
+  margin-right: 0;
+  font-size: 28rpx;
+  color: #ff721c;
+  border: 2rpx solid #ff721c;
+  margin-top: 16rpx;
+}
+.on-list-btn-wrap:nth-child(3){
+  margin-right: 24rpx;
+}
+.on-list-btn-wrap:nth-child(4) .on-list-remove-btn{
+  color: #000000;
+  border: 2rpx solid #999999;
+}

@@ -1,0 +1,12 @@
+<!--pages/mine/master/master.wxml-->
+<view class='info-edit-form-modify'>
+  <form bindsubmit="formSubmit">
+    <view class='info-edit-input'><text>擅长乐器</text><input type='text' placeholder='请输入擅长乐器' placeholder-class="placeholder" name='user_skills'></input></view>
+    <view class='info-edit-input'><text>个人简介</text><textarea maxlength='1000' name='user_intro' placeholder='请输入您的简介' placeholder-class="placeholder"></textarea></view>
+    <view class='info-edit-form-btn'>
+      <button formType="submit" class='info-edit-form-sub-btn'>
+        <text class='btn-text'>提交申请</text>
+      </button>
+    </view>
+  </form>
+</view>

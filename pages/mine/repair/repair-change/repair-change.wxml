@@ -1,0 +1,54 @@
+<!--pages/mine/repair/repair-change/repair-change.wxml-->
+<view class='info-edit-page'>
+  <form id='info-edit-form' bindsubmit="formSubmit" bindreset="formReset">
+ 
+    <view class='info-edit-form-modify'>
+      <!-- <view class='info-edit-input'><text>日  期:</text><input type='text' placeholder='请输入日期' placeholder-class="placeholder" value='{{rep_date}}' name='rep_date'></input></view> -->
+
+      <view class='info-edit-input'>
+        <text>日 期:</text>
+        <view class="section">  
+          <picker mode="date" value="{{rep_date}}" bindchange="bindDateChange">  
+            <view class="picker" style='color:{{dateColor}}'>{{rep_date}}</view>  
+          </picker>  
+        </view> 
+      </view>
+ 
+      <view class='info-edit-input'><text>电  话：</text><input type='text' placeholder='请输入电话' placeholder-class="placeholder" value='{{rep_user_mobile}}' name='rep_user_mobile'></input></view>
+
+      <view class='info-edit-input' wx:if='{{user_identity == 2}}'><text>维修状态：</text>
+      <Select prop-array='{{selectArray}}' bind:myget='getData'></Select></view>
+      <view class='info-edit-input' wx:if='{{user_identity == 2}}'><text>ID   ：</text><input type='text' placeholder='请输入维修员id' placeholder-class="placeholder" value='{{rep_repairman_id}}' name='rep_repairman_id'></input></view>   
+
+
+     <view class='info-edit-input'><text>区 域：</text><input placeholder="选择" value="{{rep_user_province}}-{{rep_user_city}}-{{rep_user_county}}" focus="{{focus}}" bindfocus="open" /></view>
+
+     <!-- <view class='info-edit-input' ><text>地  址：</text><textarea maxlength='500' placeholder='请输入地址' placeholder-class="placeholder" value='{{rep_user_address}}' name='rep_user_address'></textarea></view>    -->
+     <view class='info-edit-input'><text>地  址：</text><input type='text' placeholder='请输入地址' placeholder-class="placeholder" value='{{rep_user_address}}' name='rep_user_address'></input></view>   
+
+      
+     <view wx:if="{{condition}}" class="citypicker">
+  <picker-view indicator-style="height: 50px;" style="width: 100%; height: 300px;" value="{{value}}" bindchange="bindChange" class="citybody">
+    <view class="cityheader">
+      <view bindtap="open" class="city-cancel">取消</view>
+      <view bindtap="open" class="city-true">确定</view>
+    </view>
+    <picker-view-column>
+      <view wx:for="{{provinces}}" wx:key="item" style="line-height: 50px;padding-left:10px;">{{item}}</view>
+    </picker-view-column>
+    <picker-view-column>
+      <view wx:for="{{citys}}" wx:key="item" style="line-height: 50px;padding-left:10px;">{{item}}</view>
+    </picker-view-column>
+    <picker-view-column>
+      <view wx:for="{{countys}}" wx:key="item" style="line-height: 50px;padding-left:10px;">{{item}}</view>
+    </picker-view-column>
+  </picker-view>
+</view>
+    </view>
+    <view class='info-edit-form-btn'>
+      <button formType="submit" class='info-edit-form-sub-btn'>
+        <text class='btn-text'>更新</text>
+      </button>
+    </view>
+  </form>
+</view>

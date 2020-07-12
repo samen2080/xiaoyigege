@@ -1,0 +1,72 @@
+<!--pages/mine/contract/contract-show/contract-show.wxml-->
+<view class='contract-show-top'>
+  <!-- <view class='contract-show-top-title'>
+    <image src='/images/shouhuo_icon.png'></image>
+    <text>{{items.con_status == 0 ? "待支付" : items.con_status == 1 ? "等待当面取货":items.con_status == 2 ? "已完成":"订单已取消"}}</text>
+  </view> -->
+  
+  <view class='contract-show-top-code'>
+    <text>合约日期：{{items.con_start_date}}</text>
+    <text class='contract-show-date'>签约日期：{{items.con_sign_date}}</text>
+    
+  </view>
+</view>
+
+<view class='contract-show-middle'>
+  <view class='contract-show-middle-title'>联系人信息</view>
+
+  <view class='contract-show-middle-info-box'>
+
+    <view class='contract-show-top-code'>
+    <text>户主姓名：{{items.con_user_name}}</text>
+    <text class='contract-show-sex'>性别：{{items.con_user_sex==1?"男":"女"}}</text>
+    </view>
+    
+    <view class='contract-show-middle-info-list'>身份证号：<text>{{items.con_user_city_id}}</text></view>
+    <view class='contract-show-middle-info-list'>联系电话：<text>{{items.con_user_mobile}}</text></view>
+    <view class='contract-show-middle-info-list2'>联系地址：<text>{{items.con_user_province}}{{items.con_user_city}}{{items.con_user_county}}{{items.con_user_address}}</text></view>
+  </view>
+</view>
+
+<view class='contract-show-bottom'>
+ 
+ <view class='contract-show-middle-title'>合约相关</view>
+<view class='contract-show-middle-info-box2'>
+  
+    <view class='contract-show-top-code'>
+    <text>合约周期：{{items.con_period==1?"月付":items.con_period==2?"季付":items.con_period==3?"半年付":"年付"}}</text>
+    <text class='contract-show-module'>电梯型号：{{items.con_lift_module}}</text>
+    </view>
+
+    <view class='contract-show-bottom-list'>安装日期：<text>{{items.con_install_date}}</text></view>
+   
+    <view class='contract-show-top-code'>
+    <text>开始日期：{{items.con_start_date}}</text>
+    <text class='contract-show-date'>结束日期：{{items.con_end_date}}</text>
+    </view>
+
+    <view class='contract-show-top-code'>
+    <text>合约金额：￥{{items.con_total_amt}}</text>
+    <text class='contract-show-responser'>签约负责人：{{items.con_sign_name}}</text>
+    </view>
+
+    <view class='contract-show-bottom-list'>保养负责人：<text>{{items.con_maint_name}}</text></view>
+    <view class='contract-show-bottom-list'>签约公司：<text>{{items.con_maint_com}}</text></view>
+  
+    <view class='contract-show-top-code'>
+    <text>合约状态: {{items.con_status==0?"待生效":items.con_status==1?"已生效":items.con_status==2?"已完成":"已取消"}}</text>
+    <text class='contract-show-rating'>评价星级：{{items.con_rating_grade}}</text>
+    </view>
+
+    <view class='contract-show-bottom-list3'>评价描述：<textarea maxlength='200'>{{items.con_rating_comment}}</textarea></view>
+   
+   <view bindtap="addPlan" wx:if='{{user_identity == 2}}'><button class="add-plan">生成计划</button></view>
+
+
+  </view>
+  
+
+</view>
+
+
+

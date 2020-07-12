@@ -1,0 +1,2 @@
+/* pages/index/master/master-fans/master-fans.wxss */
+@import "../master-focus/master-focus.wxss";

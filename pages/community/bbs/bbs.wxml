@@ -1,0 +1,15 @@
+<!--pages/community/bbs/bbs.wxml-->
+
+<view class='bbs-wrap'>
+
+  <view class='bbs-list' wx:for='{{bbsList}}' wx:key='{{bbsList}}'><navigator url='bbs-home/bbs-home?forum_id={{item.forum_id}}' hover-class='none'>
+    <view class='wrap'>
+      <image src='{{host}}{{item.forum_img}}' mode='aspectFill'></image>
+      <view class='bbs-name'>{{item.forum_name}}</view>
+      <view class='bbs-intro'>{{item.forum_intro}}</view>
+      <!-- <view class='bbs-join join' wx:if='{{item.isJoin==false}}' catchtap='joinIn' id='{{item.forum_id}}'>+ 加入</view>
+      <view class='bbs-join' wx:if='{{item.isJoin==true}}' catchtap='joinIn' id='{{item.forum_id}}'>已加入</view> -->
+    </view></navigator>
+  </view>
+
+</view>

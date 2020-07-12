@@ -1,0 +1,22 @@
+<!--pages/index/school/school.wxml-->
+
+
+<view class='index-search-box'>
+  <view class='wrap'>
+    <form  bindsubmit="formSubmit">
+      <view class='index-search'>
+        <button formType="submit" hover-class='none'><image src='/images/search.png'></image></button>
+        <input type='search' confirm-type='search' placeholder='搜索关键词' placeholder-class='search-placeholder' name='search'  bindconfirm='bindconfirm'></input>
+      </view>
+    </form>
+  </view>
+</view>
+
+<!-- 列表 -->
+<view class='school-list-box'>
+  <view class='school-list' wx:for='{{schoolList}}' wx:key='{{schoolList}}'><navigator url='school-show/school-show?dr_id={{item.dr_id}}' hover-class='none'>
+    <image src='{{host}}{{item.dr_img[0]}}' mode='aspectFill'></image>
+    <view class='school-name'>{{item.dr_name}}</view>
+    <text class='school-location'>{{item.dr_address}}</text></navigator>
+  </view>
+</view>

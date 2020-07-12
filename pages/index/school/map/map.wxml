@@ -1,0 +1,4 @@
+<!--pages/index/school/map/map.wxml-->
+
+<!-- 地图 -->
+<map id="map" longitude="{{longitude}}" latitude="{{latitude}}" scale="18"></map>

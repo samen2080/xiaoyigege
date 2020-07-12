@@ -1,0 +1,219 @@
+/* pages/mine/buy/product-show/product-show.wxss */
+page{
+  padding-bottom: 100rpx;
+}
+.product-show-top{
+  background: #ffffff;
+  border-top: 2rpx solid #e9e9e9;
+}
+.product-show-top-title{
+  margin: 34rpx 0;
+  font-size: 36rpx;
+}
+.product-show-top-title image{
+  width: 42rpx;
+  height: 34rpx;
+  margin-left: 24rpx;
+  margin-right: 32rpx;
+}
+.product-show-top-content{
+  color: #999999;
+  line-height: 48rpx;
+  padding: 0 24rpx 24rpx;
+}
+.product-show-top-code{
+  height: 100rpx;
+  line-height: 100rpx;
+  border-top: 2rpx solid #e9e9e9;
+  padding: 0 24rpx;
+}
+.product-show-top-code text{
+  font-size: 32rpx;
+}
+.product-show-top-code button{
+  width: 152rpx;
+  height: 56rpx;
+  line-height: 56rpx;
+  font-size: 26rpx;
+  color: #ffffff;
+  background: #19c810;
+  float: right;
+  margin-top: 22rpx;
+  margin-left: 10rpx;
+}
+
+
+
+
+.product-show-middle{
+  border-bottom: 2rpx solid #e9e9e9;
+}
+.product-show-middle-title{
+  height: 62rpx;
+  line-height: 62rpx;
+  font-size: 26rpx;
+  color: #999999;
+  padding-left: 24rpx;
+}
+.product-show-middle-info-box{
+  background: #ffffff;  
+  font-size: 32rpx;
+}
+.product-show-middle-info-list{
+  height: 100rpx;
+  line-height: 100rpx;
+  border-top: 2rpx solid #e9e9e9;
+  padding: 0 24rpx;
+}
+.product-show-bottom-info{
+  padding: 24rpx;
+  position: relative;
+  font-size: 32rpx;
+  overflow: hidden;
+  background: #ffffff;
+  margin: 24rpx 0;
+}
+.product-show-bottom-info image{
+  width: 208rpx;
+  height: 208rpx;
+  float: left;
+  vertical-align: middle;
+}
+.product-show-bottom-name{
+  width: 460rpx;
+  position: absolute;
+  top: 20rpx;
+  right: 24rpx;
+  text-align: justify;
+  line-height: 48rpx;
+  display: -webkit-box;
+  word-break: break-all;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp:2;
+  overflow: hidden;
+  text-overflow:ellipsis;
+}
+.product-show-bottom-price{
+  width: 460rpx;
+  position: absolute;
+  bottom: 24rpx;
+  right: 24rpx;
+  text-align: left;
+  color: #ff721c;
+}
+.product-show-bottom-list{
+  font-size: 32rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+  background: #ffffff;
+  border-bottom: 2rpx solid #e9e9e9;
+  padding: 0 24rpx;
+}
+.product-show-bottom-list:last-child{
+  border-bottom: none;
+}
+.product-show-bottom-list text{
+  color: #999999;
+}
+
+
+/* 取消交易Toast */
+.removeModal{
+  background: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+}
+.removeModal-box{
+  width: 600rpx;
+  height: 420rpx;
+  background: #FFFFFF;
+  border-radius: 12rpx;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  font-size: 36rpx;
+  text-align: center;
+  overflow: hidden;
+}
+.removeModal-title{
+  height: 318rpx;
+  line-height: 318rpx;
+}
+.removeModal-cancel,.removeModal-sure{
+  float: left;
+  width: 50%;
+  height: 102rpx;
+  line-height: 102rpx;
+}
+.removeModal-cancel{
+  background: #e9e9e9;
+}
+.removeModal-sure{
+  background: #19c810;
+  color: #FFFFFF;
+}
+
+
+
+/* 2019/10/24 start */
+.star-pos {
+/* margin: 10rpx;  */
+margin: 1rpx;  
+ 
+display: flex;
+ 
+flex-direction: row;
+ 
+}
+ 
+.stars{
+ 
+width: 40rpx;
+ 
+height: 40rpx;
+ 
+margin-left: 30rpx;
+ 
+}
+
+/*2019/10/24 end*/
+
+/* 2019/10/25 start */
+textarea{
+  width: 100%;
+  height: 450rpx;
+  background: #d6d8d6  
+}
+/* 2019/10/31 start */
+.btn-wrap{
+width: 100%;
+height: 114rpx;
+line-height: 114rpx;
+background: #ffffff;
+position: fixed;
+bottom: 0;
+}
+.btn-wrap button{
+  width: 338rpx;
+  height: 86rpx;
+  line-height: 86rpx;
+  float: left;
+  font-size: 36rpx;
+  margin-top: 14rpx;
+}
+.cancel-btn{
+background: #e9e9e9;
+color: #999999;
+margin:0 24rpx;
+margin-left: 7rpx;
+}
+.sure-btn{
+background: #3ec51f;
+color: #ffffff;
+}
+/* 2019/10/25 end */
+/* 2019/10/25 end */

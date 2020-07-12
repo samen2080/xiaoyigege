@@ -1,0 +1,71 @@
+<!--pages/mine/repair/repair-show/repair-show.wxml-->
+<view class='contract-show-top'>
+  <!-- <view class='contract-show-top-title'>
+    <image src='/images/shouhuo_icon.png'></image>
+    <text>{{items.rep_status == 0 ? "待支付" : items.rep_status == 1 ? "等待当面取货":items.rep_status == 2 ? "已完成":"订单已取消"}}</text>
+  </view> -->
+  
+
+  
+  <view class='contract-show-top-code'>
+    <!-- <text>维修编号：{{items.rep_id}}</text> -->
+    <text>维修编号：{{rep_id}}</text>
+    <text class='contract-show-top2'>保养编号：{{items.rep_mnt_id}}</text>
+    
+  </view>
+</view>
+
+<view class='contract-show-middle'>
+  <view class='contract-show-middle-title'>联系人信息</view>
+
+  <view class='contract-show-middle-info-box'>
+
+    <!-- <view class='contract-show-top-code'>
+    <text>用户ID：{{items.rep_user_id}}</text>
+    <text class='contract-show-top2'>用户电话：{{items.rep_user_mobile}}</text>
+    </view> -->
+    
+    <view class='contract-show-middle-info-list'>用户ID：<text>{{items.rep_user_id}}</text></view>
+    <view class='contract-show-middle-info-list'>用户电话：<text>{{items.rep_user_mobile}}</text></view>
+    <view class='contract-show-middle-info-list2'>用户地址：<text>{{items.rep_user_province}}{{items.rep_user_city}}{{items.rep_user_county}}{{items.rep_user_address}}</text></view>
+  </view>
+</view>
+
+<view class='contract-show-bottom'>
+ 
+ <view class='contract-show-middle-title'>合约相关</view>
+<view class='contract-show-middle-info-box2'>
+  
+    <view class='contract-show-top-code'>
+    <text>维修员ID：{{items.rep_repairman_id}}</text>
+    <!-- <text class='contract-show-top3'>维修公司：{{items.rep_repairman_com}}</text> -->
+    </view>
+    <view class='contract-show-bottom-list'>维修公司：<text>{{items.rep_repairman_com}}</text></view>
+    <view class='contract-show-bottom-list'>维修员电话：<text>{{items.rep_repairman_mobile}}</text></view>
+   
+    <!-- <view class='contract-show-top-code'>
+    <text>开始日期：{{items.con_start_date}}</text>
+    <text class='contract-show-top2'>结束日期：{{items.con_end_date}}</text>
+    </view>
+
+    <view class='contract-show-top-code'>
+    <text>合约金额: {{items.con_total_amt}}</text>
+    <text class='contract-show-top2'>签约负责人：{{items.con_sign_name}}</text>
+    </view> -->
+
+    <view class='contract-show-bottom-list2'>维修中心地址：<text>{{items.rep_repairman_province}}{{items.rep_repairman_city}}{{items.rep_repairman_county}}{{items.rep_repairman_address}}</text></view>
+    <!-- <view class='contract-show-bottom-list'>签约公司：<text>{{items.con_maint_com}}</text></view>
+   -->
+    <view class='contract-show-top-code'>
+    <!-- <text>维修状态: {{items.rep_status == 1?"已报修":{{items.rep_status == 2?"已维修":"已过期"}}</text> -->
+    <text>维修状态: {{items.rep_status==1?"已报修":items.rep_status==2?"已维修":"已过期"}}</text>
+    <text class='contract-show-top4'>评价星级：{{items.rep_rating_grade}}</text>
+    </view>
+
+    <!-- <view class='contract-show-bottom-list'>时间戳：<text>{{items.rep_timestamp}}</text></view> -->
+    <view class='contract-show-bottom-list3'>评价描述：<textarea maxlength='200'>{{items.rep_rating_comment}}</textarea></view>
+   
+   
+  </view>
+  
+</view>

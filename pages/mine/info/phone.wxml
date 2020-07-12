@@ -1,0 +1,23 @@
+<!--pages/mine/info/phone.wxml-->
+<form bindsubmit='formSubmit'>
+  <view class='edit-wrap'>
+    <view class='wrap'>
+      <text class='title font-32'>手机号</text>
+      <button class='color-f code-btn border-r' bindtap='getVerificationCode' disabled='{{disabled}}'>{{show_get_code}}</button>
+      <input class='font-32' placeholder='请输入手机号' placeholder-class='form-placeholder' name='phoneInput' type='number' bindinput ='phoneInput'></input>
+    </view>
+  </view>
+
+  <view class='edit-wrap'>
+    <view class='wrap'>
+      <text class='title font-32'>验证码</text><input class='font-32' placeholder='请输入验证码' placeholder-class='form-placeholder' type='number' name="yzmInput" value='{{input_login_code}}'></input>
+    </view>
+  </view>
+
+
+  <view class='btn-wrap'>
+    <button form-type="submit">确定</button>
+  </view>
+</form>
+
+
