@@ -285,7 +285,7 @@ Page({
             host: host,
             user_id: user_id,
             com_inf_sex: this.data.selectArray1[0].text,
-            com_inf_age: this.data.selectArray2[24].text,
+            com_inf_age: this.data.selectArray2[0].text,
             com_inf_pen: this.data.selectArray3[0].text
           });
     },

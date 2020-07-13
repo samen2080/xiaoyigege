@@ -7,6 +7,7 @@
     </view>
 
     <view class="info-first" wx:if='{{currentTab==0}}'>
+       <view class="info-team-info">
             <view class='info-one'>  
             <text>参赛机构</text>
             <input class placeholder='' placeholder-class='placeholder' name='com_inf_organization'></input>
@@ -30,9 +31,9 @@
             <view class='info-four'>  
                 <view class='info-four-title'>团队联系地址</view>
                 <view class='info-four-value'>
-                    <picker bindchange="bindRegionChange" customItem="{{customItem}}" mode="region" value="{{region}}">
+                    <picker style="width: 370rpx; height: 60rpx;" bindchange="bindRegionChange" customItem="{{customItem}}" mode="region" value="{{region}}">
                       <text wx:if="{{select_province}}">{{select_province}} {{select_city}} {{select_county}}</text>
-                      <text wx:else class='placeholder'>请选择地区</text>
+                      <text wx:else class='placeholder'>选择地区</text>
                     </picker>
                 </view>
             </view>
@@ -40,7 +41,9 @@
             <view class='info-six'>  
                 <input placeholder='请输入详细地址' placeholder-class='placeholder' name='com_inf_address_detail'></input>
             </view>
+        </view>
 
+       <view class="info-personal-info">
             <view class='info-name-gender-age' >
                 <view class='info-name'>
                     <text>姓名</text>
@@ -60,11 +63,13 @@
                 </view>
             </view>
 
-            <view class='info-seven'>  
+            <view class='info-five'>  
                 <text>身份证号</text>
                 <input placeholder='' placeholder-class='placeholder' name='com_inf_ident'></input>
             </view>
+        </view>       
 
+       <view class="info-calligraphy-info">
             <view class='info-eight' >
                 <view class='info-calligraphy-type'>
                     <view class='info-calligraphy-type-input'>
@@ -96,12 +101,15 @@
                 </view>
             </view>
 
-            <view class='info-seven'>  
+            <view class='info-ten'>  
                 <text>指导老师</text>
                 <input placeholder='' placeholder-class='placeholder' name='com_inf_teacher'></input>
             </view>
 
-            <button class='submit-icon' formType="submit" hover-class='none'>提交</button>
+            <view class="info-button">
+                  <button class='submit-icon' formType="submit" hover-class='none'>提 交</button>
+            </view>
+        </view>
     </view>
 
     <view class="info-second" wx:if='{{currentTab==1}}'>
@@ -146,9 +154,9 @@
             </view> -->
 
             <view class='info-four'>  
-                <view class='info-four-title'>团队联系地址</view>
+                <view class='info-four-title'>联系地址</view>
                 <view class='info-four-value'>
-                    <picker bindchange="bindRegionChange" customItem="{{customItem}}" mode="region" value="{{region}}">
+                    <picker style="width: 370rpx; height: 60rpx;" bindchange="bindRegionChange" customItem="{{customItem}}" mode="region" value="{{region}}">
                       <text wx:if="{{select_province}}">{{select_province}} {{select_city}} {{select_county}}</text>
                       <text wx:else class='placeholder'>请选择地区</text>
                     </picker>
@@ -190,7 +198,7 @@
                 </view>
             </view>
 
-            <view class='info-seven'>  
+            <view class='info-ten'>  
                 <text>指导老师</text>
                 <input placeholder='' placeholder-class='placeholder' name='com_inf_teacher'></input>
             </view>
