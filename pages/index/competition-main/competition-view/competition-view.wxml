@@ -159,7 +159,7 @@
                 <text>联系地址</text>
             </view>
             <view class='area-info-wrap-value'>
-                <text>{{itemIndividual.com_inf_address_province}}{{itemIndividual.com_inf_address_city}}{{itemTeam.com_inf_address_county}}{{itemIndividual.com_inf_address_detail}}</text>
+                <text>{{itemIndividual.com_inf_address_province}}{{itemIndividual.com_inf_address_city}}{{itemIndividual.com_inf_address_county}}{{itemIndividual.com_inf_address_detail}}</text>
             </view>
         </view>
     </view>
