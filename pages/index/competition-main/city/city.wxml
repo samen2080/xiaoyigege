@@ -1,0 +1,24 @@
+<!--pages/index/competition-main/city/city.wxml-->
+<!-- <view class="location_city" wx:if="{{city_search==false&&location_city!=null}}">
+    <view>当前定位城市</view>
+    <view>
+        <text bindtap="select" class="citys" data-city="{{location_city}}">{{location_city}}</text>
+    </view>
+</view> -->
+<view class="location_city" wx:if="{{select_city!=null}}">
+    <view>当前选择城市</view>
+    <view>
+        <text bindtap="select" class="province-city-county-selected" data-province="{{select_province}}" data-city="{{select_city}}" data-county="{{select_county}}" >{{select_province}}  {{select_city}} {{select_county}}</text>
+    </view>
+</view>
+<view class="location_city" wx:if="{{city_search==false}}">
+    <view>热门城市
+    <picker bindchange="bindRegionChange" customItem="{{customItem}}" mode="region" value="{{region}}">
+     更多城市>
+    </picker>
+    </view>
+    <view>
+        <text bindtap="select" class="citys" data-city="{{item}}" wx:for="{{hot_city}}" wx:key="*this">{{item}}</text>
+    </view>
+</view>
+

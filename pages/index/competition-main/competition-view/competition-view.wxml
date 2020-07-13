@@ -46,7 +46,7 @@
             <text>联系地址</text>
         </view>
         <view class='content-info-wrap-value'>
-            <text>{{itemTeam.com_inf_address_province}}{{itemTeam.com_inf_address_city}}{{itemTeam.com_inf_address_detail}}</text>
+            <text>{{itemTeam.com_inf_address_province}}{{itemTeam.com_inf_address_city}}{{itemTeam.com_inf_address_county}}{{itemTeam.com_inf_address_detail}}</text>
         </view>
     </view>
 
@@ -156,7 +156,7 @@
             <text>联系地址</text>
         </view>
         <view class='content-info-wrap-value'>
-            <text>{{itemIndividual.com_inf_address_province}}{{itemIndividual.com_inf_address_city}}{{itemIndividual.com_inf_address_detail}}</text>
+            <text>{{itemIndividual.com_inf_address_province}}{{itemIndividual.com_inf_address_city}}{{itemTeam.com_inf_address_county}}{{itemIndividual.com_inf_address_detail}}</text>
         </view>
     </view>
 

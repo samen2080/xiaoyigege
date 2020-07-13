@@ -99,6 +99,8 @@
     "pages/index/competition-main/competition-main",
     "pages/index/competition-main/competition-view/competition-view",
     "pages/index/competition-main/competition-regist/competition-regist",
+    "pages/index/competition-main/competition-enroll/competition-enroll",
+    "pages/index/competition-main/city/city",
     "pages/index/competition-main/competition-regist/payment/payment",
     "pages/index/competition-main/competition-regist/payment-success/payment-success",
     "component/select/select"

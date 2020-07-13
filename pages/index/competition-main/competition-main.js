@@ -46,7 +46,8 @@ Page({
   enroll: function () {
     var that = this;
     wx.navigateTo({
-      url: 'competition-regist/competition-regist',
+      // url: 'competition-regist/competition-regist',
+      url: 'competition-enroll/competition-enroll',
     })
   },
 

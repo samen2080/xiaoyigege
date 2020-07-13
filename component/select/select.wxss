@@ -1,6 +1,6 @@
 /* component/select/select.wxss */
 .com-selectBox{
-    width: 130rpx;
+    position: relative;
     float: left;
     height: 50rpx;
     border: 1px solid #3f3e3e;
@@ -23,22 +23,25 @@
     margin-top:0rpx;
     padding:0 0rpx 0 0rpx;
     font-size: 32rpx;
+    position: relative;
+    float: left;
 }
 
 .com-sImg{
-    position: absolute;
-    right: 0rpx;
-    top: 10rpx;
+    position: relative;
     width: 22rpx;
     height: 22rpx;
     transition: all .3s ease;
-    margin-right: 5px;
+    margin-top: 12rpx;
+    margin-left: 12rpx;
+    margin-right: 12rpx;
+    position: relative;
+    float: left;
 }
 
 
 .com-sList{
     background: white;
-    width: 130rpx;
     position: absolute;
     border: 1rpx solid #e2e2e2;
     border-top: none;

@@ -1,0 +1,128 @@
+/* pages/index/competition-main/city/city.wxss */
+page {
+  background: #e5e5e5;
+}
+
+.search {
+  padding: 20rpx 0 20rpx 20rpx;
+  background: #f66925;
+}
+
+.search>view:nth-child(1) {
+  width: 90%;
+  height: 60rpx;
+  background: #fff;
+  margin: 0 auto 0;
+  border-radius: 10rpx;
+}
+
+.search>view icon {
+  height: 30rpx;
+  width: 30rpx;
+  left: 10rpx;
+}
+
+.search>view input {
+  width: 86%;
+  display: inline-block;
+  left: 55rpx;
+  height: 50rpx;
+}
+
+.location_city {
+  padding: 20rpx;
+  background: #fff;
+  margin-top: 20rpx;
+}
+
+.location_city>view picker {
+  float: right;
+  width: auto;
+  color: #f66925;
+}
+
+.location_city>view:nth-child(1) {
+  height: 65rpx;
+  width: 100%;
+  line-height: 30rpx;
+  font-size: 24rpx;
+}
+
+.location_city>view:nth-child(2) {
+  height: auto;
+  line-height: 60rpx;
+}
+
+.citys {
+  width: 30%;
+  text-align: center;
+  display: inline-block;
+  border: 2rpx solid #e5e5e5;
+  background: #fff;
+  border-radius: 6rpx;
+  box-sizing: border-box;
+  margin-bottom: 20rpx;
+  color: #666;
+  font-size: 24rpx;
+  margin-right: 3.333%;
+}
+
+.province-city-county-selected {
+  width: 90%;
+  text-align: center;
+  display: inline-block;
+  border: 2rpx solid #e5e5e5;
+  background: #fff;
+  border-radius: 6rpx;
+  box-sizing: border-box;
+  margin-bottom: 20rpx;
+  color: #666;
+  font-size: 24rpx;
+  margin-right: 3.333%;
+}
+
+.city_more {
+  background: #e5e5e5;
+  float: right;
+  color: #f66925;
+}
+
+picker {
+  width: 300rpx;
+  height: 100%;
+  float: right;
+}
+
+picker-view {
+  position: fixed;
+  bottom: 0;
+}
+
+.block {
+  opacity: 1,;
+}
+
+.none {
+  opacity: 0;
+}
+
+.city_search {
+  padding: 20rpx;
+  background: #fff;
+}
+
+.city_search>view {
+  height: 60rpx;
+  font-size: 24rpx;
+  color: #666;
+  line-height: 60rpx;
+  border-bottom: 2rpx solid #e5e5e5;
+}
+
+.mask {
+  width: 100%;
+  height: 450rpx;
+  background: #e5e5e5;
+  position: fixed;
+  bottom: 0;
+}

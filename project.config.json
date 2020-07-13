@@ -22,7 +22,7 @@
 			"disablePlugins": [],
 			"outputPath": ""
 		},
-		"useCompilerModule": true,
+		"useCompilerModule": false,
 		"userConfirmedUseCompilerModuleSwitch": false
 	},
 	"compileType": "miniprogram",
@@ -47,6 +47,10 @@
 		},
 		"game": {
 			"currentL": -1,
+			"list": []
+		},
+		"gamePlugin": {
+			"current": -1,
 			"list": []
 		},
 		"miniprogram": {
@@ -405,6 +409,34 @@
 					"id": -1,
 					"name": "pages/message/message",
 					"pathName": "pages/message/message",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/index/competition-main/competition-regist/competition-regist",
+					"pathName": "pages/index/competition-main/competition-regist/competition-regist",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/index/competition-main/competition-regist/competition-regist",
+					"pathName": "pages/index/competition-main/competition-regist/competition-regist",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/index/competition-main/competition-regist/competition-regist",
+					"pathName": "pages/index/competition-main/competition-regist/competition-regist",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/index/competition-main/competition-enroll/competition-enroll",
+					"pathName": "pages/index/competition-main/competition-enroll/competition-enroll",
 					"scene": null
 				}
 			]

@@ -1,4 +1,4 @@
-<!--pages/index/competition-main/competition-regist/competition-regist.wxml-->
+<!--pages/index/competition-main/competition-enroll/competition-enroll.wxml-->
 <form bindsubmit="formSubmit" bindreset="formReset">
 
     <view class="swiper-tab">
@@ -28,16 +28,14 @@
             </view>
 
             <view class='info-four'>  
-                <view class='info-four-title'>联系地址</view>
-                <navigator url='../city/city' hover-class='none'>
-                    <view class='info-four-value'>{{com_inf_address_province}} {{com_inf_address_city}} {{com_inf_address_county}}</view>
-                </navigator>
+                <view class='info-four-title'>团队联系地址</view>
+                <view class='info-four-value'>
+                    <picker bindchange="bindRegionChange" customItem="{{customItem}}" mode="region" value="{{region}}">
+                      <text wx:if="{{select_province}}">{{select_province}} {{select_city}} {{select_county}}</text>
+                      <text wx:else class='placeholder'>请选择地区</text>
+                    </picker>
+                </view>
             </view>
-
-            <!-- <view class='info-five'>  
-                <input placeholder='' placeholder-class='placeholder' name='com_inf_address_city'></input>
-                <text>市</text>
-            </view> -->
 
             <view class='info-six'>  
                 <input placeholder='请输入详细地址' placeholder-class='placeholder' name='com_inf_address_detail'></input>
@@ -136,7 +134,7 @@
                 <input class placeholder='' placeholder-class='placeholder' name='com_inf_phone'></input>
             </view>
 
-            <view class='info-ten'>  
+            <!-- <view class='info-ten'>  
                 <text>通讯地址</text>
                 <input  placeholder='' placeholder-class='placeholder' name='com_inf_address_province'></input>
                 <text>省</text>
@@ -145,9 +143,19 @@
             <view class='info-eleven'>  
                 <input placeholder='' placeholder-class='placeholder' name='com_inf_address_city'></input>
                 <text>市</text>
+            </view> -->
+
+            <view class='info-four'>  
+                <view class='info-four-title'>团队联系地址</view>
+                <view class='info-four-value'>
+                    <picker bindchange="bindRegionChange" customItem="{{customItem}}" mode="region" value="{{region}}">
+                      <text wx:if="{{select_province}}">{{select_province}} {{select_city}} {{select_county}}</text>
+                      <text wx:else class='placeholder'>请选择地区</text>
+                    </picker>
+                </view>
             </view>
 
-            <view class='info-twelve'>
+            <view class='info-six'>
                 <input placeholder='请输入详细地址' placeholder-class='placeholder' name='com_inf_address_detail'></input>
             </view>
 
@@ -190,3 +198,5 @@
             <button class='submit-icon' formType="submit" hover-class='none'>提交</button>     
     </view>
 </form>
+
+

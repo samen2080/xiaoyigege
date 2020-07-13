@@ -7,7 +7,10 @@ Page({
    */
   data: {
     currentTab: 0,
-    inf_code : Math.floor(Math.random()*20000 + 20000),
+    inf_code: Math.floor(Math.random()*20000 + 20000),
+    com_inf_address_province: "城市",
+    com_inf_address_city: "/",
+    com_inf_address_county: "区域",
     selectArray1: [{
       "id": "1",
       "text": "男"
@@ -18,154 +21,244 @@ Page({
 
     selectArray2: [{
       "id": "1",
-      "text": "1970"
+      "text": "1"
     }, {
       "id": "2",
-      "text": "1971"
+      "text": "2"
     }, {
       "id": "3",
-      "text": "1972"
+      "text": "3"
     }, {
       "id": "4",
-      "text": "1973"
+      "text": "4"
     }, {
       "id": "5",
-      "text": "1974"
+      "text": "5"
       }, {
         "id": "6",
-        "text": "1975"
+        "text": "6"
       },  {
         "id": "7",
-        "text": "1976"
+        "text": "7"
       },  {
         "id": "8",
-        "text": "1977"
+        "text": "8"
       }, {
         "id": "9",
-        "text": "1978"
+        "text": "9"
       }, {
         "id": "10",
-        "text": "1979"
+        "text": "10"
       }, {
         "id": "11",
-        "text": "1980"
+        "text": "11"
       }, {
         "id": "12",
-        "text": "1981"
+        "text": "12"
       }, {
         "id": "13",
-        "text": "1982"
+        "text": "13"
       }, {
         "id": "14",
-        "text": "1983"
+        "text": "14"
       }, {
         "id": "15",
-        "text": "1984"
+        "text": "15"
       }, {
         "id": "16",
-        "text": "1985"
+        "text": "16"
       }, {
         "id": "17",
-        "text": "1986"
+        "text": "17"
       }, {
         "id": "18",
-        "text": "1987"
+        "text": "18"
       }, {
         "id": "19",
-        "text": "1988"
+        "text": "19"
       }, {
         "id": "20",
-        "text": "1989"
+        "text": "20"
       }, {
         "id": "21",
-        "text": "1990"
+        "text": "21"
       }, {
         "id": "22",
-        "text": "1991"
+        "text": "22"
       }, {
         "id": "23",
-        "text": "1992"
+        "text": "23"
       }, {
         "id": "24",
-        "text": "1993"
+        "text": "24"
       }, {
         "id": "25",
-        "text": "1994"
+        "text": "25"
       }, {
         "id": "26",
-        "text": "1995"
+        "text": "26"
       }, {
         "id": "27",
-        "text": "1996"
+        "text": "27"
       }, {
         "id": "28",
-        "text": "1997"
+        "text": "28"
       }, {
         "id": "29",
-        "text": "1998"
+        "text": "29"
       }, {
         "id": "30",
-        "text": "1999"
+        "text": "30"
       }, {
         "id": "31",
-        "text": "2000"
+        "text": "31"
       }, {
         "id": "32",
-        "text": "2001"
+        "text": "32"
       }, {
         "id": "33",
-        "text": "2002"
+        "text": "33"
       }, {
         "id": "34",
-        "text": "2003"
+        "text": "34"
       }, {
         "id": "35",
-        "text": "2004"
+        "text": "35"
       }, {
         "id": "36",
-        "text": "2005"
+        "text": "36"
       }, {
         "id": "37",
-        "text": "2006"
+        "text": "37"
       }, {
         "id": "38",
-        "text": "2007"
+        "text": "38"
       }, {
         "id": "39",
-        "text": "2008"
+        "text": "39"
       }, {
         "id": "40",
-        "text": "2009"
+        "text": "40"
       }, {
         "id": "41",
-        "text": "2010"
+        "text": "41"
       }, {
         "id": "42",
-        "text": "2011"
+        "text": "42"
       }, {
         "id": "43",
-        "text": "2012"
+        "text": "43"
       }, {
         "id": "44",
-        "text": "2013"
+        "text": "44"
       }, {
         "id": "45",
-        "text": "2014"
+        "text": "45"
       }, {
         "id": "46",
-        "text": "2015"
+        "text": "46"
       }, {
         "id": "47",
-        "text": "2016"
+        "text": "47"
       }, {
         "id": "48",
-        "text": "2017"
+        "text": "48"
       }, {
         "id": "49",
-        "text": "2018"
+        "text": "49"
       }, {
         "id": "50",
-        "text": "2019"
+        "text": "50"
+      }, {
+        "id": "51",
+        "text": "51"
+      }, {
+        "id": "52",
+        "text": "52"
+      }, {
+        "id": "53",
+        "text": "53"
+      }, {
+        "id": "54",
+        "text": "54"
+      }, {
+        "id": "55",
+        "text": "55"
+      }, {
+        "id": "56",
+        "text": "56"
+      }, {
+        "id": "57",
+        "text": "57"
+      }, {
+        "id": "58",
+        "text": "58"
+      }, {
+        "id": "59",
+        "text": "59"
+      }, {
+        "id": "60",
+        "text": "60"
+      }, {
+        "id": "61",
+        "text": "61"
+      }, {
+        "id": "62",
+        "text": "62"
+      }, {
+        "id": "63",
+        "text": "63"
+      }, {
+        "id": "64",
+        "text": "64"
+      }, {
+        "id": "65",
+        "text": "65"
+      }, {
+        "id": "66",
+        "text": "66"
+      }, {
+        "id": "67",
+        "text": "67"
+      }, {
+        "id": "68",
+        "text": "68"
+      }, {
+        "id": "69",
+        "text": "69"
+      }, {
+        "id": "70",
+        "text": "70"
+      }, {
+        "id": "71",
+        "text": "71"
+      }, {
+        "id": "72",
+        "text": "72"
+      }, {
+        "id": "73",
+        "text": "73"
+      }, {
+        "id": "74",
+        "text": "74"
+      }, {
+        "id": "75",
+        "text": "75"
+      }, {
+        "id": "76",
+        "text": "76"
+      }, {
+        "id": "77",
+        "text": "77"
+      }, {
+        "id": "78",
+        "text": "78"
+      }, {
+        "id": "79",
+        "text": "79"
+      }, {
+        "id": "80",
+        "text": "80"
       }],
       
       selectArray3: [{
@@ -216,6 +309,17 @@ Page({
       com_inf_age: that.data.selectArray2[0].text,
       com_inf_pen: that.data.selectArray3[0].text
     });
+    // if (!undefined == e.detail.value.com_inf_organization){
+    //     wx.setStorage({
+    //       key: 'enroll_info',
+    //       data: {
+    //         inf_organization: e.detail.value.com_inf_organization,
+    //       },
+    //       success: function () {
+    //           console.log("save success");
+    //       }
+    //     });
+    // };
   },
 
 
@@ -410,6 +514,7 @@ Page({
                           com_inf_phone_two: that.data.com_inf_phone_two,
                           com_inf_address_province: that.data.com_inf_address_province,
                           com_inf_address_city: that.data.com_inf_address_city,
+                          com_inf_address_city: that.data.com_inf_address_county,
                           com_inf_address_detail: that.data.com_inf_address_detail,
 
                           com_inf_name: that.data.com_inf_name,
@@ -455,6 +560,7 @@ Page({
                           com_inf_phone: that.data.com_inf_phone,
                           com_inf_address_province: that.data.com_inf_address_province,
                           com_inf_address_city: that.data.com_inf_address_city,
+                          com_inf_address_city: that.data.com_inf_address_county,
                           com_inf_address_detail: that.data.com_inf_address_detail,
 
                           com_inf_pen: that.data.com_inf_pen,
@@ -486,6 +592,17 @@ Page({
   })
   },
 
+  bindRegionChange: function(t) {
+    console.log("picker发送选择改变，携带值为", t.detail.value);
+    var e = t.detail.value[1];
+    -1 != e.indexOf("市") ? (console.log("有市"), this.setData({
+        select_city: e
+    })) : wx.showModal({
+        title: "温馨提示",
+        content: "当前城市选择仅支持市"
+    });
+},
+
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
@@ -497,7 +614,11 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-  
+    this.setData({
+      com_inf_address_province: wx.getStorageSync("province"),
+      com_inf_address_city: wx.getStorageSync("city"),
+      com_inf_address_county: wx.getStorageSync("county")
+  });
   },
 
   /**
