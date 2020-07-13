@@ -5,102 +5,104 @@
 </view>
 
 <view class="show-first" wx:if='{{currentTab==0}}'>
-    <view class='identity-info' >
-        <view class='identity-info-wrap'>
-            <view class='identity-info-wrap-title'>
-                <text>姓名</text>
+    <view class='personal-info'>
+        <view class='identity-info' >
+            <view class='identity-info-wrap'>
+                <view class='identity-info-wrap-title'>
+                    <text>姓名</text>
+                </view>
+                <view class='identity-info-wrap-value'>
+                    <text>{{itemTeam.com_inf_name}}</text>
+                </view>
             </view>
-            <view class='identity-info-wrap-value'>
-                <text>{{itemTeam.com_inf_name}}</text>
+            <view class='identity-info-wrap'>
+                <view class='identity-info-wrap-title'>
+                    <text>性别</text>
+                </view>
+                <view class='identity-info-wrap-value'>
+                    <text>{{itemTeam.com_inf_sex}}</text>
+                </view>
+            </view>
+            <view class='identity-info-wrap'>
+                <view class='identity-info-wrap-title'>
+                    <text>年龄</text>
+                </view>
+                <view class='identity-info-wrap-value'>
+                    <text>{{itemTeam.com_inf_age}}</text>
+                </view>
             </view>
         </view>
-        <view class='identity-info-wrap'>
-            <view class='identity-info-wrap-title'>
-                <text>性别</text>
+
+        <view class='content-info-wrap'>
+            <view class='content-info-wrap-title'>
+                <text>联系方式</text>
             </view>
-            <view class='identity-info-wrap-value'>
-                <text>{{itemTeam.com_inf_sex}}</text>
-            </view>
-        </view>
-        <view class='identity-info-wrap'>
-            <view class='identity-info-wrap-title'>
-                <text>年龄</text>
-            </view>
-            <view class='identity-info-wrap-value'>
-                <text>{{itemTeam.com_inf_age}}</text>
+            <view class='content-info-wrap-value'>
+                <text>{{itemTeam.com_inf_phone}}</text>
             </view>
         </view>
-    </view>
 
-    <view class='content-info-wrap'>
-        <view class='content-info-wrap-title'>
-            <text>联系方式</text>
-        </view>
-        <view class='content-info-wrap-value'>
-            <text>{{itemTeam.com_inf_phone}}</text>
-        </view>
-    </view>
-
-    <view class='address-info-wrap'>
-        <view class='content-info-wrap-title'>
-            <text>联系地址</text>
-        </view>
-        <view class='content-info-wrap-value'>
-            <text>{{itemTeam.com_inf_address_province}}{{itemTeam.com_inf_address_city}}{{itemTeam.com_inf_address_county}}{{itemTeam.com_inf_address_detail}}</text>
+        <view class='address-info-wrap'>
+            <view class='content-info-wrap-title'>
+                <text>联系地址</text>
+            </view>
+            <view class='area-info-wrap-value'>
+                <text>{{itemTeam.com_inf_address_province}}{{itemTeam.com_inf_address_city}}{{itemTeam.com_inf_address_county}}{{itemTeam.com_inf_address_detail}}</text>
+            </view>
         </view>
     </view>
 
-    <view class='content-info-wrap'>
-        <view class='content-info-wrap-title'>
-            <text>硬笔软笔</text>
+    <view class='calligraphy-info'>
+        <view class='content-info-wrap'>
+            <view class='content-info-wrap-title'>
+                <text>硬笔软笔</text>
+            </view>
+            <view class='content-info-wrap-value'>
+                <text>{{itemTeam.com_inf_pen}}</text>
+            </view>
         </view>
-        <view class='content-info-wrap-value'>
-            <text>{{itemTeam.com_inf_pen}}</text>
-        </view>
-    </view>
 
-    <view class='content-info-wrap'>
-        <view class='content-info-wrap-title'>
-            <text>作品名称</text>
+        <view class='content-info-wrap'>
+            <view class='content-info-wrap-title'>
+                <text>作品名称</text>
+            </view>
+            <view class='content-info-wrap-value'>
+                <text>{{itemTeam.com_inf_product}}</text>
+            </view>
         </view>
-        <view class='content-info-wrap-value'>
-            <text>{{itemTeam.com_inf_product}}</text>
-        </view>
-    </view>
 
-    <view class='content-info-wrap'>
-        <view class='content-info-wrap-title'>
-            <text>作品书体</text>
+        <view class='content-info-wrap'>
+            <view class='content-info-wrap-title'>
+                <text>作品书体</text>
+            </view>
+            <view class='content-info-wrap-value'>
+                <text>{{itemTeam.com_inf_calligraphy}}</text>
+            </view>
         </view>
-        <view class='content-info-wrap-value'>
-            <text>{{itemTeam.com_inf_calligraphy}}</text>
-        </view>
-    </view>
 
-    <view class='content-info-wrap'>
-        <view class='content-info-wrap-title'>
-            <text>作品尺寸</text>
+        <view class='content-info-wrap'>
+            <view class='content-info-wrap-title'>
+                <text>作品尺寸</text>
+            </view>
+            <view class='content-info-wrap-value'>
+                <text>{{itemTeam.com_inf_size}}</text>
+            </view>
         </view>
-        <view class='content-info-wrap-value'>
-            <text>{{itemTeam.com_inf_size}}</text>
-        </view>
-    </view>
 
-    <view class='area-info-wrap'>
-        <view class='content-info-wrap-title'>
-            <text>作品内容</text>
+        <view class='area-info-wrap'>
+            <view class='content-info-wrap-title'>
+                <text>作品内容</text>
+            </view>
+                <text class='area-info-wrap-value'>{{itemTeam.com_inf_content}}</text>
         </view>
-        <view class='content-info-wrap-value'>
-            <text>{{itemTeam.com_inf_content}}</text>
-        </view>
-    </view>
 
-    <view class='content-info-wrap'>
-        <view class='content-info-wrap-title'>
-            <text>指导老师</text>
-        </view>
-        <view class='content-info-wrap-value'>
-            <text>{{itemTeam.com_inf_teacher}}</text>
+        <view class='content-info-wrap'>
+            <view class='content-info-wrap-title'>
+                <text>指导老师</text>
+            </view>
+            <view class='content-info-wrap-value'>
+                <text>{{itemTeam.com_inf_teacher}}</text>
+            </view>
         </view>
     </view>
 
@@ -114,112 +116,114 @@
     </view>
 </view>
 
-<view class="show-first" wx:if='{{currentTab==1}}'>
-    <view class='identity-info'>
-        <view class='identity-info-wrap'>
-            <view class='identity-info-wrap-title'>
-                <text>姓名</text>
+<view class="show-second" wx:if='{{currentTab==1}}'>
+    <view class='personal-info'>
+        <view class='identity-info'>
+            <view class='identity-info-wrap'>
+                <view class='identity-info-wrap-title'>
+                    <text>姓名</text>
+                </view>
+                <view class='identity-info-wrap-value'>
+                    <text>{{itemIndividual.com_inf_name}}</text>
+                </view>
             </view>
-            <view class='identity-info-wrap-value'>
-                <text>{{itemIndividual.com_inf_name}}</text>
+            <view class='identity-info-wrap'>
+                <view class='identity-info-wrap-title'>
+                    <text>性别</text>
+                </view>
+                <view class='identity-info-wrap-value'>
+                    <text>{{itemIndividual.com_inf_sex}}</text>
+                </view>
+            </view>
+            <view class='identity-info-wrap'>
+                <view class='identity-info-wrap-title'>
+                    <text>年龄</text>
+                </view>
+                <view class='identity-info-wrap-value'>
+                    <text>{{itemIndividual.com_inf_age}}</text>
+                </view>
             </view>
         </view>
-        <view class='identity-info-wrap'>
-            <view class='identity-info-wrap-title'>
-                <text>性别</text>
+
+        <view class='content-info-wrap'>
+            <view class='content-info-wrap-title'>
+                <text>联系方式</text>
             </view>
-            <view class='identity-info-wrap-value'>
-                <text>{{itemIndividual.com_inf_sex}}</text>
-            </view>
-        </view>
-        <view class='identity-info-wrap'>
-            <view class='identity-info-wrap-title'>
-                <text>年龄</text>
-            </view>
-            <view class='identity-info-wrap-value'>
-                <text>{{itemIndividual.com_inf_age}}</text>
+            <view class='content-info-wrap-value'>
+                <text>{{itemIndividual.com_inf_phone}}</text>
             </view>
         </view>
-    </view>
 
-    <view class='content-info-wrap'>
-        <view class='content-info-wrap-title'>
-            <text>联系方式</text>
-        </view>
-        <view class='content-info-wrap-value'>
-            <text>{{itemIndividual.com_inf_phone}}</text>
-        </view>
-    </view>
-
-    <view class='address-info-wrap'>
-        <view class='content-info-wrap-title'>
-            <text>联系地址</text>
-        </view>
-        <view class='content-info-wrap-value'>
-            <text>{{itemIndividual.com_inf_address_province}}{{itemIndividual.com_inf_address_city}}{{itemTeam.com_inf_address_county}}{{itemIndividual.com_inf_address_detail}}</text>
+        <view class='address-info-wrap'>
+            <view class='content-info-wrap-title'>
+                <text>联系地址</text>
+            </view>
+            <view class='area-info-wrap-value'>
+                <text>{{itemIndividual.com_inf_address_province}}{{itemIndividual.com_inf_address_city}}{{itemTeam.com_inf_address_county}}{{itemIndividual.com_inf_address_detail}}</text>
+            </view>
         </view>
     </view>
 
-    <view class='content-info-wrap'>
-        <view class='content-info-wrap-title'>
-            <text>硬笔软笔</text>
+    <view class='calligraphy-info'>
+        <view class='content-info-wrap'>
+            <view class='content-info-wrap-title'>
+                <text>硬笔软笔</text>
+            </view>
+            <view class='content-info-wrap-value'>
+                <text>{{itemIndividual.com_inf_pen}}</text>
+            </view>
         </view>
-        <view class='content-info-wrap-value'>
-            <text>{{itemIndividual.com_inf_pen}}</text>
-        </view>
-    </view>
 
-    <view class='content-info-wrap'>
-        <view class='content-info-wrap-title'>
-            <text>作品名称</text>
+        <view class='content-info-wrap'>
+            <view class='content-info-wrap-title'>
+                <text>作品名称</text>
+            </view>
+            <view class='content-info-wrap-value'>
+                <text>{{itemIndividual.com_inf_product}}</text>
+            </view>
         </view>
-        <view class='content-info-wrap-value'>
-            <text>{{itemIndividual.com_inf_product}}</text>
-        </view>
-    </view>
 
-    <view class='content-info-wrap'>
-        <view class='content-info-wrap-title'>
-            <text>作品书体</text>
+        <view class='content-info-wrap'>
+            <view class='content-info-wrap-title'>
+                <text>作品书体</text>
+            </view>
+            <view class='content-info-wrap-value'>
+                <text>{{itemIndividual.com_inf_calligraphy}}</text>
+            </view>
         </view>
-        <view class='content-info-wrap-value'>
-            <text>{{itemIndividual.com_inf_calligraphy}}</text>
-        </view>
-    </view>
 
-    <view class='content-info-wrap'>
-        <view class='content-info-wrap-title'>
-            <text>作品尺寸</text>
+        <view class='content-info-wrap'>
+            <view class='content-info-wrap-title'>
+                <text>作品尺寸</text>
+            </view>
+            <view class='content-info-wrap-value'>
+                <text>{{itemIndividual.com_inf_size}}</text>
+            </view>
         </view>
-        <view class='content-info-wrap-value'>
-            <text>{{itemIndividual.com_inf_size}}</text>
-        </view>
-    </view>
 
-    <view class='area-info-wrap'>
-        <view class='content-info-wrap-title'>
-            <text>作品内容</text>
+        <view class='area-info-wrap'>
+            <view class='content-info-wrap-title'>
+                <text>作品内容</text>
+            </view>
+            <text class='area-info-wrap-value'>{{itemIndividual.com_inf_content}}</text>
         </view>
-        <view class='content-info-wrap-value'>
-            <text>{{itemIndividual.com_inf_content}}</text>
-        </view>
-    </view>
 
-    <view class='content-info-wrap'>
-        <view class='content-info-wrap-title'>
-            <text>指导老师</text>
+        <view class='content-info-wrap'>
+            <view class='content-info-wrap-title'>
+                <text>指导老师</text>
+            </view>
+            <view class='content-info-wrap-value'>
+                <text>{{itemIndividual.com_inf_teacher}}</text>
+            </view>
         </view>
-        <view class='content-info-wrap-value'>
-            <text>{{itemIndividual.com_inf_teacher}}</text>
-        </view>
-    </view>
 
-    <view class='content-info-wrap'>
-        <view class='content-info-wrap-title'>
-            <text>参赛码</text>
-        </view>
-        <view class='content-info-wrap-value'>
-            <text>{{itemIndividual.com_inf_code}}</text>
+        <view class='content-info-wrap'>
+            <view class='content-info-wrap-title'>
+                <text>参赛码</text>
+            </view>
+            <view class='content-info-wrap-value'>
+                <text>{{itemIndividual.com_inf_code}}</text>
+            </view>
         </view>
     </view>
 </view>

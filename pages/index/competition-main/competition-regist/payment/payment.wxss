@@ -16,20 +16,21 @@ page{
   position: relative;
   margin-top: 30rpx;
   width: 100%;
+  color: #969696;
   font-size: 38rpx;
-  font-weight: bold;
   text-align: center;
 }
 
 .pay-icon{
   position: relative;
-  margin-top: 150rpx;
-  margin-left: 10%;
-  width: 80%;
+  float: left;
+  width: 30%;
   height: 80rpx;
   line-height: 80rpx;
-  font-size: 38rpx;
-  font-weight: bold;
-  background-color: rgb(96, 165, 5);
-  border: 1px solid #3f3e3e;
+  margin-left: 35%;
+  margin-top: 100rpx;
+  font-size: 32rpx;
+  font-weight: 800;
+  color: white;
+  background-color: #f65e5d;
 }

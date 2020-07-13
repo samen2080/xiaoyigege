@@ -1,7 +1,9 @@
 /* pages/index/competition-main/competition-view/competition-view.wxss */
 page{
-  background-color: rgb(232, 232, 232);
+  background-color: #e5e5e5;
 }
+
+text {color: #6b6b6b;}
 
 .swiper-tab{
   text-align: center;
@@ -10,10 +12,12 @@ page{
   display: flex;
   flex-flow: row;
   justify-content: space-between;
-  color:rgb(216, 216, 216);
+  color:rgb(0, 0, 0);
   background-color: #FFFFFF;
   border-top: 1px solid #e9e9e9;
   border-bottom: 1px solid #e9e9e9;
+  /* border: #000000 solid 1px; */
+
 }
 
 .swiper-tab-item{
@@ -35,15 +39,40 @@ page{
   color:#f4673d
 }
 
+.info-first{
+  width: 100%;
+  height: 100%;
+}
+
+.info-second{
+  width: 100%;
+  height: 100%;
+}
+
+.personal-info{
+  width: 100%;
+  height: 230rpx;
+  margin-bottom: 15rpx;
+  background-color: #ffffff;  
+  /*border: rgb(206, 20, 20) solid 1px;*/
+}
+
+.calligraphy-info{
+  width: 100%;
+  /* height: 510rpx; */
+  padding-top: 5rpx;
+  margin-bottom: 15rpx;
+  /* border: rgb(66, 24, 163) solid 1px; */
+}
+
 .identity-info{
   position: relative;
   float: left;
-  margin-bottom: 5rpx;
-  margin-left: 5rpx;
-  width: 98%;
+  width: 100%;
   height: 60rpx;
   background-color: white;
   border-radius: 6rpx;
+  border-bottom: 1px solid #e9e9e9;
 }
 
 .identity-info-wrap{
@@ -89,12 +118,10 @@ page{
 .content-info-wrap{
   position: relative;
   float: left;
-  margin-bottom: 10rpx;
-  margin-left: 5rpx;
-  width: 98%;
+  width: 100%;
   height: 60rpx;
   background-color: white;
-  border-radius: 6rpx;
+  border-bottom: 1px solid #e9e9e9;
 }
 
 .content-info-wrap-title{
@@ -133,21 +160,36 @@ page{
 .address-info-wrap{
   position: relative;
   float: left;
-  margin-bottom: 10rpx;
-  margin-left: 5rpx;
-  width: 98%;
-  height: 100rpx;
+  width: 100%;
   background-color: white;
   border-radius: 6rpx;
+  /*border: rgb(206, 20, 20) solid 1px;*/
 }
 
 .area-info-wrap{
   position: relative;
   float: left;
-  margin-bottom: 10rpx;
-  margin-left: 5rpx;
-  width: 98%;
+  width: 100%;
   height: 200rpx;
   background-color: white;
   border-radius: 6rpx;
+}
+
+.area-info-wrap-value{
+  position: relative;
+  float: left;
+  width: 550rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  border-bottom: 1px solid #e9e9e9;
+  border-radius: 8rpx;
+  word-wrap: break-word;
+  word-break: break-all;
+  white-space: pre-line;
+  margin-left: 10rpx;
+}
+
+
+.content-border{
+  background-color: #e5e5e5;
 }

@@ -9,18 +9,30 @@ button{
   bottom: 100rpx;
   left: 50%;
   transform: translateX(-50%);
-  width: 280rpx;
-  height: 80rpx;
-  line-height: 80rpx;
-  border-radius: 10rpx;
-  font-size: 28rpx;
+  width: 260rpx;
+  height: 90rpx;
+  line-height: 78rpx;
+  border-radius: 50rpx;
+  font-size: 30rpx;
   font-weight: 800;
   letter-spacing: 4rpx;
-  border: rgb(69, 156, 148) solid 1px; 
-  color: rgb(243, 247, 28);
+  background-color: #2f7fbb;
+  border: rgb(81, 177, 221) solid 3px; 
+  color: rgb(200, 239, 44);
 }
+
+/* .button-display text {
+  position: absolute;
+  margin-bottom: 1rpx;
+  margin-left: 62rpx;
+  bottom: 1rpx;
+  vertical-align:middle;
+  display: table-cell;
+} */
+
 .start-image{
   /* border-radius: 10%; */
+  position: fixed;
   width:100%;
   height: 100%;
   text-align: center;

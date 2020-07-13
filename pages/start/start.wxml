@@ -8,5 +8,5 @@
     open-type="getUserInfo" 
     bindgetuserinfo="bindGetUserInfo"
     hover-class='none'
->立即开始</button>
+><text>立即开始</text></button>
 <view wx:else>请升级微信版本</view>

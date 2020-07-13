@@ -174,14 +174,19 @@ margin-top: 80rpx;
   height: 100%;
 }
 
-.info-team-info{
+.info-second{
+  width: 100%;
+  height: 100%;
+}
+
+.team-info{
   width: 100%;
   height: 100%;
   padding-top: 5rpx;
   background-color: #ffffff;  
 }
 
-.info-personal-info{
+.personal-info{
   width: 100%;
   height: 100%;
   padding-top: 5rpx;
@@ -189,7 +194,7 @@ margin-top: 80rpx;
   background-color: #ffffff;  
 }
 
-.info-calligraphy-info{
+.calligraphy-info{
   width: 100%;
   height: 100%;
   padding-top: 5rpx;

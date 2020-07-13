@@ -1,15 +1,18 @@
 <!--pages/index/competition-main/competition-main.wxml-->
 <view class="index-page">
+    <image class='background-img' src='http://www.xqtechinfo.com/xiaoyigege/storage/app/public/uploads/competition/background2.jpg' mode="aspectFill"></image>
+
     <view class="index-top">
         <text>第一届小艺阁阁杯征稿启示</text>
     </view>
 
-    <view class="index_draft-info" selectable="true" scroll-y="true" >     
-        <text class="th-text" disabled='true'  style="overflow-y:auto;overflow-x:scroll;" selectable="true">{{infoList.dra_content}}</text>
+    <view class="index-draft-info">     
+        <text>{{infoList.dra_content}}</text>
     </view>
 
     <view class="index-bottom">
-        <button class='enroll-btn' catchtap='enroll'>参赛报名</button>
-        <button class='look-btn' catchtap='query'>参赛查询</button>
+        <button class='button-style' catchtap='enroll'>参赛报名</button>
+        <button class='button-style' catchtap='query'>参赛查询</button>
     </view>
+
 </view>
