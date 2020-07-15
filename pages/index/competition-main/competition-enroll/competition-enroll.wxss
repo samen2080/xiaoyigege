@@ -190,7 +190,6 @@ margin-top: 80rpx;
   width: 100%;
   height: 100%;
   padding-top: 5rpx;
-  margin-top: 15rpx;
   background-color: #ffffff;  
 }
 
@@ -231,7 +230,7 @@ margin-top: 80rpx;
   margin-left: 10rpx;
   padding-left: 5rpx;
   border-bottom: 1px solid #e9e9e9;
-  border-radius: 8rpx;
+  border-radius: 4rpx;
 }
 
 .info-two{
@@ -239,7 +238,6 @@ margin-top: 80rpx;
   width: 100%;
   height: 60rpx;
   margin-top: 20rpx;
-  /*border: rgb(0, 0, 0) solid 1px;*/
 }
 
 .info-two text{
@@ -263,7 +261,7 @@ margin-top: 80rpx;
   margin-left: 10rpx;
   padding-left: 5rpx;
   border-bottom: 1px solid #e9e9e9;
-  border-radius: 8rpx;
+  border-radius: 4rpx;
 }
 
 .info-three{
@@ -271,7 +269,6 @@ margin-top: 80rpx;
   width: 100%;
   height: 60rpx;
   margin-top: 20rpx;
-  /*border: rgb(0, 0, 0) solid 1px;*/
 }
 
 .info-three text{
@@ -295,7 +292,7 @@ margin-top: 80rpx;
   margin-left: 0rpx;
   padding-left: 5rpx;
   border-bottom: 1px solid #e9e9e9;
-  border-radius: 8rpx;
+  border-radius: 4rpx;
 }
 
 .info-four{
@@ -312,6 +309,7 @@ margin-top: 80rpx;
   float: left;
   width: 200rpx;
   height: 60rpx;
+  margin-right: 20rpx;
   font-size: 32rpx;
   font-weight: 600;
   letter-spacing: 3rpx;
@@ -321,24 +319,11 @@ margin-top: 80rpx;
 .info-four-value{
   position: relative;
   float: left;
-  /* width: 320rpx; */
   width: 370rpx;
   height: 60rpx;
   font-size: 32rpx;
   font-weight: 400;
 }
-
-/* .info-four input{
-  width: 100rpx;
-  position: relative;
-  float: left;
-  height: 50rpx;
-  line-height: 50rpx;
-  margin-left: 10rpx;
-  padding-left: 5rpx;
-  border: 1px solid #3f3e3e;
-  border-radius: 8rpx;
-} */
 
 .info-five{
   position: relative;
@@ -368,7 +353,7 @@ letter-spacing: 3rpx;
   line-height: 50rpx;
   margin-left: 30rpx;
   padding-left: 5rpx;
-  border-radius: 8rpx;
+  border-radius: 4rpx;
 }
 
 .info-five text{
@@ -399,11 +384,9 @@ letter-spacing: 3rpx;
   line-height: 50rpx;
   margin-left: 30rpx;
   padding-left: 5rpx;
-  /* border-bottom: 1px solid #e9e9e9; */
-  border-radius: 8rpx;
+  border-radius: 4rpx;
 }
 
-/* 下拉框选项 */
 .info-name-gender-age{
   height: 60rpx;
   width: 100%;
@@ -413,7 +396,6 @@ letter-spacing: 3rpx;
   float: left;
   margin-top: 20rpx;
   margin-bottom:30rpx;
-  /* border: rgb(0, 0, 0) solid 1px; */
 }
 
 .info-name{
@@ -424,7 +406,6 @@ letter-spacing: 3rpx;
   position: relative; 
   float: left;
   padding-left: 10rpx;
-  /*border: rgb(0, 0, 0) solid 1px;*/
 }
 
 .info-name input{
@@ -458,53 +439,46 @@ letter-spacing: 3rpx;
   font-size: 32rpx;
   position: relative; 
   float: left;
-  margin-left: 50rpx;
-  /*border: rgb(254, 0, 0) solid 1px;*/
+  margin-left: 5rpx;
 }
 
 .info-gender-input text{
   position: relative;
   float: left;
-  width:80rpx ;
+  width: 80rpx ;
   height: 50rpx;
   line-height: 50rpx;
   font-size: 32rpx;
   font-weight: bold;
-  margin-left: 20rpx;
+  margin-left: 5rpx;
   letter-spacing: 3rpx;
-  /* border: rgb(248, 226, 24) solid 1px; */
 }
 
 .info-age{
   background: #ffffff;
   height: 50rpx;
-  width: 200rpx;
+  width: 240rpx;
   font-size: 32rpx;
   position: relative; 
   float: left;
-  margin-left: 30rpx;
-  /* border: rgb(240, 0, 0) solid 1px; */
+  margin-left: 10rpx;
 }
 
 .info-age-input text{
   position: relative;
   float: left;
-  width:80rpx ;
+  width: 100rpx;
   height: 50rpx;
   line-height: 50rpx;
   font-size: 32rpx;
   font-weight: bold;
-  margin-left: 20rpx;
+  margin-left: 10rpx;
   letter-spacing: 3rpx;
-  /* border: rgb(211, 238, 31) solid 1px; */
 }
 
 .qualification-value{
   text-align: center;
 }
-
-
-
 
 .experience-years-value{
  text-align: center;
@@ -526,7 +500,6 @@ letter-spacing: 3rpx;
   width: 100%;
   height: 60rpx;
   margin-top: 30rpx;
-  /* border: rgb(228, 39, 39) solid 1px; */
 }
 
 .info-seven text{
@@ -549,7 +522,7 @@ letter-spacing: 3rpx;
   line-height: 50rpx;
   margin-left: 10rpx;
   padding-left: 5rpx;
-  border-radius: 8rpx;
+  border-radius: 4rpx;
   border-bottom: 1px solid #e9e9e9;
 }
 
@@ -571,7 +544,6 @@ letter-spacing: 3rpx;
   font-size: 32rpx;
   position: relative; 
   float: left;
-  /*border: rgb(254, 0, 0) solid 1px;*/
 }
 
 .info-calligraphy-type-input text{
@@ -584,15 +556,14 @@ letter-spacing: 3rpx;
   font-weight: bold;
   margin-left: 30rpx;
   letter-spacing: 3rpx;
-  /* border: rgb(248, 226, 24) solid 1px; */
 }
 
 .info-nine{
   position: relative;
   width: 100%;
-  height: 210rpx;
+  height: 268rpx;
+  margin-left: 30rpx;
   margin-top: 30rpx;
-  /*border: rgb(254, 0, 0) solid 1px;*/
 }
 
 .info-nine text{
@@ -603,20 +574,19 @@ letter-spacing: 3rpx;
   line-height: 50rpx;
   font-size: 32rpx;
   font-weight: bold;
-  margin-left: 30rpx;
   letter-spacing: 3rpx;
 }
 
-.textarea-wrap textarea{
+.textarea-wrap{
   position: relative;
   float: left;
   height: 200rpx;
-  width: 520rpx;
+  margin-top: 10rpx;
+  width: 670rpx;
   background: #ffffff;
-  margin-left: 10rpx;
   font-size: 32rpx;
   border: rgba(187, 187, 187, 0.59) solid 1px;
-  border-radius: 8rpx;
+  border-radius: 4rpx;
 }
 
 .placeholder{
@@ -640,20 +610,17 @@ letter-spacing: 3rpx;
   line-height: 80rpx;
   margin-left: 35%;
   margin-top: 10rpx;
-  /* margin-bottom: 90rpx; */
   font-size: 32rpx;
   font-weight: 800;
   color: white;
   background-color: #f65e5d;
-  /* border:  rgb(0, 0, 0) solid 1px; */
 }
 
 .info-ten{
   position: relative;
   width: 100%;
   height: 60rpx;
-  margin-top: 20rpx;
-  /*border: rgb(0, 0, 0) solid 1px;*/
+  margin-top: 30rpx;
 }
 
 .info-ten text{
@@ -676,7 +643,7 @@ letter-spacing: 3rpx;
   line-height: 50rpx;
   margin-left: 0rpx;
   padding-left: 5rpx;
-  border-radius: 8rpx;
+  border-radius: 4rpx;
   border-bottom: 1px solid #e9e9e9;
 }
 
@@ -696,7 +663,7 @@ letter-spacing: 3rpx;
   margin-left: 190rpx;
   padding-left: 5rpx;
   border: 1px solid #3f3e3e;
-  border-radius: 8rpx;
+  border-radius: 4rpx;
 }
 
 .info-eleven text{
@@ -727,7 +694,7 @@ letter-spacing: 3rpx;
   margin-left: 190rpx;
   padding-left: 5rpx;
   border: 1px solid #3f3e3e;
-  border-radius: 8rpx;
+  border-radius: 4rpx;
 }
 
 .location_city {

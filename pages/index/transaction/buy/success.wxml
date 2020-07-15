@@ -1,7 +1,0 @@
-<view class='success-top'>
-  <image src='/images/pay-success.png'></image>
-  <view class='success-top-title'>购买成功</view>
-  <navigator url='../../../mine/buy/product-show/product-show?tra_id={{tra_id}}' hover-class='none'><view class='success-top-btn'>查看订单</view></navigator>
-</view>
-
-<view class='success-phone'>卖主电话<text>{{tel == null ? "暂无" : tel}}</text></view>

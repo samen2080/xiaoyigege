@@ -1,5 +1,4 @@
 /**app.wxss**/
-@import "/template/template.wxss";
 page{
   background: #f5f5f5;
   font-size: 28rpx;

@@ -8,7 +8,6 @@ Page({
         picker_city: !1,
         city_search: !1,
         currentTab: 0,
-        inf_code: Math.floor(Math.random()*20000 + 20000),
         com_inf_address_province: "城市",
         com_inf_address_city: "/",
         com_inf_address_county: "区域",
@@ -21,18 +20,6 @@ Page({
         }],
     
         selectArray2: [{
-          "id": "1",
-          "text": "1"
-        }, {
-          "id": "2",
-          "text": "2"
-        }, {
-          "id": "3",
-          "text": "3"
-        }, {
-          "id": "4",
-          "text": "4"
-        }, {
           "id": "5",
           "text": "5"
           }, {
@@ -74,192 +61,6 @@ Page({
           }, {
             "id": "18",
             "text": "18"
-          }, {
-            "id": "19",
-            "text": "19"
-          }, {
-            "id": "20",
-            "text": "20"
-          }, {
-            "id": "21",
-            "text": "21"
-          }, {
-            "id": "22",
-            "text": "22"
-          }, {
-            "id": "23",
-            "text": "23"
-          }, {
-            "id": "24",
-            "text": "24"
-          }, {
-            "id": "25",
-            "text": "25"
-          }, {
-            "id": "26",
-            "text": "26"
-          }, {
-            "id": "27",
-            "text": "27"
-          }, {
-            "id": "28",
-            "text": "28"
-          }, {
-            "id": "29",
-            "text": "29"
-          }, {
-            "id": "30",
-            "text": "30"
-          }, {
-            "id": "31",
-            "text": "31"
-          }, {
-            "id": "32",
-            "text": "32"
-          }, {
-            "id": "33",
-            "text": "33"
-          }, {
-            "id": "34",
-            "text": "34"
-          }, {
-            "id": "35",
-            "text": "35"
-          }, {
-            "id": "36",
-            "text": "36"
-          }, {
-            "id": "37",
-            "text": "37"
-          }, {
-            "id": "38",
-            "text": "38"
-          }, {
-            "id": "39",
-            "text": "39"
-          }, {
-            "id": "40",
-            "text": "40"
-          }, {
-            "id": "41",
-            "text": "41"
-          }, {
-            "id": "42",
-            "text": "42"
-          }, {
-            "id": "43",
-            "text": "43"
-          }, {
-            "id": "44",
-            "text": "44"
-          }, {
-            "id": "45",
-            "text": "45"
-          }, {
-            "id": "46",
-            "text": "46"
-          }, {
-            "id": "47",
-            "text": "47"
-          }, {
-            "id": "48",
-            "text": "48"
-          }, {
-            "id": "49",
-            "text": "49"
-          }, {
-            "id": "50",
-            "text": "50"
-          }, {
-            "id": "51",
-            "text": "51"
-          }, {
-            "id": "52",
-            "text": "52"
-          }, {
-            "id": "53",
-            "text": "53"
-          }, {
-            "id": "54",
-            "text": "54"
-          }, {
-            "id": "55",
-            "text": "55"
-          }, {
-            "id": "56",
-            "text": "56"
-          }, {
-            "id": "57",
-            "text": "57"
-          }, {
-            "id": "58",
-            "text": "58"
-          }, {
-            "id": "59",
-            "text": "59"
-          }, {
-            "id": "60",
-            "text": "60"
-          }, {
-            "id": "61",
-            "text": "61"
-          }, {
-            "id": "62",
-            "text": "62"
-          }, {
-            "id": "63",
-            "text": "63"
-          }, {
-            "id": "64",
-            "text": "64"
-          }, {
-            "id": "65",
-            "text": "65"
-          }, {
-            "id": "66",
-            "text": "66"
-          }, {
-            "id": "67",
-            "text": "67"
-          }, {
-            "id": "68",
-            "text": "68"
-          }, {
-            "id": "69",
-            "text": "69"
-          }, {
-            "id": "70",
-            "text": "70"
-          }, {
-            "id": "71",
-            "text": "71"
-          }, {
-            "id": "72",
-            "text": "72"
-          }, {
-            "id": "73",
-            "text": "73"
-          }, {
-            "id": "74",
-            "text": "74"
-          }, {
-            "id": "75",
-            "text": "75"
-          }, {
-            "id": "76",
-            "text": "76"
-          }, {
-            "id": "77",
-            "text": "77"
-          }, {
-            "id": "78",
-            "text": "78"
-          }, {
-            "id": "79",
-            "text": "79"
-          }, {
-            "id": "80",
-            "text": "80"
           }],
           
           selectArray3: [{
@@ -268,6 +69,26 @@ Page({
           }, {
             "id": "2",
             "text": "软笔"
+          }],
+
+          selectArray4: [{
+            "id": "1",
+            "text": "楷书"
+          }, {
+            "id": "2",
+            "text": "隶书"
+          }, {
+            "id": "3",
+            "text": "篆书"
+          }, {
+            "id": "4",
+            "text": "草书"
+          }, {
+            "id": "5",
+            "text": "行书"
+          }, {
+            "id": "6",
+            "text": "其他"
           }],
     },
     onLoad: function(t) {
@@ -286,7 +107,8 @@ Page({
             user_id: user_id,
             com_inf_sex: this.data.selectArray1[0].text,
             com_inf_age: this.data.selectArray2[0].text,
-            com_inf_pen: this.data.selectArray3[0].text
+            com_inf_pen: this.data.selectArray3[0].text,
+            com_inf_calligraphy: this.data.selectArray4[0].text
           });
     },
 
@@ -423,7 +245,7 @@ Page({
     
       getData4: function (e) {
         this.setData({
-          currentTab: e.target.dataset.current
+          com_inf_calligraphy: e.detail.text
          })
       },
 
@@ -460,7 +282,7 @@ Page({
         com_inf_name: e.detail.value.com_inf_name,
         com_inf_ident: e.detail.value.com_inf_ident,
         com_inf_product: e.detail.value.com_inf_product,
-        com_inf_calligraphy: e.detail.value.com_inf_calligraphy,
+        // com_inf_calligraphy: e.detail.value.com_inf_calligraphy,
         com_inf_size: e.detail.value.com_inf_size,
         com_inf_content: e.detail.value.com_inf_content,
         com_inf_teacher: e.detail.value.com_inf_teacher
@@ -475,7 +297,7 @@ Page({
         com_inf_name: e.detail.value.com_inf_name,
         com_inf_ident: e.detail.value.com_inf_ident,
         com_inf_product: e.detail.value.com_inf_product,
-        com_inf_calligraphy: e.detail.value.com_inf_calligraphy,
+        // com_inf_calligraphy: e.detail.value.com_inf_calligraphy,
         com_inf_size: e.detail.value.com_inf_size,
         com_inf_content: e.detail.value.com_inf_content,
         com_inf_teacher: e.detail.value.com_inf_teacher
@@ -558,12 +380,13 @@ Page({
         title: '作品名称不能为空',
         icon: 'none'
       })
-      }else if (that.data.com_inf_calligraphy.length <= 0){
-      wx.showToast({
-        title: '作品书体不能为空',
-        icon: 'none'
-      })
-      } else if (that.data.com_inf_size.length <= 0){
+      // }else if (that.data.com_inf_calligraphy.length <= 0){
+      // wx.showToast({
+      //   title: '作品书体不能为空',
+      //   icon: 'none'
+      // })
+      } 
+      else if (that.data.com_inf_size.length <= 0){
       wx.showToast({
         title: '作品尺寸不能为空',
         icon: 'none'
@@ -644,7 +467,7 @@ Page({
                         }, 'POST', function (res) {
                           if (res.code == 200) {
                             wx.navigateTo({
-                              url: '../competition-regist/payment/payment?inf_code=' + that.data.inf_code,
+                              url: '../payment/payment?inf_code=' + that.data.inf_code,
                             })
                           }
                         });
@@ -686,7 +509,7 @@ Page({
                         }, 'POST', function (res) {
                           if (res.code == 200) {
                             wx.navigateTo({
-                              url: '../competition-regist/payment/payment?inf_code=' + that.data.inf_code,
+                              url: '../payment/payment?inf_code=' + that.data.inf_code,
                             })
                           }
                         });
@@ -695,18 +518,26 @@ Page({
               };
           }else{
               console.log('弹框后点取消')
-              wx.navigateBack({
-                    delta: 1
-                  })
+              // wx.navigateBack({
+              //       delta: 1
+              //     })
           }
     }
   })
   },
 
     onReady: function() {},
-    onShow: function() {},
+
+    onShow: function() {
+      this.setData({
+      inf_code: Math.floor(Math.random()*20000 + 20000),
+    });
+    },
     onHide: function() {},
+
     onUnload: function() {},
+
     onPullDownRefresh: function() {},
+    
     onReachBottom: function() {}
 });

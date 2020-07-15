@@ -1,6 +1,0 @@
-{
-  "navigationBarTitleText": "新建合约",
-   "usingComponents": {
-      "Select": "/component/select/select"
-     }
-}

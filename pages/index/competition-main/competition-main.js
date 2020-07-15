@@ -8,7 +8,6 @@ Page({
   data: {
     hidden: true,
     cancel: false
-
   },
 
   
@@ -22,7 +21,8 @@ Page({
     that.setData({
       host: host,
       user_id: user_id,
-    })
+    });
+
     wx.getStorage({
       key: 'openid',
       success: function (res) {
@@ -44,17 +44,15 @@ Page({
   },
 
   enroll: function () {
-    var that = this;
-    wx.navigateTo({
-      // url: 'competition-regist/competition-regist',
+    wx.redirectTo({
       url: 'competition-enroll/competition-enroll',
-    })
+    });
   },
 
   query: function () {
-    wx.navigateTo({
+    wx.redirectTo({
       url: 'competition-view/competition-view',
-    })
+    });
   },
   
   /**

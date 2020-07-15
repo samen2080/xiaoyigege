@@ -1,5 +1,4 @@
 //app.js
-//this is a comment
 var http = require('utils/config.js'); //接口配置
 var userInfo = {};
 App({

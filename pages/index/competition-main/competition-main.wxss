@@ -1,84 +1,8 @@
 /* pages/index/competition-main/competition-main.wxss */
-/* .index-page{
-  height: 100%;
-  position: relative;
-}
-
-.background-img {
+.index-page{
   width: 100%;
-  height: 100%;
-  position:absolute; 
-  background-size:100% 100%;
-  z-index: -1;
-}
-
-.index-top{
-  position: relative;
-  width: 100%;
-  margin-top: 50rpx;
-}
-
-.index-top text{
-  width: 100%;
-  font-size: 36rpx;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.th-text {
-  justify-content: center;
-  color: #000;
-  display: block;
-  width: 90%;
-  margin-top: 20rpx;
-  margin-left: 5%;
-  height: 120rpx;
-  align-items: center;
-  max-height: 120rpx;
-  font-size: 30rpx;
-}
-
-.index-bottom{
-  position: relative;
-  margin-top: 700rpx;
-}
-
-.enroll-btn{
-  width: 40%;
-  height: 70rpx;
-  line-height: 70rpx;
-  border: rgb(0, 0, 0) solid 1px;
-  color: black;
-  position: relative;
-  margin-left: 30%;
-  border-radius: 10rpx;
-  font-size: 24rpx;
-  text-align: center;
-  font-size: 36rpx;
-}
-
-.view-btn{
-  width: 40%;
-  height: 70rpx;
-  line-height: 70rpx;
-  border: rgb(0, 0, 0) solid 1px;
-  color: black;
-  position: relative;
-  margin-left: 30%;
-  margin-top: 30rpx;
-  border-radius: 10rpx;
-  font-size: 24rpx;
-  text-align: center;
-  font-size: 36rpx;
-} */
-
-
-
-/* pages/index/index.wxss */
-index-page{
   height:100%;
-  position: relative;
+  position: fixed;
   }
 
 .background-img {
@@ -100,11 +24,11 @@ index-page{
 .index-draft-info{
   position: relative;
   width: 92%;
-  margin-top: 100rpx;
+  margin-top: 60rpx;
+  margin-bottom: 60rpx;
   margin-left: 30rpx;
   text-align: center;
   font-size: 32rpx;
-  /* border: rgb(0, 0, 0) solid 1px; */
 }
 
 .index-bottom{
@@ -113,12 +37,11 @@ index-page{
   width: 100%;
   margin-top: 300rpx;
   text-align: center;
-  font-size: 32rpx;
 }
 
 .button-style{
   position: relative;
-  margin-top: 50rpx;
+  margin-top: 36rpx;
   width: 260rpx;
   height: 90rpx;
   line-height: 78rpx;
@@ -126,7 +49,7 @@ index-page{
   font-size: 30rpx;
   font-weight: 800;
   letter-spacing: 4rpx;
-  background-color: #2f7fbb;
-  border: rgb(81, 177, 221) solid 3px; 
-  color: rgb(200, 239, 44);
+  background-color: #e3eedd;
+  border: #c9d7bd solid 3px; 
+  color: #ca233c;
 }

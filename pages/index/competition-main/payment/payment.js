@@ -1,4 +1,4 @@
-// pages/index/index.js
+// pages/index/competition-main/payment/payment.js
 Page({
 
   /**
@@ -8,19 +8,23 @@ Page({
 
   },
 
+
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function () {
-    wx.setStorage({
-      key: 'index_user_info',
-      data: {
-        user_id: '1221',
-      },
-      success: function () {
-        console.log("20200710");
-      }
+  onLoad: function (options) {
+       var that = this;
+       that.setData({
+       inf_code: options.inf_code
+      });
+  },
+
+  pay: function () {
+    var that = this;
+    wx.navigateTo({
+      url: '../payment-success/payment-success?inf_code=' + that.data.inf_code,
     })
+    
   },
 
   /**

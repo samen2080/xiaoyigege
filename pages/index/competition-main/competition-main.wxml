@@ -14,5 +14,4 @@
         <button class='button-style' catchtap='enroll'>参赛报名</button>
         <button class='button-style' catchtap='query'>参赛查询</button>
     </view>
-
 </view>

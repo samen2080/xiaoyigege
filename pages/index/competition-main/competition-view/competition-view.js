@@ -38,14 +38,12 @@ Page({
     });
 
     app.func.req('get_enroll_team', { user_id: user_id }, 'GET', function (res) {
-      console.log("20200705res", res);
       that.setData({
         itemTeam: res
       })  
     });
 
     app.func.req('get_enroll_individual', { user_id: user_id }, 'GET', function (res) {
-      console.log("20200705res", res);
       that.setData({
         itemIndividual: res
       })

@@ -22,7 +22,8 @@
 			"disablePlugins": [],
 			"outputPath": ""
 		},
-		"useCompilerModule": true,
+		"useIsolateContext": true,
+		"useCompilerModule": false,
 		"userConfirmedUseCompilerModuleSwitch": false
 	},
 	"compileType": "miniprogram",
@@ -77,13 +78,6 @@
 					"scene": null
 				},
 				{
-					"id": 3,
-					"name": "pages/community/community",
-					"pathName": "pages/community/community",
-					"query": "",
-					"scene": null
-				},
-				{
 					"id": -1,
 					"name": "pages/qrcode/qrcode",
 					"pathName": "pages/qrcode/qrcode",
@@ -99,36 +93,8 @@
 				},
 				{
 					"id": -1,
-					"name": "pages/mine/contract/contract",
-					"pathName": "pages/mine/contract/contract",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "pages/mine/contract/contract-pj/contract-pj",
-					"pathName": "pages/mine/contract/contract-pj/contract-pj",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
 					"name": "pages/mine/worker/worker",
 					"pathName": "pages/mine/worker/worker",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "pages/mine/worker/new-contract-page2/new-contract-page2",
-					"pathName": "pages/mine/worker/new-contract-page2/new-contract-page2",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "pages/mine/worker/new-contract-page3/new-contract-page3",
-					"pathName": "pages/mine/worker/new-contract-page3/new-contract-page3",
 					"query": "",
 					"scene": null
 				},
@@ -458,6 +424,28 @@
 					"id": -1,
 					"name": "pages/index/competition-main/competition-main",
 					"pathName": "pages/index/competition-main/competition-main",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/index/competition-main/competition-enroll/competition-enroll",
+					"pathName": "pages/index/competition-main/competition-enroll/competition-enroll",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/index/competition-main/competition-regist/payment-success/payment-success",
+					"pathName": "pages/index/competition-main/competition-regist/payment-success/payment-success",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/index/competition-main/competition-enroll/competition-enroll",
+					"pathName": "pages/index/competition-main/competition-enroll/competition-enroll",
+					"query": "",
 					"scene": null
 				}
 			]

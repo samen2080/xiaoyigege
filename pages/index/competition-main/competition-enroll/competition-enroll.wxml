@@ -20,12 +20,12 @@
 
             <view class='info-two'>  
                 <text>联系方式</text>
-                <input class placeholder='' placeholder-class='placeholder' name='com_inf_phone'></input>
+                <input class placeholder='' placeholder-class='placeholder' name='com_inf_phone' maxlength='11'></input>
             </view>
 
             <view class='info-three'>  
                 <text>备用联系方式</text>
-                <input class placeholder='可不填' placeholder-class='placeholder' name='com_inf_phone_two'></input>
+                <input class placeholder='可不填' placeholder-class='placeholder' name='com_inf_phone_two' maxlength='11'></input>
             </view>
 
             <view class='info-four'>  
@@ -65,7 +65,7 @@
 
             <view class='info-five'>  
                 <text>身份证号</text>
-                <input placeholder='' placeholder-class='placeholder' name='com_inf_ident'></input>
+                <input placeholder='' placeholder-class='placeholder' name='com_inf_ident' maxlength='18'></input>
             </view>
         </view>       
 
@@ -84,9 +84,13 @@
                 <input placeholder='' placeholder-class='placeholder' name='com_inf_product'></input>
             </view>
 
-            <view class='info-seven'>  
-                <text>作品书体</text>
-                <input placeholder='' placeholder-class='placeholder' name='com_inf_calligraphy'></input>
+            <view class='info-eight' >
+                <view class='info-calligraphy-type'>
+                    <view class='info-calligraphy-type-input'>
+                        <text>作品书体</text>
+                        <Select propArray='{{selectArray4}}' deaultValue='{{com_inf_calligraphy}}' bind:myget='getData4'></Select>
+                    </view>
+                </view>
             </view>
 
             <view class='info-seven'>  
@@ -97,7 +101,7 @@
             <view class='info-nine'>  
                 <text>作品内容</text>
                 <view class='textarea-wrap'>
-                    <textarea maxlength='200' placeholder='' placeholder-class='placeholder' name='com_inf_content' value="{{com_inf_content}}"></textarea>
+                    <textarea maxlength='2500' placeholder='' placeholder-class='placeholder' name='com_inf_content' value="{{com_inf_content}}"></textarea>
                 </view>
             </view>
 
@@ -135,12 +139,12 @@
 
             <view class='info-seven'>  
                 <text>身份证号</text>
-                <input placeholder='' placeholder-class='placeholder' name='com_inf_ident'></input>
+                <input placeholder='' placeholder-class='placeholder' name='com_inf_ident' maxlength='18'></input>
             </view>
 
             <view class='info-two'>  
                 <text>联系方式</text>
-                <input class placeholder='' placeholder-class='placeholder' name='com_inf_phone'></input>
+                <input class placeholder='' placeholder-class='placeholder' name='com_inf_phone' maxlength='11'></input>
             </view>
 
             <view class='info-four'>  
@@ -173,9 +177,13 @@
                 <input placeholder='' placeholder-class='placeholder' name='com_inf_product'></input>
             </view>
 
-            <view class='info-seven'>  
-                <text>作品书体</text>
-                <input placeholder='' placeholder-class='placeholder' name='com_inf_calligraphy'></input>
+            <view class='info-eight' >
+                <view class='info-calligraphy-type'>
+                    <view class='info-calligraphy-type-input'>
+                        <text>作品书体</text>
+                        <Select propArray='{{selectArray4}}' deaultValue='{{com_inf_calligraphy}}' bind:myget='getData4'></Select>
+                    </view>
+                </view>
             </view>
 
             <view class='info-seven'>  
@@ -186,7 +194,7 @@
             <view class='info-nine'>  
                 <text>作品内容</text>
                 <view class='textarea-wrap'>
-                    <textarea maxlength='200' placeholder='' placeholder-class='placeholder' name='com_inf_content' value="{{com_inf_content}}"></textarea>
+                    <textarea maxlength='2500' placeholder='' placeholder-class='placeholder' name='com_inf_content' value="{{com_inf_content}}"></textarea>
                 </view>
             </view>
 
@@ -200,5 +208,3 @@
         </view>
     </view>
 </form>
-
-

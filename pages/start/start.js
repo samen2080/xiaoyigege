@@ -15,13 +15,10 @@ Page({
    */
   onLoad: function (options) {
     var that = this;
-    console.log("onload====================")
     console.log(http.hostUrl)
     wx.login({
       success(res){
         if(res.code){
-          console.log("20200118 start.js res.code=", res.code)
-          console.log("login.url===++++++====", app.globalData.host + '/home/get_openid')
           wx.request({
             url: app.globalData.host+'/home/get_openid',
             method:'POST',
@@ -29,14 +26,10 @@ Page({
               code:res.code
             },
             success: function (res) {
-              console.log("20191216:===")
-              console.log("login.res", res)
               var obj = {};
               obj.openid = res.data.openid;
-              //console.log("openid",res.data.openid);
               obj.expires_in = Date.now() + res.data.expires_in;
-              //console.log(obj);
-              wx.setStorageSync('openid', obj.openid);//存储openid  
+              wx.setStorageSync('openid', obj.openid);
               wx.setStorage({
                 key: 'openid',
                 data: obj.openid,
@@ -71,7 +64,7 @@ Page({
                 },
                 success: function () {
                   wx.redirectTo({
-                    url: '../index/indexnew',
+                    url: '../index/index',
                   })
                 }
               })

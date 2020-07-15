@@ -1,6 +1,0 @@
-{
-  "navigationBarTitleText": "参赛信息填写",
-  "usingComponents": {
-    "Select": "/component/select/select"
-  }
-}

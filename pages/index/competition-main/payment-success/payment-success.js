@@ -1,28 +1,45 @@
-// pages/index/index.js
+// pages/index/competition-main/payment-success/payment-success.js
+
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
   },
 
-  /**
+   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function () {
-    wx.setStorage({
-      key: 'index_user_info',
-      data: {
-        user_id: '1221',
-      },
-      success: function () {
-        console.log("20200710");
-      }
-    })
+  onLoad: function (options) {
+    var that = this;
+    that.setData({
+    inf_code: options.inf_code
+   });
   },
 
+  back: function () {
+    wx.redirectTo({
+      url: "../../../index/index"
+  });
+  },
+
+  pay: function (e) {
+  var arr = [];
+  for(var i = 0;i<10;i++){
+    var isRepeat = false;
+    var num = parseInt(Math.random()*(100-20)+20);
+    for(var j = 0;j<arr.length;j++){
+        if(arr[j] == num){
+            isRepeat = true;
+        }
+    }
+    if(isRepeat == false){
+        arr.push(num);
+    }
+}
+  },
+  
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

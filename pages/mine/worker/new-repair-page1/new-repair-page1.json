@@ -1,6 +1,0 @@
-{
-  "navigationBarTitleText": "新建维修",
-  "usingComponents": {
-    "Select": "/component/select/select"
-  }
-}

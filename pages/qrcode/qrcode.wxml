@@ -1,9 +1,0 @@
-<!--pages/qrcode/qrcode.wxml-->
-<text>pages/qrcode/qrcode.wxml</text>
-<view class="container">
-  <view class="content">
-    <view class="qrcode-logo"></view>
-    <button class="qrcode-btn" bindtap="callQRcode">扫一扫</button>
-    <view class="qrcode-p">点击按钮扫描二维码签到</view>
-  </view>
-</view>
